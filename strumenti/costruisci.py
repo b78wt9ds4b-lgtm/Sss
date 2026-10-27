@@ -17,6 +17,10 @@ RADICE = Path(__file__).resolve().parent.parent
 DOCS = RADICE / "docs"
 NEGOZIO = json.loads((RADICE / "data" / "negozio.json").read_text(encoding="utf-8"))
 PEZZI = json.loads((RADICE / "data" / "pezzi.json").read_text(encoding="utf-8"))
+# Descrizioni riscritte per il nuovo sito: hanno la precedenza su quelle importate.
+DESCRIZIONI = json.loads((RADICE / "data" / "descrizioni.json").read_text(encoding="utf-8"))
+for _p in PEZZI:
+    _p["descrizione"] = DESCRIZIONI.get(_p["slug"], _p["descrizione"])
 BASE = NEGOZIO["url"].rstrip("/")
 
 # chiave interna -> percorso (uguale al vecchio sito), nomi e testi
@@ -34,6 +38,8 @@ CATEGORIE = {
         "testo": "Piccole sculture in legno dipinto, nate anche dai frammenti dei mobili restaurati.",
     },
 }
+
+CORRIERI = "BRT o Poste Italiane"
 
 SPEDIZIONI = [
     ("Credenze, armadi e pezzi voluminosi", "150 €"),
@@ -185,7 +191,7 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", immagine_og=None,
         <ul>{"".join(f'<li><a href="{u}">{t}</a></li>' for u, t, _ in voci[:4])}</ul>
       </div>
       <div>
-        <h2>Negozio</h2>
+        <h2>Contatti</h2>
         <ul>
           <li><a href="{NEGOZIO['mappa']}">{e(NEGOZIO['indirizzo'])}, {e(NEGOZIO['citta'])}</a></li>
           <li><a href="tel:+39{NEGOZIO['telefono'].replace(' ', '')}">{e(NEGOZIO['telefono'])}</a></li>
@@ -244,23 +250,22 @@ def griglia(r, pezzi, classe="griglia"):
 def blocco_visita(r, titolo_tag="h2"):
     return f"""<div class="visita">
   <div>
-    <p class="occhiello">Il negozio</p>
-    <{titolo_tag}>Vieni a vederli <em>dal vivo</em></{titolo_tag}>
-    <p>In negozio a Trieste trovi tutti i pezzi — e dal vivo, spesso, sono ancora più belli. Per il ritiro di un acquisto avvisaci prima: prepariamo il pezzo e l’imballo.</p>
+    <p class="occhiello">Contatti</p>
+    <{titolo_tag}>Hai una domanda <em>su un pezzo?</em></{titolo_tag}>
+    <p>Misure, colori, foto in più, tempi di consegna: scrivici su WhatsApp o per email, ti rispondiamo noi di persona, di solito in giornata.</p>
     <dl>
-      <div><dt>Indirizzo</dt><dd><a href="{NEGOZIO['mappa']}">{e(NEGOZIO['indirizzo'])}, {NEGOZIO['cap']} {e(NEGOZIO['citta'])}</a></dd></div>
-      <div><dt>Orari</dt><dd>{e(NEGOZIO['orari_testo'])}</dd></div>
-      <div><dt>Telefono e WhatsApp</dt><dd><a href="tel:+39{NEGOZIO['telefono'].replace(' ', '')}">{e(NEGOZIO['telefono'])}</a></dd></div>
+      <div><dt>WhatsApp e telefono</dt><dd><a href="tel:+39{NEGOZIO['telefono'].replace(' ', '')}">{e(NEGOZIO['telefono'])}</a></dd></div>
       <div><dt>Email</dt><dd><a href="mailto:{NEGOZIO['email']}">{e(NEGOZIO['email'])}</a></dd></div>
+      <div><dt>Laboratorio</dt><dd>{e(NEGOZIO['indirizzo'])}, {NEGOZIO['cap']} {e(NEGOZIO['citta'])} · {e(NEGOZIO['orari_testo'])}</dd></div>
     </dl>
     <div class="azioni">
-      <a class="btn btn-scuro" href="{NEGOZIO['mappa']}">Indicazioni stradali</a>
-      <a class="btn btn-whatsapp" href="{wa('Ciao DART, vorrei passare in negozio a vedere i pezzi.')}">{ICONE['whatsapp']}Scrivici</a>
+      <a class="btn btn-whatsapp" href="{wa('Ciao DART, vorrei qualche informazione su un pezzo.')}">{ICONE['whatsapp']}Scrivici su WhatsApp</a>
+      <a class="btn btn-chiaro" href="mailto:{NEGOZIO['email']}">Scrivi un’email</a>
     </div>
   </div>
   <a class="mappa" href="{NEGOZIO['mappa']}">
     {immagine(r, {"file": "negozio", "w": 1050, "h": 1400}, "Il negozio DART in via Luigi Cadorna a Trieste", "(min-width: 760px) 50vw, 100vw")}
-    <span>Apri in Google Maps ↗</span>
+    <span>Il laboratorio a Trieste ↗</span>
   </a>
 </div>"""
 
@@ -271,13 +276,13 @@ def blocco_info(r):
     return f"""<div class="info">
   <div class="info-scheda">
     <h3>Spedizione</h3>
-    <p>Tariffa fissa in base al pezzo, imballaggio fatto a mano da noi.</p>
+    <p>Spediamo in tutta Italia con {CORRIERI}. Tariffa fissa in base al pezzo, imballaggio fatto a mano da noi.</p>
     <ul>{righe}</ul>
   </div>
   <div class="info-scheda">
-    <h3>Consegna e ritiro</h3>
-    <p>Dopo l’ordine ti chiamiamo per concordare il giorno: di solito i mobili arrivano entro due settimane, quadri e tavolini entro dieci giorni lavorativi.</p>
-    <p>Il ritiro in negozio a Trieste è gratuito, su appuntamento. Piano, ascensore, ZTL: diccelo e ci organizziamo.</p>
+    <h3>Consegna</h3>
+    <p>La consegna è <b>al piano strada</b>: il corriere lascia il pezzo all’ingresso dell’edificio, non lo porta su per le scale. Per i mobili più grandi, organizzati con qualcuno che ti aiuti a portarli in casa.</p>
+    <p>Di solito i mobili arrivano entro due settimane, quadri e oggetti entro dieci giorni lavorativi. Quando il pezzo parte ti mandiamo il codice per seguire la spedizione.</p>
     <p><a href="{legali['Spedizioni e consegna']}">Tutti i dettagli sulla spedizione</a></p>
   </div>
   <div class="info-scheda">
@@ -322,7 +327,6 @@ def home():
   {immagine(r, foto, "", "(min-width: 640px) 33vw, 100vw")}
   <div><h3>{c['nome']}</h3><span>{n} {'pezzo disponibile' if n == 1 else 'pezzi disponibili'}</span></div>
 </a>"""
-    orari_json = e(json.dumps(NEGOZIO["orari"]))
     corpo = f"""<section class="apertura">
   <div class="contenitore">
     <div>
@@ -331,21 +335,20 @@ def home():
       <p class="lead">Pezzi d’epoca restaurati e dipinti a mano, uno per uno. E i quadri che li accompagnano. Ogni pezzo è unico: quando è venduto, è venduto.</p>
       <div class="azioni">
         <a class="btn btn-scuro" href="negozio/">Guarda i {len(disponibili)} pezzi disponibili</a>
-        <a class="btn btn-chiaro" href="#visita">Vieni in negozio</a>
+        <a class="btn btn-chiaro" href="#come-funziona">Come funziona la spedizione</a>
       </div>
-      <p class="stato-negozio" data-orari="{orari_json}"><span class="punto"></span><span class="testo">{e(NEGOZIO['orari_testo'])}</span></p>
     </div>
     <figure>
       {immagine(r, {"file": "hero", "w": 1050, "h": 1400}, "Interno del negozio DART a Trieste: un mobile dipinto a mano con uccelli e i quadri alle pareti", "(min-width: 760px) 45vw, 100vw", lazy=False)}
-      <figcaption>Via Luigi Cadorna 13, Trieste</figcaption>
+      <figcaption>Restaurati e dipinti a mano a Trieste</figcaption>
     </figure>
   </div>
 </section>
 <section class="forza" aria-label="Perché DART">
   <ul>
-    <li>{ICONE['unico']}<strong>Ogni pezzo è unico</strong><span>Niente repliche, niente produzione in serie.</span></li>
-    <li>{ICONE['pennello']}<strong>Restauro e pittura a mano</strong><span>Tutto fatto in laboratorio, a Trieste.</span></li>
-    <li>{ICONE['furgone']}<strong>Spedizione in tutta Italia</strong><span>Imballaggio curato, consegna concordata con te.</span></li>
+    <li>{ICONE['unico']}<strong>Pezzi unici, dipinti a mano</strong><span>Niente repliche: ogni pezzo esiste in un solo esemplare.</span></li>
+    <li>{ICONE['furgone']}<strong>Spedizione in tutta Italia</strong><span>Con {CORRIERI}, imballaggio fatto a mano da noi.</span></li>
+    <li>{ICONE['carrello']}<strong>Pagamento sicuro</strong><span>Carta, Apple Pay, Google Pay o bonifico. 14 giorni per il reso.</span></li>
   </ul>
 </section>
 <section class="sezione">
@@ -363,7 +366,13 @@ def home():
     <div class="categorie">{categorie}</div>
   </div>
 </section>
-<section class="sezione" id="laboratorio">
+<section class="sezione" id="come-funziona">
+  <div class="contenitore">
+    <div class="sezione-testa"><div><p class="occhiello">Come funziona</p><h2>Dall’ordine a casa tua</h2></div></div>
+    {blocco_info(r)}
+  </div>
+</section>
+<section class="sezione sezione-alt" id="laboratorio">
   <div class="contenitore storia">
     <figure>{immagine(r, trova_foto("armadio-botanico-3"), "Dettaglio di un mobile dipinto a mano da DART", "(min-width: 760px) 40vw, 100vw")}</figure>
     <div>
@@ -378,13 +387,7 @@ def home():
     </div>
   </div>
 </section>
-<section class="sezione sezione-alt">
-  <div class="contenitore">
-    <div class="sezione-testa"><div><p class="occhiello">Come funziona</p><h2>Dall’ordine a casa tua</h2></div></div>
-    {blocco_info(r)}
-  </div>
-</section>
-<section class="sezione" id="visita">
+<section class="sezione" id="contatti">
   <div class="contenitore">{blocco_visita(r)}</div>
 </section>"""
     return pagina(percorso="index.html", titolo="DART — Mobili restaurati e quadri dipinti a mano · Trieste",
@@ -450,14 +453,16 @@ def scheda(p):
             for i, f in enumerate(foto)) + f'</div><p class="galleria-conta" aria-live="polite">1 di {len(foto)}</p>'
 
     if p["disponibile"]:
-        msg = f"Ciao DART, mi interessa «{p['nome']}» ({url}). È ancora disponibile?"
+        msg = f"Ciao DART, ho una domanda su «{p['nome']}» ({url})."
+        compra = NEGOZIO["acquisto_online"].format(id=p["id"]) if p["prezzo"] and NEGOZIO.get("acquisto_online") else ""
         azioni = ""
-        if p["prezzo"] and NEGOZIO.get("acquisto_online"):
-            azioni += (f'<a class="btn btn-scuro btn-pieno" href="{NEGOZIO["acquisto_online"].format(id=p["id"])}">'
-                       f'{ICONE["carrello"]}Acquista online</a>')
-        azioni += f'<a class="btn btn-whatsapp btn-pieno" href="{wa(msg)}">{ICONE["whatsapp"]}Chiedi su WhatsApp</a>'
-        azioni += f'<a class="btn btn-chiaro btn-pieno" href="{wa("Ciao DART, vorrei passare in negozio a vedere «" + p["nome"] + "».")}">Vieni a vederlo in negozio</a>'
-        nota = "Pagamento sicuro con carta, Apple Pay, Google Pay o bonifico. Ti contattiamo dopo l’ordine per concordare la consegna."
+        if compra:
+            azioni += f'<a class="btn btn-scuro btn-pieno" href="{compra}">{ICONE["carrello"]}Acquista ora</a>'
+            azioni += f'<a class="btn btn-chiaro btn-pieno" href="{wa(msg)}">{ICONE["whatsapp"]}Hai una domanda? Scrivici</a>'
+        else:
+            azioni += f'<a class="btn btn-whatsapp btn-pieno" href="{wa(msg)}">{ICONE["whatsapp"]}Chiedi il prezzo su WhatsApp</a>'
+        nota = (f"Pagamento sicuro con carta, Apple Pay, Google Pay o bonifico. Spedizione con {CORRIERI}, "
+                "consegna al piano strada. Hai 14 giorni per il reso.")
         etichetta = '<span class="etichetta">Pezzo unico</span>'
         prezzo = euro(p["prezzo"]) if p["prezzo"] else "Prezzo su richiesta"
     else:
@@ -478,7 +483,7 @@ def scheda(p):
             spec.append(("Spedizione in Italia", p["spedizione"]))
         if p["spedizione_isole"]:
             spec.append(("Spedizione in Sicilia e Sardegna", p["spedizione_isole"]))
-        spec.append(("Ritiro in negozio", "Gratuito, a Trieste"))
+        spec.append(("Consegna", f"Al piano strada, con {CORRIERI}"))
     if p["garanzia"]:
         spec.append(("Garanzia", p["garanzia"]))
     spec_html = "".join(f"<li><span>{e(k)}</span><span>{e(v)}</span></li>" for k, v in spec)
@@ -498,7 +503,7 @@ def scheda(p):
     if p["disponibile"]:
         barra = f"""<div class="barra-acquisto" aria-hidden="true">
   <div><strong>{e(p['nome'])}</strong><span>{e(prezzo)}</span></div>
-  <a class="btn btn-whatsapp" href="{wa(msg)}" tabindex="-1">{ICONE['whatsapp']}Chiedi</a>
+  {f'<a class="btn btn-scuro" href="{compra}" tabindex="-1">Acquista</a>' if compra else f'<a class="btn btn-whatsapp" href="{wa(msg)}" tabindex="-1">{ICONE["whatsapp"]}Chiedi</a>'}
 </div>"""
 
     descr = p["descrizione"] or (f"<p>{e(p['sottotitolo'])}</p>" if p["sottotitolo"] else "")
@@ -523,8 +528,9 @@ def scheda(p):
       <ul class="specifiche">{spec_html}</ul>
       <div class="fisarmonica">
         <details><summary>Spedizione e consegna</summary>
-          <p>Spedizione in tutta Italia con corriere, a tariffa fissa in base al pezzo; per Sicilia e Sardegna c’è un supplemento. Dopo l’ordine ti contattiamo per concordare il giorno di consegna.</p>
-          <p>In alternativa puoi ritirare gratuitamente in negozio a Trieste, su appuntamento. <a href="{legali['Spedizioni e consegna']}">Tutti i dettagli</a></p>
+          <p>Spediamo in tutta Italia con {CORRIERI}, a tariffa fissa in base al pezzo; per Sicilia e Sardegna c’è un supplemento. Imballiamo noi ogni pezzo, a mano.</p>
+          <p>La consegna è al piano strada: il corriere lascia il pezzo all’ingresso dell’edificio e non lo porta su per le scale. Quando il pezzo parte ti mandiamo il codice per seguire la spedizione.</p>
+          <p>Abiti a Trieste? Puoi anche ritirarlo gratis in laboratorio, su appuntamento. <a href="{legali['Spedizioni e consegna']}">Tutti i dettagli</a></p>
         </details>
         <details><summary>Resi e garanzia</summary>
           <p>Hai 14 giorni dalla consegna per esercitare il diritto di recesso, come previsto dal Codice del Consumo. Il rimborso avviene sullo stesso metodo di pagamento.</p>
@@ -586,12 +592,12 @@ def scheda(p):
 def contatti():
     corpo = f"""<div class="contenitore sezione">{blocco_visita("../", "h1")}</div>
 <section class="sezione sezione-alt"><div class="contenitore">
-  <div class="sezione-testa"><div><p class="occhiello">Domande frequenti</p><h2>Prima di acquistare</h2></div></div>
+  <div class="sezione-testa"><div><p class="occhiello">Prima di acquistare</p><h2>Spedizione, consegna e resi</h2></div></div>
   {blocco_info("../")}
   <p style="margin-top:28px">Se ci scrivi per un ordine già fatto, mettici il numero dell’ordine: facciamo prima.</p>
 </div></section>"""
-    return pagina(percorso="contatti/index.html", titolo="Contatti e orari — DART, Via Luigi Cadorna 13, Trieste",
-                  descrizione=f"Il negozio DART è in {NEGOZIO['indirizzo']}, Trieste. {NEGOZIO['orari_testo']}. Telefono e WhatsApp {NEGOZIO['telefono']}.",
+    return pagina(percorso="contatti/index.html", titolo="Contatti — DART, mobili e quadri dipinti a mano",
+                  descrizione=f"Domande su un pezzo, una spedizione o un ordine? Scrivi a DART su WhatsApp al {NEGOZIO['telefono']} o a {NEGOZIO['email']}.",
                   corpo=corpo, attivo="contatti", dati_strutturati=[negozio_ld()])
 
 
@@ -611,13 +617,13 @@ def main():
         "negozio/index.html", "Tutti i pezzi",
         "Mobili restaurati, quadri e sculture: tutto dipinto a mano a Trieste, tutto in un solo esemplare.",
         PEZZI, "negozio", "Tutti i pezzi — Mobili dipinti, quadri e sculture | DART Trieste",
-        "Mobili d’epoca restaurati e dipinti a mano, quadri originali e sculture in legno. Pezzi unici dal laboratorio DART di Trieste, spedizione in tutta Italia."))
+        f"Mobili d’epoca restaurati e dipinti a mano, quadri originali e sculture in legno. Pezzi unici dal laboratorio DART di Trieste, spedizione in tutta Italia con {CORRIERI}."))
     for k, c in CATEGORIE.items():
         pezzi = [p for p in PEZZI if p["categoria"] == k]
         indirizzi.append(catalogo(
             c["percorso"] + "index.html", c["nome"], c["testo"], pezzi, k,
             f"{c['nome']} dipint{'e' if k == 'sculture' else 'i'} a mano — Pezzi unici | DART Trieste",
-            c["testo"] + " Spedizione in tutta Italia o ritiro in negozio a Trieste."))
+            c["testo"] + f" Acquisto online, spedizione in tutta Italia con {CORRIERI}."))
     for p in PEZZI:
         indirizzi.append(scheda(p))
     indirizzi.append(contatti())

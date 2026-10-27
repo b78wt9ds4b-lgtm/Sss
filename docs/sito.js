@@ -13,26 +13,6 @@
     });
   }
 
-  /* "Aperto ora" calcolato sugli orari del negozio, ora di Trieste */
-  var stato = document.querySelector('[data-orari]');
-  if (stato) {
-    try {
-      var orari = JSON.parse(stato.getAttribute('data-orari'));
-      var parti = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-      }).formatToParts(new Date());
-      var v = {};
-      parti.forEach(function (p) { v[p.type] = p.value; });
-      var giorno = v.weekday.slice(0, 2);
-      var adesso = v.hour + ':' + v.minute;
-      var aperto = orari.some(function (o) {
-        return o.giorni.indexOf(giorno) >= 0 && o.fasce.some(function (f) { return adesso >= f[0] && adesso < f[1]; });
-      });
-      stato.classList.toggle('aperto', aperto);
-      stato.querySelector('.testo').textContent = aperto ? 'Negozio aperto ora' : 'Negozio chiuso ora';
-    } catch (e) { /* lascia il testo di partenza */ }
-  }
-
   /* Filtro "solo disponibili" nel catalogo */
   var interruttore = document.querySelector('[data-solo-disponibili]');
   if (interruttore) {

@@ -130,9 +130,6 @@ button { font: inherit; color: inherit; }
 .apertura figure { margin: 0; position: relative; }
 .apertura figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--raggio-l); }
 .apertura figcaption { position: absolute; left: 14px; bottom: 14px; background: rgba(253, 251, 246, .92); padding: 6px 12px; border-radius: 999px; font-size: 13px; color: var(--inchiostro); }
-.stato-negozio { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--testo); margin-top: 22px; }
-.stato-negozio .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--tenue); }
-.stato-negozio.aperto .punto { background: #3E9B5A; box-shadow: 0 0 0 4px rgba(62, 155, 90, .18); }
 
 @media (min-width: 760px) {
   .apertura { padding: 56px 0 80px; }
