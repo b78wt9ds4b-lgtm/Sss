@@ -2,6 +2,7 @@
   {
     "id": 491,
     "slug": "armadio-botanico",
+    "pubblicato": "2026-10-22",
     "nome": "Armadio botanico",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -59,6 +60,7 @@
   {
     "id": 428,
     "slug": "nuotatrici",
+    "pubblicato": "2026-09-26",
     "nome": "Nuotatrici",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -81,6 +83,7 @@
   {
     "id": 496,
     "slug": "fiori-di-mezzanotte",
+    "pubblicato": "2026-10-22",
     "nome": "Fiori di mezzanotte",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -118,6 +121,7 @@
   {
     "id": 378,
     "slug": "tavolo-antico",
+    "pubblicato": "2026-09-23",
     "nome": "Tavolo antico",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -160,6 +164,7 @@
   {
     "id": 431,
     "slug": "la-regina-rossa",
+    "pubblicato": "2026-09-26",
     "nome": "La regina rossa",
     "categoria": "sculture",
     "sottotitolo": "",
@@ -187,6 +192,7 @@
   {
     "id": 435,
     "slug": "pesce-doro",
+    "pubblicato": "2026-09-26",
     "nome": "Pesce d’Oro",
     "categoria": "sculture",
     "sottotitolo": "",
@@ -219,6 +225,7 @@
   {
     "id": 388,
     "slug": "quadro-con-vaso-dorato",
+    "pubblicato": "2026-09-23",
     "nome": "Giardino di Mezzanotte",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -241,6 +248,7 @@
   {
     "id": 438,
     "slug": "leviatano-doro",
+    "pubblicato": "2026-09-26",
     "nome": "Leviatano d’Oro",
     "categoria": "sculture",
     "sottotitolo": "",
@@ -268,6 +276,7 @@
   {
     "id": 392,
     "slug": "quadro-con-vaso-dorato-2",
+    "pubblicato": "2026-09-23",
     "nome": "Bouquet Notturno",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -300,6 +309,7 @@
   {
     "id": 442,
     "slug": "equilibrio",
+    "pubblicato": "2026-09-26",
     "nome": "Equilibrio",
     "categoria": "sculture",
     "sottotitolo": "",
@@ -332,6 +342,7 @@
   {
     "id": 399,
     "slug": "quadro-con-i-fiori",
+    "pubblicato": "2026-09-23",
     "nome": "Giardino di Porcellana",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -374,6 +385,7 @@
   {
     "id": 403,
     "slug": "tavolo-anni30-rotondo",
+    "pubblicato": "2026-09-23",
     "nome": "Tavolo anni’30 rotondo",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -406,6 +418,7 @@
   {
     "id": 409,
     "slug": "tavolino",
+    "pubblicato": "2026-09-23",
     "nome": "Tavolino",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -438,6 +451,7 @@
   {
     "id": 470,
     "slug": "cassettiera-verde-oliva",
+    "pubblicato": "2026-10-11",
     "nome": "Cassettiera verde oliva",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -480,6 +494,7 @@
   {
     "id": 413,
     "slug": "quadro-con-i-fiori-2",
+    "pubblicato": "2026-09-23",
     "nome": "Bouquet Mediterraneo",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -512,6 +527,7 @@
   {
     "id": 473,
     "slug": "bordeaux-in-fiore",
+    "pubblicato": "2026-10-15",
     "nome": "Bordeaux in fiore",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -539,6 +555,7 @@
   {
     "id": 478,
     "slug": "floraison",
+    "pubblicato": "2026-10-15",
     "nome": "Floraison",
     "categoria": "quadri",
     "sottotitolo": "",
@@ -571,6 +588,7 @@
   {
     "id": 18,
     "slug": "mobile-art-deco",
+    "pubblicato": "2026-09-14",
     "nome": "Mobile Art Déco",
     "categoria": "mobili",
     "sottotitolo": "Ante decorate nei toni del verde",
@@ -608,6 +626,7 @@
   {
     "id": 33,
     "slug": "tavolino-rotondo",
+    "pubblicato": "2026-09-14",
     "nome": "Tavolino rotondo con base rossa",
     "categoria": "mobili",
     "sottotitolo": "Piano decorato, base laccata rossa",
@@ -645,6 +664,7 @@
   {
     "id": 49,
     "slug": "sgabello-rosso",
+    "pubblicato": "2026-09-14",
     "nome": "Sgabello rosso con fiori",
     "categoria": "mobili",
     "sottotitolo": "Color corallo, decoro floreale",
@@ -677,6 +697,7 @@
   {
     "id": 53,
     "slug": "quadro-fiori-azzurro",
+    "pubblicato": "2026-09-14",
     "nome": "Azzurro e Oro",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",
@@ -714,6 +735,7 @@
   {
     "id": 426,
     "slug": "mobile-anni50",
+    "pubblicato": "2026-09-26",
     "nome": "Mobile anni’50",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -776,6 +798,7 @@
   {
     "id": 386,
     "slug": "credenza-antica",
+    "pubblicato": "2026-09-23",
     "nome": "Credenza antica",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -823,6 +846,7 @@
   {
     "id": 11,
     "slug": "credenza-art-deco",
+    "pubblicato": "2026-09-14",
     "nome": "Credenza Art Déco",
     "categoria": "mobili",
     "sottotitolo": "Radica restaurata · interno dipinto a mano",
@@ -870,6 +894,7 @@
   {
     "id": 456,
     "slug": "armadio-con-pesce",
+    "pubblicato": "2026-10-02",
     "nome": "Armadio con pesce",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -952,6 +977,7 @@
   {
     "id": 464,
     "slug": "mobile-botanico",
+    "pubblicato": "2026-10-08",
     "nome": "Mobile botanico",
     "categoria": "mobili",
     "sottotitolo": "",
@@ -1004,6 +1030,7 @@
   {
     "id": 23,
     "slug": "cassettiera-vintage",
+    "pubblicato": "2026-09-14",
     "nome": "Cassettiera vintage",
     "categoria": "mobili",
     "sottotitolo": "Legno naturale e decoro verde",
@@ -1031,6 +1058,7 @@
   {
     "id": 26,
     "slug": "mobile-uccellini",
+    "pubblicato": "2026-09-14",
     "nome": "Mobile vintage con uccellini",
     "categoria": "mobili",
     "sottotitolo": "Uccelli dipinti a mano nei toni verde salvia",
@@ -1063,6 +1091,7 @@
   {
     "id": 30,
     "slug": "tavolino-fiori",
+    "pubblicato": "2026-09-14",
     "nome": "Tavolino con fiori",
     "categoria": "mobili",
     "sottotitolo": "Piano dipinto con fiori astratti in vaso",
@@ -1090,6 +1119,7 @@
   {
     "id": 38,
     "slug": "tavolino-legno",
+    "pubblicato": "2026-09-14",
     "nome": "Tavolino in legno",
     "categoria": "mobili",
     "sottotitolo": "Decoro floreale sul piano, ripiano inferiore",
@@ -1112,6 +1142,7 @@
   {
     "id": 39,
     "slug": "armadio-dipinto",
+    "pubblicato": "2026-09-14",
     "nome": "Armadio dipinto",
     "categoria": "mobili",
     "sottotitolo": "Restaurato nei toni del verde polvere",
@@ -1154,6 +1185,7 @@
   {
     "id": 45,
     "slug": "scrivania-vintage",
+    "pubblicato": "2026-09-14",
     "nome": "Scrivania vintage",
     "categoria": "mobili",
     "sottotitolo": "Legno massello con cassettiera laterale",
@@ -1186,6 +1218,7 @@
   {
     "id": 58,
     "slug": "quadro-fiori-blu",
+    "pubblicato": "2026-09-14",
     "nome": "Fiori in vaso — fondo blu notte",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",
@@ -1213,6 +1246,7 @@
   {
     "id": 61,
     "slug": "quadro-donna-corona",
+    "pubblicato": "2026-09-14",
     "nome": "Donna con la corona",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",
@@ -1240,6 +1274,7 @@
   {
     "id": 64,
     "slug": "quadro-donna-legno",
+    "pubblicato": "2026-09-14",
     "nome": "Siamo tutte regine",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su legno",
@@ -1262,6 +1297,7 @@
   {
     "id": 66,
     "slug": "quadro-nuotatrici",
+    "pubblicato": "2026-09-14",
     "nome": "Nuotatrici",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela, grande formato",
@@ -1304,6 +1340,7 @@
   {
     "id": 72,
     "slug": "quadro-colomba",
+    "pubblicato": "2026-09-14",
     "nome": "Donna con la colomba",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",
@@ -1326,6 +1363,7 @@
   {
     "id": 74,
     "slug": "quadro-due-donne",
+    "pubblicato": "2026-09-14",
     "nome": "Due donne con la corona",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",

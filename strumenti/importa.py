@@ -89,8 +89,15 @@ def euro(minori):
     return int(minori) / 100 if minori else None
 
 
+def date_pubblicazione():
+    """Data in cui ogni pezzo è stato messo in vendita (serve per l'etichetta «Nuovo»)."""
+    voci = json.loads(scarica(f"{SITO}/wp-json/wp/v2/product?per_page=100&_fields=slug,date"))
+    return {v["slug"]: v["date"][:10] for v in voci}
+
+
 def importa_pezzi():
     prodotti = json.loads(scarica(f"{SITO}/wp-json/wc/store/v1/products?per_page=100"))
+    date = date_pubblicazione()
     pezzi = []
     for p in prodotti:
         slug = p["slug"]
@@ -110,6 +117,7 @@ def importa_pezzi():
         pezzi.append({
             "id": p["id"],
             "slug": slug,
+            "pubblicato": date.get(slug, ""),
             "nome": correggi(html.unescape(p["name"])),
             "categoria": CATEGORIE.get(p["categories"][0]["slug"], "altro"),
             "sottotitolo": correggi(sottotitolo),

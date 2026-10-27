@@ -13,16 +13,40 @@
     });
   }
 
-  /* Filtro "solo disponibili" nel catalogo */
+  /* Etichetta «Nuovo»: solo nei 30 giorni dopo la messa in vendita,
+     così sparisce da sola anche senza ricostruire il sito */
+  var oggi = Date.now();
+  Array.prototype.forEach.call(document.querySelectorAll('[data-nuovo]'), function (el) {
+    var dal = Date.parse(el.getAttribute('data-nuovo'));
+    if (!isNaN(dal) && oggi - dal < 30 * 864e5) el.hidden = false;
+  });
+
+  /* Filtro "solo disponibili" nel catalogo; con #venduti nell'indirizzo parte già aperto */
   var interruttore = document.querySelector('[data-solo-disponibili]');
   if (interruttore) {
     var venduti = document.querySelector('.venduti');
+    var mostraVenduti = function (si) {
+      interruttore.setAttribute('aria-pressed', String(si));
+      if (venduti) venduti.hidden = !si;
+    };
     interruttore.addEventListener('click', function () {
-      var attivo = interruttore.getAttribute('aria-pressed') === 'true';
-      interruttore.setAttribute('aria-pressed', String(!attivo));
-      if (venduti) venduti.hidden = attivo;
+      mostraVenduti(interruttore.getAttribute('aria-pressed') !== 'true');
     });
+    if (location.hash === '#venduti' && venduti) {
+      mostraVenduti(true);
+      venduti.scrollIntoView();
+    }
   }
+
+  /* Condividi: sul telefono apre il menu di condivisione, altrimenti WhatsApp */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-condividi]'), function (link) {
+    if (!navigator.share) return;
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      navigator.share({ title: link.getAttribute('data-titolo'), url: link.getAttribute('data-url') })
+        .catch(function () { /* condivisione annullata */ });
+    });
+  });
 
   /* Galleria della scheda pezzo */
   var nastro = document.querySelector('.galleria-nastro');
@@ -73,12 +97,13 @@
     }
   }
 
-  /* Barra d'acquisto fissa: compare quando i pulsanti principali escono dallo schermo */
+  /* Barra d'acquisto fissa (solo telefono): resta visibile finché i pulsanti
+     principali non sono sullo schermo, così prezzo e «Acquista» sono sempre a portata */
   var barra = document.querySelector('.barra-acquisto');
   var azioni = document.querySelector('.scheda-azioni');
   if (barra && azioni && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (voci) {
-      barra.classList.toggle('visibile', !voci[0].isIntersecting && voci[0].boundingClientRect.top < 0);
+      barra.classList.toggle('visibile', !voci[0].isIntersecting);
     }).observe(azioni);
   }
 })();

@@ -72,6 +72,7 @@ button { font: inherit; color: inherit; }
 .contenitore { width: 100%; max-width: var(--larghezza); margin: 0 auto; padding: 0 var(--gutter); }
 .salta { position: absolute; left: -9999px; top: 8px; background: var(--inchiostro); color: #fff; padding: 8px 14px; z-index: 100; border-radius: var(--raggio); }
 .salta:focus { left: 8px; }
+[hidden] { display: none !important; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .occhiello { font: 500 12px/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--tenue); margin: 0 0 12px; }
@@ -91,6 +92,11 @@ button { font: inherit; color: inherit; }
 .btn-whatsapp { background: var(--whatsapp); color: #fff; }
 .btn-whatsapp:hover { background: #17713d; }
 .btn-pieno { width: 100%; }
+.btn-grande { min-height: 56px; font-size: 16.5px; font-weight: 600; }
+.btn-crema { background: var(--crema); color: var(--inchiostro); }
+.btn-crema:hover { background: #fff; }
+.btn-contorno-chiaro { background: transparent; color: var(--crema); border-color: rgba(255, 255, 255, .35); }
+.btn-contorno-chiaro:hover { border-color: #fff; }
 
 /* ---------- Testata ---------- */
 .testata {
@@ -128,8 +134,12 @@ button { font: inherit; color: inherit; }
 .apertura .lead { font-size: 18px; max-width: 34em; margin: 18px 0 28px; }
 .apertura .azioni { display: flex; flex-wrap: wrap; gap: 12px; }
 .apertura figure { margin: 0; position: relative; }
-.apertura figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--raggio-l); }
+.apertura figure img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; border-radius: var(--raggio-l); }
 .apertura figcaption { position: absolute; left: 14px; bottom: 14px; background: rgba(253, 251, 246, .92); padding: 6px 12px; border-radius: 999px; font-size: 13px; color: var(--inchiostro); }
+
+.rassicura { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; color: var(--testo); }
+.rassicura li { display: inline-flex; align-items: center; gap: 6px; }
+.rassicura svg { width: 16px; height: 16px; color: var(--salvia); stroke-width: 2.4; flex: none; }
 
 @media (min-width: 760px) {
   .apertura { padding: 56px 0 80px; }
@@ -147,14 +157,14 @@ button { font: inherit; color: inherit; }
 @media (min-width: 760px) { .forza ul { grid-template-columns: repeat(3, 1fr); padding-block: 28px; } }
 
 /* ---------- Sezioni ---------- */
-.sezione { padding: 64px 0; }
+.sezione { padding-block: 64px; }
 .sezione-alt { background: var(--crema); border-block: 1px solid var(--linea); }
 .sezione-testa { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 28px; }
 .sezione-testa h2 { font-size: clamp(30px, 5vw, 44px); }
 .sezione-testa p { margin: 10px 0 0; max-width: 36em; }
 .link-freccia { font-weight: 500; color: var(--inchiostro); text-decoration: none; border-bottom: 1px solid var(--linea-forte); padding-bottom: 2px; white-space: nowrap; }
 .link-freccia:hover { border-color: var(--inchiostro); }
-@media (min-width: 760px) { .sezione { padding: 96px 0; } }
+@media (min-width: 760px) { .sezione { padding-block: 96px; } }
 
 /* ---------- Categorie ---------- */
 .categorie { display: grid; gap: 14px; grid-template-columns: 1fr; }
@@ -180,8 +190,12 @@ button { font: inherit; color: inherit; }
   .pezzo a:hover .pezzo-foto img:first-child { transform: scale(1.03); }
   .pezzo a:hover .pezzo-foto img + img { opacity: 1; }
 }
-.etichetta { position: absolute; top: 10px; left: 10px; background: var(--crema); color: var(--inchiostro); font: 600 11px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; }
+.etichette { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; flex-wrap: wrap; gap: 6px; pointer-events: none; }
+.etichetta { display: inline-block; background: var(--crema); color: var(--inchiostro); font: 600 11px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; }
 .etichetta-venduto { background: var(--inchiostro); color: var(--crema); }
+.etichetta-nuovo { background: var(--terra); color: #fff; }
+.conta-foto { position: absolute; right: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 4px; padding: 4px 9px; border-radius: 999px; background: rgba(20, 16, 12, .55); color: #fff; font-size: 12px; font-weight: 500; }
+.conta-foto svg { width: 14px; height: 14px; }
 .pezzo h3 { font-size: 19px; margin: 12px 0 4px; }
 .pezzo .sotto { font-size: 14px; color: var(--tenue); margin: 0; }
 .pezzo .riga { display: flex; flex-direction: column-reverse; gap: 2px; margin-top: 6px; }
@@ -199,13 +213,14 @@ button { font: inherit; color: inherit; }
 .chip:hover { border-color: var(--inchiostro); }
 .chip[aria-current="page"], .chip[aria-pressed="true"] { background: var(--inchiostro); border-color: var(--inchiostro); color: var(--crema); }
 .chip small { opacity: .7; font-size: 12px; }
-.catalogo-testa { padding: 40px 0 24px; }
+.catalogo-testa { padding-top: 40px; padding-bottom: 24px; }
 .catalogo-testa h1 { font-size: clamp(36px, 7vw, 56px); }
 .catalogo-testa p { max-width: 38em; margin: 12px 0 0; }
 .venduti { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--linea); }
 .venduti h2 { font-size: 30px; }
 .venduti > p { margin: 8px 0 28px; color: var(--tenue); }
 .vuoto { padding: 40px 0; color: var(--tenue); }
+.catalogo-corpo { padding-top: 28px; padding-bottom: 80px; }
 
 /* ---------- Laboratorio / storia ---------- */
 .storia { display: grid; gap: 32px; align-items: center; }
@@ -221,6 +236,12 @@ button { font: inherit; color: inherit; }
 @media (min-width: 760px) { .storia { grid-template-columns: .9fr 1.1fr; gap: 64px; } }
 
 /* ---------- Come funziona ---------- */
+.passi-acquisto { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 18px; }
+.passi-acquisto li { display: flex; gap: 14px; align-items: flex-start; }
+.passi-acquisto .num { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--inchiostro); color: var(--crema); display: grid; place-items: center; font: 400 17px/1 var(--serif); }
+.passi-acquisto strong { display: block; color: var(--inchiostro); font-weight: 600; margin-bottom: 2px; }
+.passi-acquisto div span { display: block; font-size: 15px; }
+@media (min-width: 900px) { .passi-acquisto { grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 36px; } }
 .info { display: grid; gap: 16px; }
 .info-scheda { background: var(--sabbia); border: 1px solid var(--linea); border-radius: var(--raggio-l); padding: 24px; }
 .info-scheda h3 { font-size: 22px; margin-bottom: 12px; }
@@ -231,10 +252,43 @@ button { font: inherit; color: inherit; }
 .info-scheda p { font-size: 15px; }
 .info-scheda a { color: var(--inchiostro); }
 @media (min-width: 900px) { .info { grid-template-columns: repeat(3, 1fr); } }
+.info-pagamenti { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-top: 22px; font-size: 14px; color: var(--tenue); }
+
+/* ---------- Metodi di pagamento ---------- */
+.pagamenti { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.pagamenti li { display: inline-flex; align-items: center; justify-content: center; height: 30px; min-width: 48px; padding: 0 8px; border: 1px solid var(--linea); border-radius: 6px; background: var(--crema); color: var(--inchiostro); font-size: 12px; font-weight: 500; overflow: hidden; }
+.pagamenti svg { width: 34px; height: 34px; flex: none; }
+.piede .pagamenti-scuri { display: flex; gap: 6px; margin-top: 36px; }
+.pagamenti-scuri li { background: transparent; border-color: rgba(255, 255, 255, .18); color: #F2EBE0; }
+
+/* ---------- Domande frequenti ---------- */
+.faq { display: grid; gap: 24px; }
+.faq h2, .faq h1 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 12px; }
+.faq a { color: var(--inchiostro); }
+.faq .fisarmonica { border-top: 1px solid var(--linea); }
+@media (min-width: 900px) { .faq { grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; } }
+
+/* ---------- Recensioni ---------- */
+.recensioni { display: grid; gap: 16px; }
+.recensione { margin: 0; background: var(--crema); border: 1px solid var(--linea); border-radius: var(--raggio-l); padding: 24px; }
+.recensione blockquote { margin: 0 0 12px; font: italic 400 19px/1.45 var(--serif); color: var(--inchiostro); }
+.recensione figcaption { font-size: 14px; color: var(--tenue); }
+.recensione a { color: var(--inchiostro); }
+@media (min-width: 760px) { .recensioni { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Chiusura: domande e avvisi ---------- */
+.chiusura { display: grid; gap: 16px; }
+.chiusura-scheda { background: var(--sabbia); border: 1px solid var(--linea); border-radius: var(--raggio-l); padding: 28px 24px; }
+.chiusura-scheda h2 { font-size: clamp(26px, 4vw, 34px); margin-bottom: 12px; }
+.chiusura-scheda .azioni { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.chiusura-scura { background: var(--inchiostro); border-color: var(--inchiostro); color: #D9CFC1; }
+.chiusura-scura h2 { color: var(--crema); }
+@media (min-width: 900px) { .chiusura { grid-template-columns: 1fr 1fr; gap: 24px; } .chiusura-scheda { padding: 40px; } }
+.nota-ordine { margin-top: 24px; font-size: 15px; color: var(--tenue); }
 
 /* ---------- Visita ---------- */
 .visita { display: grid; gap: 28px; }
-.visita h2 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 16px; }
+.visita h1, .visita h2 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 16px; }
 .visita dl { margin: 24px 0; display: grid; gap: 14px; }
 .visita dt { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--tenue); }
 .visita dd { margin: 2px 0 0; color: var(--inchiostro); font-size: 17px; }
@@ -268,11 +322,23 @@ button { font: inherit; color: inherit; }
 
 .scheda-corpo h1 { font-size: clamp(34px, 5vw, 48px); }
 .scheda-corpo .sotto { color: var(--tenue); margin: 8px 0 0; }
-.scheda-prezzo { display: flex; align-items: center; gap: 12px; margin: 18px 0 22px; }
-.scheda-prezzo .prezzo { font: 400 30px/1 var(--serif); color: var(--inchiostro); }
-.scheda-prezzo .etichetta { position: static; border: 1px solid var(--linea-forte); }
-.scheda-azioni { display: grid; gap: 10px; margin-bottom: 14px; }
-.nota-acquisto { font-size: 14px; color: var(--tenue); margin: 0 0 24px; }
+.scheda-misure { font-size: 15px; color: var(--testo); margin: 10px 0 0; }
+.scheda-prezzo { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin: 18px 0 6px; }
+.scheda-prezzo .prezzo { font: 400 32px/1 var(--serif); color: var(--inchiostro); margin-right: 4px; }
+.scheda-prezzo .etichetta { border: 1px solid var(--linea-forte); }
+.scheda-prezzo .etichetta-nuovo, .scheda-prezzo .etichetta-venduto { border-color: transparent; }
+.prezzo-nota { font-size: 14px; color: var(--tenue); margin: 0 0 14px; }
+.stima { display: flex; align-items: center; gap: 8px; font-size: 14.5px; color: var(--testo); margin: 0 0 18px; }
+.stima svg { width: 20px; height: 20px; color: var(--salvia); flex: none; }
+.scheda-azioni { display: grid; gap: 10px; margin-bottom: 10px; }
+.unico { font: italic 400 15px/1.4 var(--serif); color: var(--terra); margin: 0 0 18px; text-align: center; }
+.garanzie { list-style: none; margin: 0 0 14px; padding: 16px 18px; display: grid; gap: 12px; background: var(--crema); border: 1px solid var(--linea); border-radius: var(--raggio-l); }
+.garanzie li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; font-size: 14.5px; line-height: 1.45; }
+.garanzie svg { width: 20px; height: 20px; color: var(--salvia); margin-top: 1px; }
+.garanzie strong { color: var(--inchiostro); font-weight: 600; }
+.condividi { margin: 22px 0 0; }
+.condividi a { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: var(--inchiostro); text-underline-offset: 3px; }
+.condividi svg { width: 18px; height: 18px; }
 .descrizione { font-size: 16.5px; margin: 28px 0; }
 .specifiche { margin: 0 0 24px; padding: 0; list-style: none; border-top: 1px solid var(--linea); }
 .specifiche li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--linea); font-size: 15px; }
@@ -305,7 +371,7 @@ button { font: inherit; color: inherit; }
 .visore .succ { right: 16px; top: 50%; translate: 0 -50%; }
 
 /* ---------- Pagina semplice ---------- */
-.pagina { padding: 48px 0 80px; max-width: 760px; }
+.pagina { padding-top: 48px; padding-bottom: 80px; max-width: 760px; }
 .pagina h1 { font-size: clamp(36px, 6vw, 52px); margin-bottom: 20px; }
 
 /* ---------- Piede ---------- */

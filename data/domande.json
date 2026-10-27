@@ -1,0 +1,34 @@
+[
+  {
+    "domanda": "Quanto costa la spedizione?",
+    "risposta": "Dipende dal pezzo ed è scritta in ogni scheda, prima di pagare: da 15 € per un oggetto piccolo a 150 € per credenze e armadi. Per Sicilia e Sardegna c’è un supplemento di 50 €. Se ti interessano più pezzi, scrivici prima di ordinare: vediamo se si può fare un’unica spedizione."
+  },
+  {
+    "domanda": "Il corriere mi porta il mobile in casa?",
+    "risposta": "No: spediamo con BRT o Poste Italiane e la consegna è al piano strada, cioè all’ingresso dell’edificio. Per i mobili più grandi organizzati con qualcuno che ti aiuti a portarli in casa."
+  },
+  {
+    "domanda": "Quanto ci mette ad arrivare?",
+    "risposta": "Di solito i mobili arrivano entro due settimane dall’ordine; quadri, tavolini e oggetti entro dieci giorni lavorativi. Quando il pezzo parte ti mandiamo il codice per seguire la spedizione."
+  },
+  {
+    "domanda": "Come posso pagare?",
+    "risposta": "Con carta di credito o debito, Apple Pay e Google Pay, tramite Stripe: i dati della carta non passano da noi. Oppure con bonifico: in quel caso il pezzo resta riservato per te 7 giorni."
+  },
+  {
+    "domanda": "Posso restituirlo se cambio idea?",
+    "risposta": "Sì. Hai 14 giorni dalla consegna per recedere, senza dover spiegare il motivo. La spedizione di ritorno è a carico tuo; noi ti rimborsiamo il prezzo e anche le spese di consegna che avevi pagato, sullo stesso metodo di pagamento."
+  },
+  {
+    "domanda": "E se arriva danneggiato?",
+    "risposta": "Controlla l’imballo davanti al corriere: se è rovinato, firma la consegna «con riserva» e mandaci subito una foto. Vale comunque la garanzia legale (12 mesi sui mobili restaurati, 24 sui quadri): troviamo insieme la soluzione, senza costi per te."
+  },
+  {
+    "domanda": "I colori dal vivo sono come in foto?",
+    "risposta": "Ogni schermo mostra i colori in modo un po’ diverso. Se hai un dubbio, chiedici altre foto o un video su WhatsApp prima di comprare."
+  },
+  {
+    "domanda": "I mobili sono nuovi?",
+    "risposta": "No: sono mobili d’epoca, che restauriamo e dipingiamo a mano. Qualche segno del tempo nel legno e piccole irregolarità nella pittura fanno parte del loro carattere."
+  }
+]
