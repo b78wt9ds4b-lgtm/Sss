@@ -1,0 +1,33 @@
+{
+  "nome": "DART",
+  "descrizione": "Mobili d’epoca restaurati e dipinti a mano, quadri originali e piccole sculture in legno. Laboratorio e negozio a Trieste, spedizione in tutta Italia.",
+  "url": "https://www.darthome.it",
+  "indirizzo": "Via Luigi Cadorna 13",
+  "cap": "34123",
+  "citta": "Trieste",
+  "provincia": "TS",
+  "telefono": "366 293 6810",
+  "whatsapp": "393662936810",
+  "email": "assistenza@darthome.it",
+  "pec": "dejana.mandic@legalmail.it",
+  "titolare": "DART di Dejana Mandic — Ditta artigiana",
+  "piva": "01429660325",
+  "rea": "TS 33575",
+  "orari": [
+    {"giorni": ["Tu", "We", "Th", "Fr"], "fasce": [["10:00", "13:00"], ["16:00", "19:00"]]},
+    {"giorni": ["Sa"], "fasce": [["10:00", "13:00"]]}
+  ],
+  "orari_testo": "Martedì – venerdì 10–13 e 16–19 · sabato 10–13",
+  "instagram": "https://www.instagram.com/dart_trieste_/",
+  "facebook": "https://www.facebook.com/shabbychicantiquetochic/",
+  "mappa": "https://www.google.com/maps/search/?api=1&query=DART%20Via%20Luigi%20Cadorna%2013%2C%2034123%20Trieste",
+  "acquisto_online": "https://www.darthome.it/carrello/?add-to-cart={id}",
+  "pagine_legali": {
+    "Spedizioni e consegna": "https://www.darthome.it/spedizioni-e-consegna/",
+    "Resi e rimborsi": "https://www.darthome.it/resi-e-rimborsi/",
+    "Recedere dal contratto qui": "https://www.darthome.it/recesso/",
+    "Termini di vendita": "https://www.darthome.it/termini-e-condizioni/",
+    "Privacy": "https://www.darthome.it/privacy/",
+    "Cookie": "https://www.darthome.it/cookie-policy/"
+  }
+}
