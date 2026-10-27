@@ -186,6 +186,8 @@ button { font: inherit; color: inherit; }
 .pezzo-foto { position: relative; border-radius: var(--raggio-l); overflow: hidden; background: var(--sabbia-2); aspect-ratio: 4 / 5; }
 .pezzo-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s, opacity .3s; }
 .pezzo-foto img + img { position: absolute; inset: 0; opacity: 0; }
+/* quadri e foto orizzontali: interi, come appesi a una parete */
+.pezzo-foto img.intera, .galleria-nastro img.intera { object-fit: contain; padding: 7%; filter: drop-shadow(0 8px 14px rgba(43, 38, 34, .2)); }
 @media (hover: hover) {
   .pezzo a:hover .pezzo-foto img:first-child { transform: scale(1.03); }
   .pezzo a:hover .pezzo-foto img + img { opacity: 1; }

@@ -13,6 +13,7 @@ vecchia rimasta in memoria.
 """
 import hashlib
 import json
+import re
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -56,9 +57,13 @@ def _a_capo(disegno, testo, font, larghezza, righe_max):
     return righe
 
 
+def _impronta_file(percorso):
+    return hashlib.sha1(percorso.read_bytes()).hexdigest()[:8]
+
+
 def anteprima_social(nome_file, foto, occhiello, titolo, prezzo="", nota=""):
     """Crea (se manca) docs/foto/social/<nome_file>-<impronta>.jpg e ne restituisce il percorso relativo a docs/."""
-    impronta = _impronta(foto, occhiello, titolo, prezzo, nota, 2)
+    impronta = _impronta(foto, occhiello, titolo, prezzo, nota, _impronta_file(FOTO / f"{foto}-1200.webp"), 3)
     dest = SOCIAL / f"{nome_file}-{impronta}.jpg"
     relativo = f"foto/social/{dest.name}"
     if dest.exists():
@@ -70,18 +75,16 @@ def anteprima_social(nome_file, foto, occhiello, titolo, prezzo="", nota=""):
     tela = Image.new("RGB", (W, H), SABBIA)
     with Image.open(FOTO / f"{foto}-1200.webp") as im:
         im = im.convert("RGB")
-        # foto intera, alta quanto la tela: il pezzo si vede tutto
-        alt = H
-        larg = round(im.width * alt / im.height)
-        if larg > 560:  # foto orizzontale: la ritagliamo al centro
-            larg = 560
-            sc = alt / im.height
-            im = im.resize((round(im.width * sc), alt), Image.LANCZOS)
-            x = (im.width - larg) // 2
-            im = im.crop((x, 0, x + larg, alt))
+        if im.width / im.height <= 560 / H:
+            # foto verticale: alta quanto la tela, il pezzo si vede tutto
+            larg = round(im.width * H / im.height)
+            tela.paste(im.resize((larg, H), Image.LANCZOS), (0, 0))
         else:
-            im = im.resize((larg, alt), Image.LANCZOS)
-        tela.paste(im, (0, 0))
+            # foto orizzontale (un quadro): intera, centrata, con un margine
+            larg = 560
+            w = larg - 80
+            h = round(im.height * w / im.width)
+            tela.paste(im.resize((w, h), Image.LANCZOS), (40, (H - h) // 2))
     x0 = larg + 64
     larghezza = W - x0 - 64
     d = ImageDraw.Draw(tela)
@@ -118,8 +121,12 @@ def anteprima_social(nome_file, foto, occhiello, titolo, prezzo="", nota=""):
 
 def foto_jpeg(foto):
     """Copia JPEG (1200 px) di una foto, per i cataloghi prodotti. Restituisce il percorso relativo a docs/."""
-    dest = FOTO / f"{foto}.jpg"
+    sorgente = FOTO / f"{foto}-1200.webp"
+    dest = FOTO / f"{foto}-{_impronta_file(sorgente)}.jpg"
     if not dest.exists():
-        with Image.open(FOTO / f"{foto}-1200.webp") as im:
+        for vecchio in FOTO.iterdir():  # versioni della stessa foto fatte prima di un ritocco
+            if re.fullmatch(re.escape(foto) + r"(-[0-9a-f]{8})?\.jpg", vecchio.name):
+                vecchio.unlink()
+        with Image.open(sorgente) as im:
             im.convert("RGB").save(dest, "JPEG", quality=84, optimize=True, progressive=True)
     return f"foto/{dest.name}"

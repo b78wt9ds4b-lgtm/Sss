@@ -1,0 +1,256 @@
+{
+  "foto": {
+    "armadio-botanico-2": {
+      "togli": true,
+      "motivo": "Pagina di un libro di scuola, caricata per sbaglio"
+    },
+    "tavolo-antico-3": {
+      "ritaglio": [
+        0,
+        0,
+        1,
+        0.68
+      ],
+      "motivo": "Tolte la mano e la scarpa in basso"
+    },
+    "sgabello-rosso-1": {
+      "luce": 1.12,
+      "bilanciamento": 0.4,
+      "motivo": "Foto scura e gialla"
+    },
+    "sgabello-rosso-3": {
+      "luce": 1.15,
+      "bilanciamento": 0.4,
+      "motivo": "Foto scura e gialla"
+    },
+    "tavolino-rotondo-3": {
+      "luce": 1.12,
+      "motivo": "Foto scura"
+    },
+    "tavolino-3": {
+      "luce": 1.08,
+      "motivo": "Foto scura"
+    },
+    "bordeaux-in-fiore-2": {
+      "luce": 1.08,
+      "motivo": "Foto scura"
+    },
+    "floraison-2": {
+      "luce": 1.1,
+      "motivo": "Foto scura"
+    }
+  },
+  "frontali": {
+    "nuotatrici": {
+      "da": "nuotatrici-1",
+      "angoli": [
+        [
+          0.065,
+          0.255
+        ],
+        [
+          0.926,
+          0.264
+        ],
+        [
+          0.905,
+          0.714
+        ],
+        [
+          0.071,
+          0.712
+        ]
+      ],
+      "bilanciamento": 0.3,
+      "motivo": "Quadro piccolo in mezzo al muro"
+    },
+    "quadro-con-vaso-dorato": {
+      "da": "quadro-con-vaso-dorato-1",
+      "angoli": [
+        [
+          0.159,
+          0.1
+        ],
+        [
+          0.84,
+          0.102
+        ],
+        [
+          0.816,
+          0.798
+        ],
+        [
+          0.179,
+          0.796
+        ]
+      ],
+      "bilanciamento": 0.35,
+      "motivo": "Quadro storto in mezzo al muro"
+    },
+    "quadro-con-vaso-dorato-2": {
+      "da": "quadro-con-vaso-dorato-2-1",
+      "angoli": [
+        [
+          0.276,
+          0.111
+        ],
+        [
+          0.733,
+          0.103
+        ],
+        [
+          0.707,
+          0.85
+        ],
+        [
+          0.3,
+          0.856
+        ]
+      ],
+      "bilanciamento": 0.35,
+      "motivo": "Quadro fotografato di sbieco",
+      "margine": 0.012
+    },
+    "quadro-con-i-fiori": {
+      "da": "quadro-con-i-fiori-5",
+      "angoli": [
+        [
+          0.048,
+          0.157
+        ],
+        [
+          0.952,
+          0.157
+        ],
+        [
+          0.96,
+          0.636
+        ],
+        [
+          0.034,
+          0.633
+        ]
+      ],
+      "bilanciamento": 0.35,
+      "motivo": "La prima foto mostrava solo un dettaglio"
+    },
+    "quadro-con-i-fiori-2": {
+      "da": "quadro-con-i-fiori-2-1",
+      "sostituisci": true,
+      "angoli": [
+        [
+          0.057,
+          0.085
+        ],
+        [
+          0.945,
+          0.087
+        ],
+        [
+          0.941,
+          0.913
+        ],
+        [
+          0.06,
+          0.913
+        ]
+      ],
+      "motivo": "Troppo sfondo bianco"
+    },
+    "fiori-di-mezzanotte": {
+      "da": "fiori-di-mezzanotte-1",
+      "sostituisci": true,
+      "angoli": [
+        [
+          0.028,
+          0.023
+        ],
+        [
+          0.978,
+          0.031
+        ],
+        [
+          0.974,
+          0.979
+        ],
+        [
+          0.028,
+          0.977
+        ]
+      ],
+      "motivo": "Bordi del cavalletto nella foto",
+      "margine": 0.02
+    },
+    "bordeaux-in-fiore": {
+      "da": "bordeaux-in-fiore-1",
+      "sostituisci": true,
+      "angoli": [
+        [
+          0.109,
+          0.035
+        ],
+        [
+          0.916,
+          0.044
+        ],
+        [
+          0.886,
+          0.953
+        ],
+        [
+          0.083,
+          0.948
+        ]
+      ],
+      "bilanciamento": 0.25,
+      "motivo": "Quadro storto con il muro intorno"
+    },
+    "floraison": {
+      "da": "floraison-1",
+      "sostituisci": true,
+      "angoli": [
+        [
+          0.084,
+          0.048
+        ],
+        [
+          0.888,
+          0.04
+        ],
+        [
+          0.89,
+          0.951
+        ],
+        [
+          0.088,
+          0.953
+        ]
+      ],
+      "bilanciamento": 0.2,
+      "motivo": "Muro intorno al quadro"
+    },
+    "quadro-fiori-azzurro": {
+      "da": "quadro-fiori-azzurro-1",
+      "angoli": [
+        [
+          0.159,
+          0.168
+        ],
+        [
+          0.828,
+          0.166
+        ],
+        [
+          0.816,
+          0.875
+        ],
+        [
+          0.155,
+          0.867
+        ]
+      ],
+      "bilanciamento": 0.25,
+      "motivo": "Quadro appoggiato alla porta, con il legno intorno"
+    }
+  }
+}

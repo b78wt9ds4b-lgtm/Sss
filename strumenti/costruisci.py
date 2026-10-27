@@ -128,9 +128,15 @@ def foto_url(r, nome, w):
 
 
 def immagine(r, foto, alt, sizes, lazy=True):
-    """<img> con le due larghezze generate da importa.py."""
+    """<img> con le due larghezze generate da importa.py.
+
+    Le foto molto più larghe o più strette del riquadro verticale del sito
+    (i quadri orizzontali, per esempio) si mostrano intere invece che tagliate.
+    """
     caricamento = 'loading="lazy"' if lazy else 'fetchpriority="high"'
-    return (f'<img src="{foto_url(r, foto["file"], 600)}" '
+    rapporto = foto["w"] / foto["h"]
+    classe = ' class="intera"' if rapporto > 0.95 or rapporto < 0.62 else ""
+    return (f'<img{classe} src="{foto_url(r, foto["file"], 600)}" '
             f'srcset="{foto_url(r, foto["file"], 600)} 600w, {foto_url(r, foto["file"], 1200)} {foto["w"]}w" '
             f'sizes="{sizes}" width="{foto["w"]}" height="{foto["h"]}" alt="{e(alt)}" {caricamento} decoding="async">')
 
@@ -204,10 +210,15 @@ def rassicura_html():
 
 # ---------------------------------------------------------------- anteprime social
 
+USATE = set()  # immagini derivate usate in questa costruzione: le altre si cancellano
+
+
 def og_social(nome_file, foto, occhiello, titolo, prezzo="", nota="", alt=""):
     """Anteprima 1200×630 per i social; senza Pillow ripiega sulla foto WebP."""
     if immagini:
-        return (immagini.anteprima_social(nome_file, foto, occhiello, titolo, prezzo, nota), 1200, 630, alt or titolo)
+        percorso = immagini.anteprima_social(nome_file, foto, occhiello, titolo, prezzo, nota)
+        USATE.add(percorso)
+        return (percorso, 1200, 630, alt or titolo)
     f = trova_foto(foto) if foto not in ("hero", "negozio") else {"w": 1050, "h": 1400}
     return (f"foto/{foto}-1200.webp", f["w"], f["h"], alt or titolo)
 
@@ -923,6 +934,7 @@ def feed_prodotti():
         url = f"{BASE}/pezzo/{p['slug']}/"
         if immagini:
             principale = immagini.foto_jpeg(p["foto"][0]["file"])
+            USATE.add(principale)
         else:
             principale = f"foto/{p['foto'][0]['file']}-1200.webp"
         altre = "".join(f"<g:additional_image_link>{BASE}/foto/{f['file']}-1200.webp</g:additional_image_link>\n"
@@ -988,6 +1000,10 @@ def main():
     indirizzi.append(contatti())
     pagina_404()
     feed_prodotti()
+    if immagini:  # via anteprime e JPEG rimasti da pezzi venduti, tolti o con foto cambiate
+        for f in list((DOCS / "foto").glob("*.jpg")) + list((DOCS / "foto" / "social").glob("*.jpg")):
+            if f.relative_to(DOCS).as_posix() not in USATE:
+                f.unlink()
 
     oggi = date.today().isoformat()
     voci = "".join(f"<url><loc>{u}</loc><lastmod>{oggi}</lastmod></url>\n" for u in indirizzi)

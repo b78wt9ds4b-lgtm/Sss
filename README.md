@@ -14,9 +14,11 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
 | `data/domande.json` | Le domande frequenti (home e pagina contatti) |
 | `data/recensioni.json` | Le recensioni dei clienti: finché è vuoto, la sezione non compare |
 | `data/negozio.json` | Indirizzo, orari, telefono, WhatsApp, social, link alle pagine legali |
+| `data/ritocchi.json` | I ritocchi alle foto: quali togliere, schiarire, ritagliare, e i quadri da raddrizzare |
 | `strumenti/importa.py` | Copia pezzi e foto dal vecchio sito WordPress |
 | `strumenti/costruisci.py` | Genera le pagine HTML in `docs/` partendo da `data/` |
 | `strumenti/immagini.py` | Crea le anteprime per WhatsApp e i social e le foto JPEG per i cataloghi |
+| `strumenti/ritocca.py` | Applica i ritocchi di `data/ritocchi.json` partendo dalle foto originali |
 
 ## Modificare i contenuti
 
@@ -41,6 +43,20 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
 Per riallineare pezzi e foto al vecchio sito: `python3 strumenti/importa.py`.
 
 L’etichetta **Nuovo** compare da sola nei 30 giorni dopo la messa in vendita di un pezzo (campo `pubblicato`) e poi sparisce, anche senza rigenerare il sito.
+
+## Foto
+
+Alcune foto sono state ritoccate partendo dagli originali ad alta risoluzione: i quadri sono stati raddrizzati e ritagliati sulla sola tela, le foto scure schiarite, una foto sbagliata tolta. I ritocchi sono leggeri e non cambiano il pezzo. Sono tutti elencati, con il motivo, in `data/ritocchi.json`.
+
+Per rifarli, ad esempio dopo aver rilanciato `importa.py`:
+
+```
+pip install pillow numpy     # una volta sola
+python3 strumenti/ritocca.py
+python3 strumenti/costruisci.py
+```
+
+Gli originali vengono scaricati in `.originali/`, che non viene pubblicata. Sul sito i quadri orizzontali, o molto stretti, si vedono sempre interi, su uno sfondo neutro.
 
 ## Recensioni
 

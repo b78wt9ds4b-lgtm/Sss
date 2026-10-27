@@ -111,7 +111,7 @@ def importa_pezzi():
         foto = []
         for i, img in enumerate(p["images"]):
             w, h = salva_foto(img["src"], f"{slug}-{i + 1}")
-            foto.append({"file": f"{slug}-{i + 1}", "w": w, "h": h})
+            foto.append({"file": f"{slug}-{i + 1}", "w": w, "h": h, "origine": img["src"]})
         prezzo = euro(p["prices"]["price"])
         misure = spec.get("Misure", "")
         pezzi.append({
