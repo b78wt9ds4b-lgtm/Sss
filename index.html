@@ -3,49 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brezza — Espresso portatile</title>
-  <meta name="description" content="Brezza è la macchina per espresso portatile che ti segue ovunque: 20 bar di pressione, batteria ricaricabile, zero compromessi.">
+  <title>Segno — Taccuini da disegno</title>
+  <meta name="description" content="Segno è il taccuino da disegno con carta da 200 g/m² senza acidi e rilegatura cucita apribile a 180°. In tre formati, sempre disponibile.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     /* ---- Personalizza qui colori e font del prodotto ---- */
     :root {
-      --bg: #fbf8f4;
+      --bg: #faf7f0;
       --surface: #ffffff;
-      --surface-alt: #f3ede5;
-      --text: #1f1a16;
-      --muted: #6b6159;
-      --accent: #b4532a;
+      --surface-alt: #efe9dc;
+      --text: #1c2233;
+      --muted: #5f6474;
+      --accent: #2f4f9e;
       --accent-ink: #ffffff;
-      --border: #e6ddd2;
-      --shadow: 0 20px 50px -20px rgba(60, 35, 15, .25);
+      --ochre: #d39b2a;
+      --border: #e3dccb;
+      --shadow: 0 20px 50px -20px rgba(28, 34, 51, .28);
       --radius: 18px;
       --font-display: "Fraunces", Georgia, serif;
       --font-body: "Inter", system-ui, -apple-system, sans-serif;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #16120f;
-        --surface: #1f1a16;
-        --surface-alt: #262019;
-        --text: #f3ece4;
-        --muted: #b3a79b;
-        --accent: #e07a4b;
-        --accent-ink: #16120f;
-        --border: #3a3129;
+        --bg: #12151d;
+        --surface: #1a1e29;
+        --surface-alt: #222736;
+        --text: #eef0f5;
+        --muted: #a8adbd;
+        --accent: #8aa6f0;
+        --accent-ink: #12151d;
+        --ochre: #e2b252;
+        --border: #313749;
         --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
       }
     }
     :root[data-theme="dark"] {
-      --bg: #16120f;
-      --surface: #1f1a16;
-      --surface-alt: #262019;
-      --text: #f3ece4;
-      --muted: #b3a79b;
-      --accent: #e07a4b;
-      --accent-ink: #16120f;
-      --border: #3a3129;
+      --bg: #12151d;
+      --surface: #1a1e29;
+      --surface-alt: #222736;
+      --text: #eef0f5;
+      --muted: #a8adbd;
+      --accent: #8aa6f0;
+      --accent-ink: #12151d;
+      --ochre: #e2b252;
+      --border: #313749;
       --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
     }
 
@@ -168,7 +171,7 @@
 
     /* Prezzi */
     .pricing-grid { display: grid; gap: 20px; }
-    @media (min-width: 820px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; } }
+    @media (min-width: 900px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
     .plan {
       background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
       padding: 32px; display: flex; flex-direction: column; gap: 20px;
@@ -227,10 +230,10 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">Brezza<span>.</span></a>
+      <a href="#" class="logo">Segno<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#caratteristiche">Caratteristiche</a></li>
-        <li><a href="#come-funziona">Come funziona</a></li>
+        <li><a href="#tecniche">Tecniche</a></li>
         <li><a href="#specifiche">Specifiche</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -243,34 +246,43 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Nuovo · Edizione 2026</span>
-          <h1>Il tuo espresso, <em>ovunque</em> tu sia.</h1>
-          <p class="lead">Brezza è la macchina per espresso portatile con 20 bar di pressione e batteria ricaricabile. In montagna, in ufficio o in viaggio: la crema perfetta in meno di due minuti.</p>
+          <span class="eyebrow">Il taccuino di tutti i giorni</span>
+          <h1>Ogni idea merita <em>un buon foglio</em>.</h1>
+          <p class="lead">Segno è il taccuino da disegno con carta da 200 g/m² senza acidi e rilegatura cucita che si apre completamente. Per schizzi, china, marker e acquerello leggero. Quando lo finisci, ne prendi un altro: è sempre lo stesso, sempre disponibile.</p>
           <div class="hero-actions">
-            <a href="#prezzi" class="btn btn-primary">Ordina ora — da 149 €</a>
-            <a href="#come-funziona" class="btn btn-ghost">Scopri come funziona</a>
+            <a href="#prezzi" class="btn btn-primary">Scegli il formato — da 12 €</a>
+            <a href="#tecniche" class="btn btn-ghost">Con cosa si usa</a>
           </div>
           <div class="hero-stats">
-            <div><strong>20 bar</strong><span>pressione costante</span></div>
-            <div><strong>450 g</strong><span>peso totale</span></div>
-            <div><strong>~ 40</strong><span>caffè per carica</span></div>
+            <div><strong>200 g/m²</strong><span>carta senza acidi</span></div>
+            <div><strong>96</strong><span>pagine per taccuino</span></div>
+            <div><strong>180°</strong><span>apertura piatta</span></div>
           </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
           <!-- Illustrazione del prodotto: sostituibile con una foto reale -->
-          <svg viewBox="0 0 200 260" fill="none">
-            <ellipse cx="100" cy="245" rx="62" ry="9" fill="currentColor" opacity=".08"/>
-            <rect x="58" y="20" width="84" height="150" rx="22" fill="var(--text)"/>
-            <rect x="66" y="30" width="68" height="18" rx="9" fill="var(--accent)"/>
-            <circle cx="100" cy="95" r="16" fill="var(--surface-alt)" opacity=".18"/>
-            <circle cx="100" cy="95" r="7" fill="var(--accent)"/>
-            <rect x="92" y="130" width="16" height="6" rx="3" fill="var(--surface-alt)" opacity=".35"/>
-            <rect x="74" y="168" width="52" height="12" rx="4" fill="var(--text)" opacity=".85"/>
-            <path d="M96 184 v14 M104 184 v14" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-            <path d="M62 202 h76 l-8 38 a8 8 0 0 1 -8 6 h-44 a8 8 0 0 1 -8 -6 z" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-            <path d="M138 210 q18 2 16 16 q-2 12 -20 10" stroke="var(--border)" stroke-width="4" fill="none"/>
-            <ellipse cx="100" cy="204" rx="34" ry="4" fill="#7a4524"/>
+          <svg viewBox="0 0 240 220" fill="none">
+            <ellipse cx="120" cy="206" rx="100" ry="8" fill="var(--text)" opacity=".08"/>
+            <!-- taccuino aperto -->
+            <path d="M120 40 C95 30 55 30 22 38 V188 C55 180 95 180 120 190 Z" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+            <path d="M120 40 C145 30 185 30 218 38 V188 C185 180 145 180 120 190 Z" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+            <path d="M120 40 V190" stroke="var(--border)" stroke-width="2"/>
+            <path d="M22 188 C55 180 95 180 120 190 C145 180 185 180 218 188 V196 C185 188 145 188 120 198 C95 188 55 188 22 196 Z" fill="var(--accent)"/>
+            <!-- schizzo pagina sinistra -->
+            <circle cx="70" cy="95" r="26" stroke="var(--text)" stroke-width="2" opacity=".75"/>
+            <path d="M44 130 q26 -18 52 0" stroke="var(--text)" stroke-width="2" opacity=".55"/>
+            <path d="M40 150 h60 M40 160 h44" stroke="var(--muted)" stroke-width="1.5" opacity=".5"/>
+            <!-- macchia di colore pagina destra -->
+            <path d="M145 70 c20 -14 52 -8 58 14 c6 22 -12 40 -34 38 c-24 -2 -40 -34 -24 -52z" fill="var(--ochre)" opacity=".55"/>
+            <path d="M150 140 c14 -8 34 -6 44 4" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+            <!-- matita -->
+            <g transform="rotate(-28 170 160)">
+              <rect x="120" y="154" width="96" height="12" rx="2" fill="var(--ochre)"/>
+              <rect x="208" y="154" width="12" height="12" fill="var(--text)" opacity=".7"/>
+              <path d="M120 154 L104 160 L120 166 Z" fill="#e8c9a0"/>
+              <path d="M108 158.5 L104 160 L108 161.5 Z" fill="var(--text)"/>
+            </g>
           </svg>
         </div>
       </div>
@@ -280,62 +292,63 @@
     <section class="features" id="caratteristiche">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Perché Brezza</span>
-          <h2>Tutto il gusto del bar, nel palmo di una mano.</h2>
-          <p>Progettata in Italia per chi non rinuncia a un buon caffè, nemmeno lontano da casa.</p>
+          <span class="eyebrow">Perché Segno</span>
+          <h2>Un taccuino fatto per essere finito.</h2>
+          <p>Pochi formati, una sola carta, qualità costante: lo ritrovi sempre uguale sullo scaffale, da un taccuino all'altro.</p>
         </div>
         <div class="feature-grid">
           <article class="feature">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
             </div>
-            <h3>20 bar reali</h3>
-            <p>Pompa elettrica ad alta pressione per un'estrazione piena e una crema densa e vellutata.</p>
+            <h3>Carta da 200 g/m²</h3>
+            <p>Grana fine e senza acidi: regge china, marker e velature d'acquerello senza trasparire.</p>
           </article>
           <article class="feature">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2M10 11v2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
             </div>
-            <h3>Batteria USB‑C</h3>
-            <p>Si ricarica come il telefono e scalda l'acqua da sola: nessuna presa, nessun bollitore.</p>
+            <h3>Apertura a 180°</h3>
+            <p>Rilegatura cucita a filo: il taccuino resta piatto e puoi disegnare anche sulla doppia pagina.</p>
           </article>
           <article class="feature">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M22 12h-6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.8a1.8 1.8 0 0 1-1.6-2.7L7.2 9.5"/><path d="M11 19h8.2a1.8 1.8 0 0 0 1.6-2.7l-1.2-2.1"/><path d="m14 16-3 3 3 3"/><path d="M8.3 13.6 7.2 9.5 3.1 10.6"/><path d="m9.3 5.7 1.1-1.9a1.8 1.8 0 0 1 3.1 0l3.9 6.7"/><path d="m13.4 10.6 4.1-1.1 1.1 4.1"/></svg>
             </div>
-            <h3>Capsule o macinato</h3>
-            <p>Adattatori intercambiabili per caffè macinato e capsule compatibili più diffuse.</p>
+            <h3>Copertina riciclata</h3>
+            <p>Cartone rigido 100% riciclato con angoli arrotondati: resiste nello zaino per mesi.</p>
           </article>
           <article class="feature">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-6.5 8-11V5l-8-3-8 3v6c0 4.5 3 8 8 11z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
             </div>
-            <h3>Robusta e sicura</h3>
-            <p>Scocca in alluminio riciclato, guarnizioni alimentari e garanzia di 2 anni inclusa.</p>
+            <h3>Sempre disponibile</h3>
+            <p>Stessa carta, stesse misure, ogni volta. Con l'abbonamento ti arriva il prossimo prima di finire l'ultimo.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- COME FUNZIONA -->
-    <section id="come-funziona">
+    <!-- TECNICHE -->
+    <section id="tecniche">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Come funziona</span>
-          <h2>Tre gesti, un espresso.</h2>
+          <span class="eyebrow">Con cosa si usa</span>
+          <h2>Una carta, tante tecniche.</h2>
+          <p>Testata con gli strumenti che trovi in negozio.</p>
         </div>
         <div class="steps">
           <div class="step">
-            <h3>Riempi</h3>
-            <p>Versa l'acqua nel serbatoio da 80 ml e inserisci caffè macinato o una capsula.</p>
+            <h3>Matita e carboncino</h3>
+            <p>La grana leggera trattiene il pigmento e permette sfumature morbide senza lucidare.</p>
           </div>
           <div class="step">
-            <h3>Premi</h3>
-            <p>Un tocco sul pulsante: Brezza scalda l'acqua a 92 °C e avvia l'estrazione a 20 bar.</p>
+            <h3>China e marker</h3>
+            <p>Linee nette, nessuna sbavatura e nessun passaggio sul retro, anche con marker ad alcol.</p>
           </div>
           <div class="step">
-            <h3>Gusta</h3>
-            <p>In meno di due minuti il tuo espresso è pronto, direttamente nella tazza integrata.</p>
+            <h3>Acquerello leggero</h3>
+            <p>Regge velature e lavis senza deformarsi troppo. Per acquerello pesante consigliamo un blocco dedicato.</p>
           </div>
         </div>
       </div>
@@ -350,14 +363,13 @@
         </div>
         <table class="spec-table">
           <tbody>
-            <tr><th scope="row">Dimensioni</th><td>7,5 × 7,5 × 22 cm</td></tr>
-            <tr><th scope="row">Peso</th><td>450 g</td></tr>
-            <tr><th scope="row">Pressione</th><td>20 bar</td></tr>
-            <tr><th scope="row">Serbatoio acqua</th><td>80 ml</td></tr>
-            <tr><th scope="row">Batteria</th><td>7.500 mAh, ricarica USB‑C (PD 45 W)</td></tr>
-            <tr><th scope="row">Tempo di preparazione</th><td>&lt; 2 minuti da acqua fredda</td></tr>
-            <tr><th scope="row">Materiali</th><td>Alluminio riciclato, acciaio inox, silicone alimentare</td></tr>
-            <tr><th scope="row">In confezione</th><td>Brezza, tazza da 50 ml, adattatore capsule, cavo USB‑C, custodia</td></tr>
+            <tr><th scope="row">Formati</th><td>A6 (10,5 × 14,8 cm), A5 (14,8 × 21 cm), A4 (21 × 29,7 cm)</td></tr>
+            <tr><th scope="row">Carta</th><td>200 g/m², bianco naturale, senza acidi</td></tr>
+            <tr><th scope="row">Pagine</th><td>96 (48 fogli)</td></tr>
+            <tr><th scope="row">Rilegatura</th><td>Cucita a filo, apertura piatta a 180°</td></tr>
+            <tr><th scope="row">Copertina</th><td>Cartone rigido 100% riciclato</td></tr>
+            <tr><th scope="row">Dettagli</th><td>Elastico di chiusura, segnalibro in tessuto, tasca interna</td></tr>
+            <tr><th scope="row">Colori copertina</th><td>Blu inchiostro, Ocra, Grafite</td></tr>
           </tbody>
         </table>
       </div>
@@ -368,31 +380,40 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Prezzi</span>
-          <h2>Scegli la tua Brezza.</h2>
-          <p>Spedizione gratuita in Italia e reso entro 30 giorni.</p>
+          <h2>Scegli il tuo formato.</h2>
+          <p>Disponibile in negozio e online. Con l'abbonamento “Ricarica” ricevi un taccuino ogni due mesi con il 15% di sconto.</p>
         </div>
         <div class="pricing-grid">
           <article class="plan">
-            <h3>Brezza</h3>
-            <div class="price">149 € <small>IVA incl.</small></div>
+            <h3>Tascabile A6</h3>
+            <div class="price">12 € <small>IVA incl.</small></div>
             <ul>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Macchina Brezza e tazza</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Adattatore per caffè macinato</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Garanzia 2 anni</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Sta in tasca e in borsa</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ideale per appunti e schizzi veloci</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 10,20 € ogni 2 mesi</li>
             </ul>
-            <a href="#ordina" class="btn btn-ghost">Scegli Brezza</a>
+            <a href="#ordina" class="btn btn-ghost">Scegli A6</a>
           </article>
           <article class="plan featured">
             <span class="badge">Più scelto</span>
-            <h3>Brezza Viaggio</h3>
-            <div class="price">189 € <small>IVA incl.</small></div>
+            <h3>Classico A5</h3>
+            <div class="price">18 € <small>IVA incl.</small></div>
             <ul>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Tutto ciò che c'è in Brezza</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Adattatore per capsule</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Custodia rigida imbottita</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Seconda tazza in acciaio</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Il formato da disegno quotidiano</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Doppia pagina panoramica</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 15,30 € ogni 2 mesi</li>
             </ul>
-            <a href="#ordina" class="btn btn-primary">Scegli Brezza Viaggio</a>
+            <a href="#ordina" class="btn btn-primary">Scegli A5</a>
+          </article>
+          <article class="plan">
+            <h3>Studio A4</h3>
+            <div class="price">26 € <small>IVA incl.</small></div>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Spazio per studi e tavole</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Perfetto per corsi e accademia</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 22,10 € ogni 2 mesi</li>
+            </ul>
+            <a href="#ordina" class="btn btn-ghost">Scegli A4</a>
           </article>
         </div>
       </div>
@@ -407,20 +428,20 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>Posso usare acqua fredda?</summary>
-            <p>Sì. Brezza scalda l'acqua autonomamente fino a 92 °C. Con acqua già calda risparmi batteria e ottieni il caffè in circa 30 secondi.</p>
+            <summary>Posso usare l'acquerello?</summary>
+            <p>Sì, per velature e acquerello leggero. Con molta acqua la carta può ondularsi un po': per lavori bagnati consigliamo un blocco per acquerello da 300 g/m².</p>
           </details>
           <details>
-            <summary>Quali capsule sono compatibili?</summary>
-            <p>Con l'adattatore incluso nella versione Viaggio puoi usare le capsule compatibili più diffuse in commercio. Il macinato funziona con entrambe le versioni.</p>
+            <summary>I marker passano sul retro?</summary>
+            <p>No, con marker ad alcol e a base d'acqua la pagina successiva resta pulita. Con passate molto insistite consigliamo di usare solo il fronte.</p>
           </details>
           <details>
-            <summary>Posso portarla in aereo?</summary>
-            <p>Sì, la batteria rientra nei limiti per il bagaglio a mano. Ti consigliamo di svuotare il serbatoio prima dei controlli.</p>
+            <summary>Come funziona l'abbonamento “Ricarica”?</summary>
+            <p>Scegli formato e colore: ogni due mesi ricevi un nuovo taccuino con il 15% di sconto, oppure lo ritiri in negozio. Puoi mettere in pausa o annullare quando vuoi.</p>
           </details>
           <details>
-            <summary>Come si pulisce?</summary>
-            <p>Basta risciacquare il filtro e la tazza dopo l'uso. Tutte le parti a contatto con il caffè sono smontabili e lavabili.</p>
+            <summary>Fate sconti per scuole e corsi?</summary>
+            <p>Sì, per ordini da 10 pezzi in su applichiamo un prezzo dedicato. Scrivici dal modulo qui sotto.</p>
           </details>
         </div>
       </div>
@@ -430,12 +451,12 @@
     <section id="ordina" style="padding-top:0">
       <div class="container">
         <div class="cta">
-          <h2>Pronto per il primo sorso?</h2>
-          <p>Lascia la tua email: ti avviseremo appena riapriamo gli ordini, con il 10% di sconto sul primo acquisto.</p>
+          <h2>Il prossimo foglio bianco ti aspetta.</h2>
+          <p>Lascia la tua email: riceverai il 10% di sconto sul primo taccuino e le novità sui nuovi colori.</p>
           <form id="signup" novalidate>
             <label for="email" class="sr-only" style="position:absolute;left:-9999px">Email</label>
             <input id="email" type="email" name="email" placeholder="La tua email" autocomplete="email" required>
-            <button class="btn btn-primary" type="submit">Avvisami</button>
+            <button class="btn btn-primary" type="submit">Iscrivimi</button>
           </form>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
         </div>
@@ -445,7 +466,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© 2026 Brezza. Tutti i diritti riservati.</span>
+      <span>© 2026 Segno. Tutti i diritti riservati.</span>
       <nav>
         <a href="#">Privacy</a>
         <a href="#">Termini</a>
