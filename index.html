@@ -3,53 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Segno — Taccuini da disegno</title>
-  <meta name="description" content="Segno è il taccuino da disegno con carta da 200 g/m² senza acidi e rilegatura cucita apribile a 180°. In tre formati, sempre disponibile.">
+  <title>DART Touch — Balsamo per legno</title>
+  <meta name="description" content="DART Touch è il balsamo per legno nutriente e protettivo del laboratorio DART di Trieste. Lo stesso che usiamo sui mobili che restauriamo, in barattolo da 120 ml.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* ---- Personalizza qui colori e font del prodotto ---- */
+    /* Palette ripresa da darthome.it e dall'etichetta DART Touch */
     :root {
-      --bg: #faf7f0;
-      --surface: #ffffff;
-      --surface-alt: #efe9dc;
-      --text: #1c2233;
-      --muted: #5f6474;
-      --accent: #2f4f9e;
-      --accent-ink: #ffffff;
-      --ochre: #d39b2a;
-      --border: #e3dccb;
-      --shadow: 0 20px 50px -20px rgba(28, 34, 51, .28);
-      --radius: 18px;
-      --font-display: "Fraunces", Georgia, serif;
-      --font-body: "Inter", system-ui, -apple-system, sans-serif;
+      --bg: #f6f0e6;
+      --surface: #fbf8f2;
+      --surface-alt: #ece3d3;
+      --heading: #2b2622;
+      --text: #4c443b;
+      --muted: #8c8175;
+      --accent: #3f5a40;
+      --accent-ink: #fbf8f2;
+      --sage: #a9b39a;
+      --border: #e2d7c4;
+      --dark: #2b2622;
+      --dark-ink: #f6f0e6;
+      --shadow: 0 24px 60px -28px rgba(43, 38, 34, .35);
+      --radius: 14px;
+      --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #12151d;
-        --surface: #1a1e29;
-        --surface-alt: #222736;
-        --text: #eef0f5;
-        --muted: #a8adbd;
-        --accent: #8aa6f0;
-        --accent-ink: #12151d;
-        --ochre: #e2b252;
-        --border: #313749;
-        --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
+        --bg: #1c1916;
+        --surface: #24201c;
+        --surface-alt: #2c2722;
+        --heading: #f3ece2;
+        --text: #d8cfc3;
+        --muted: #a3988b;
+        --accent: #9db58e;
+        --accent-ink: #1c1916;
+        --sage: #5d6a52;
+        --border: #3b342d;
+        --dark: #121010;
+        --dark-ink: #f3ece2;
+        --shadow: 0 24px 60px -28px rgba(0, 0, 0, .7);
       }
     }
     :root[data-theme="dark"] {
-      --bg: #12151d;
-      --surface: #1a1e29;
-      --surface-alt: #222736;
-      --text: #eef0f5;
-      --muted: #a8adbd;
-      --accent: #8aa6f0;
-      --accent-ink: #12151d;
-      --ochre: #e2b252;
-      --border: #313749;
-      --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
+      --bg: #1c1916;
+      --surface: #24201c;
+      --surface-alt: #2c2722;
+      --heading: #f3ece2;
+      --text: #d8cfc3;
+      --muted: #a3988b;
+      --accent: #9db58e;
+      --accent-ink: #1c1916;
+      --sage: #5d6a52;
+      --border: #3b342d;
+      --dark: #121010;
+      --dark-ink: #f3ece2;
+      --shadow: 0 24px 60px -28px rgba(0, 0, 0, .7);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,186 +67,177 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-body);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: inherit; }
-    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
     @media (min-width: 720px) { .container { padding: 0 32px; } }
-    h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; font-weight: 700; }
+    h1, h2, h3 { font-family: var(--font-display); color: var(--heading); line-height: 1.12; font-weight: 500; }
+    h1 em, h2 em { font-style: italic; color: var(--accent); }
     .eyebrow {
-      display: inline-block;
-      font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 14px;
     }
+    .eyebrow b { font-family: var(--font-display); font-weight: 500; color: var(--accent); letter-spacing: 0; font-size: 1rem; }
     section { padding: 72px 0; }
     @media (min-width: 900px) { section { padding: 104px 0; } }
-    .section-head { max-width: 620px; margin-bottom: 48px; }
-    .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+    .section-head { max-width: 640px; margin-bottom: 44px; }
+    .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 12px; }
     .section-head p { color: var(--muted); font-size: 1.05rem; }
 
-    /* Bottoni */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 14px 26px; border-radius: 999px;
-      font: 600 1rem var(--font-body); text-decoration: none; cursor: pointer;
-      border: 1px solid transparent; transition: transform .15s ease, background .2s ease;
+      font: 600 .95rem var(--font-body); text-decoration: none; cursor: pointer;
+      border: 1px solid transparent; transition: transform .15s ease, opacity .2s ease;
     }
     .btn:hover { transform: translateY(-1px); }
     .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     .btn-primary { background: var(--accent); color: var(--accent-ink); }
-    .btn-ghost { border-color: var(--border); background: var(--surface); }
+    .btn-ghost { border-color: var(--border); background: var(--surface); color: var(--heading); }
 
     /* Navigazione */
     header.nav {
       position: sticky; top: 0; z-index: 10;
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
-    .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-    .logo span { color: var(--accent); }
+    .logo { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; color: var(--heading); }
+    .logo small { font-family: var(--font-body); font-size: .7rem; font-weight: 500; letter-spacing: .14em; color: var(--muted); margin-left: 8px; text-transform: uppercase; }
     .nav-links { display: none; gap: 28px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; }
-    .nav-links a:hover { color: var(--text); }
-    @media (min-width: 820px) { .nav-links { display: flex; } }
-    .nav .btn { padding: 10px 18px; font-size: .9rem; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: .92rem; }
+    .nav-links a:hover { color: var(--heading); }
+    @media (min-width: 860px) { .nav-links { display: flex; } }
+    .nav .btn { padding: 10px 18px; font-size: .88rem; }
 
     /* Hero */
-    .hero { padding-top: 56px; }
-    .hero-grid { display: grid; gap: 48px; align-items: center; }
-    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.05fr .95fr; } }
-    .hero h1 { font-size: clamp(2.4rem, 6.5vw, 4.2rem); margin-bottom: 20px; letter-spacing: -.01em; }
-    .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 520px; margin-bottom: 32px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
-    .hero-stats { display: flex; flex-wrap: wrap; gap: 28px; }
-    .hero-stats div strong { display: block; font-family: var(--font-display); font-size: 1.6rem; }
-    .hero-stats div span { font-size: .9rem; color: var(--muted); }
-    .hero-visual {
-      background: radial-gradient(circle at 50% 40%, var(--surface) 0%, var(--surface-alt) 70%);
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      aspect-ratio: 1 / 1;
-      display: grid; place-items: center;
-      box-shadow: var(--shadow);
-      padding: 32px;
+    .hero { padding-top: 48px; }
+    .hero-grid { display: grid; gap: 44px; align-items: center; }
+    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+    .hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.4rem); margin-bottom: 20px; letter-spacing: -.01em; }
+    .hero p.lead { font-size: 1.12rem; max-width: 520px; margin-bottom: 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+    .hero-points { display: grid; gap: 10px; list-style: none; color: var(--muted); font-size: .95rem; }
+    .hero-points li { display: flex; gap: 10px; align-items: center; }
+    .hero-points svg { flex: none; color: var(--accent); }
+    .hero-photo {
+      border-radius: 28px; overflow: hidden;
+      box-shadow: var(--shadow); border: 1px solid var(--border);
+      aspect-ratio: 1 / 1; background: var(--sage);
     }
-    .hero-visual svg { width: 72%; height: auto; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* Caratteristiche */
-    .features { background: var(--surface); border-block: 1px solid var(--border); }
-    .feature-grid { display: grid; gap: 20px; }
-    @media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 980px) { .feature-grid { grid-template-columns: repeat(4, 1fr); } }
-    .feature {
-      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 28px;
-    }
-    .feature .icon {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: color-mix(in srgb, var(--accent) 14%, transparent);
-      color: var(--accent);
-      display: grid; place-items: center; margin-bottom: 18px;
-    }
-    .feature h3 { font-size: 1.2rem; margin-bottom: 8px; }
-    .feature p { color: var(--muted); font-size: .95rem; }
+    /* Valori (come la barra sotto l'hero di darthome.it) */
+    .values { border-block: 1px solid var(--border); background: var(--surface); padding: 28px 0; }
+    .values-grid { display: grid; gap: 20px; }
+    @media (min-width: 760px) { .values-grid { grid-template-columns: repeat(3, 1fr); } }
+    .value { display: flex; gap: 14px; align-items: flex-start; }
+    .value .icon { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
+    .value strong { display: block; color: var(--heading); font-weight: 600; font-size: .95rem; }
+    .value span { color: var(--muted); font-size: .88rem; }
 
-    /* Come funziona */
-    .steps { display: grid; gap: 24px; counter-reset: step; }
+    /* Storia */
+    .story-grid { display: grid; gap: 40px; align-items: center; }
+    @media (min-width: 900px) { .story-grid { grid-template-columns: 1.1fr .9fr; gap: 72px; } }
+    .story p { margin-bottom: 16px; font-size: 1.05rem; }
+    .story blockquote {
+      font-family: var(--font-display); font-style: italic; font-size: 1.5rem; line-height: 1.35;
+      color: var(--heading); border-left: 3px solid var(--accent); padding-left: 20px; margin-top: 28px;
+    }
+    .props { display: grid; gap: 14px; }
+    .prop { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
+    .prop h3 { font-size: 1.2rem; margin-bottom: 6px; }
+    .prop p { color: var(--muted); font-size: .95rem; }
+
+    /* Come si usa */
+    .howto { background: var(--surface-alt); }
+    .steps { display: grid; gap: 28px; counter-reset: step; }
     @media (min-width: 820px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-    .step { position: relative; padding-top: 56px; }
+    .step { position: relative; padding-top: 58px; }
     .step::before {
-      counter-increment: step; content: counter(step);
+      counter-increment: step; content: "0" counter(step);
       position: absolute; top: 0; left: 0;
-      width: 40px; height: 40px; border-radius: 50%;
-      display: grid; place-items: center;
-      background: var(--text); color: var(--bg);
-      font-family: var(--font-display); font-weight: 700;
+      font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--accent);
     }
-    .step h3 { font-size: 1.25rem; margin-bottom: 8px; }
-    .step p { color: var(--muted); }
+    .step h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .step p { color: var(--text); }
+    .tip { margin-top: 36px; font-size: .92rem; color: var(--muted); }
 
-    /* Specifiche */
-    .specs { background: var(--surface-alt); }
-    .spec-table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
-    .spec-table th, .spec-table td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--border); vertical-align: top; }
-    .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 0; }
-    .spec-table th { width: 40%; font-weight: 500; color: var(--muted); }
-    .spec-table td { font-weight: 600; }
+    /* Superfici */
+    .surfaces { display: flex; flex-wrap: wrap; gap: 10px; }
+    .surfaces li {
+      list-style: none; padding: 10px 18px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border); color: var(--heading); font-weight: 500; font-size: .95rem;
+    }
+    .surfaces li.no { color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
 
-    /* Prezzi */
-    .pricing-grid { display: grid; gap: 20px; }
-    @media (min-width: 900px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
-    .plan {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
-      padding: 32px; display: flex; flex-direction: column; gap: 20px;
+    /* Acquisto */
+    .buy-card {
+      display: grid; gap: 32px; align-items: center;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
+      padding: 28px; box-shadow: var(--shadow);
     }
-    .plan.featured { border: 2px solid var(--accent); box-shadow: var(--shadow); }
-    .plan .badge {
-      align-self: flex-start; font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-      background: var(--accent); color: var(--accent-ink); padding: 4px 10px; border-radius: 999px;
-    }
-    .plan h3 { font-size: 1.5rem; }
-    .price { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; }
-    .price small { font-family: var(--font-body); font-size: 1rem; font-weight: 400; color: var(--muted); }
-    .plan ul { list-style: none; display: grid; gap: 10px; }
-    .plan li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); }
-    .plan li svg { flex: none; margin-top: 4px; color: var(--accent); }
-    .plan .btn { margin-top: auto; }
+    @media (min-width: 860px) { .buy-card { grid-template-columns: 340px 1fr; padding: 40px; gap: 48px; } }
+    .buy-card img { border-radius: 18px; aspect-ratio: 1 / 1; object-fit: cover; width: 100%; height: auto; align-self: center; }
+    .buy-card h3 { font-size: 2rem; margin-bottom: 4px; }
+    .buy-card .sub { color: var(--muted); margin-bottom: 18px; }
+    .price { font-family: var(--font-display); font-size: 2.6rem; color: var(--heading); line-height: 1; margin-bottom: 6px; }
+    .price-note { font-size: .85rem; color: var(--muted); margin-bottom: 22px; }
+    .qty { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--bg); }
+    .qty button { width: 42px; height: 46px; border: 0; background: transparent; font-size: 1.2rem; color: var(--heading); cursor: pointer; }
+    .qty button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .qty output { min-width: 32px; text-align: center; font-weight: 600; color: var(--heading); }
+    .buy-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 22px; }
+    .spec-list { display: grid; gap: 0; border-top: 1px solid var(--border); }
+    .spec-list div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: .95rem; }
+    .spec-list dt { color: var(--muted); }
+    .spec-list dd { color: var(--heading); font-weight: 500; text-align: right; }
 
     /* FAQ */
-    .faq-list { max-width: 760px; display: grid; gap: 12px; }
-    details {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-      padding: 18px 22px;
-    }
-    summary {
-      cursor: pointer; font-weight: 600; list-style: none;
-      display: flex; justify-content: space-between; gap: 16px;
-    }
+    .faq-list { max-width: 780px; display: grid; gap: 12px; }
+    details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+    summary { cursor: pointer; font-weight: 600; color: var(--heading); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; color: var(--accent); font-size: 1.3rem; line-height: 1; }
     details[open] summary::after { content: "−"; }
-    details p { color: var(--muted); margin-top: 12px; }
+    details p { color: var(--text); margin-top: 12px; }
 
-    /* CTA finale */
-    .cta {
-      background: var(--text); color: var(--bg);
-      border-radius: 32px; padding: 56px 24px; text-align: center;
-    }
-    .cta h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin-bottom: 12px; }
-    .cta p { opacity: .75; margin-bottom: 28px; max-width: 520px; margin-inline: auto; }
-    .cta form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 480px; margin: 0 auto; }
-    .cta input {
-      flex: 1 1 220px; min-width: 0; padding: 14px 20px; border-radius: 999px;
-      border: 1px solid transparent; font: inherit; background: var(--bg); color: var(--text);
-    }
-    .cta input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-    .form-msg { margin-top: 16px; min-height: 1.5em; font-weight: 500; }
+    /* Negozio */
+    .shop { background: var(--dark); color: var(--dark-ink); }
+    .shop h2 { color: var(--dark-ink); }
+    .shop h2 em { color: var(--sage); }
+    .shop .section-head p { color: color-mix(in srgb, var(--dark-ink) 70%, transparent); }
+    .shop-grid { display: grid; gap: 28px; }
+    @media (min-width: 760px) { .shop-grid { grid-template-columns: repeat(3, 1fr); } }
+    .shop-grid h3 { color: var(--dark-ink); font-size: 1.1rem; margin-bottom: 8px; }
+    .shop-grid p, .shop-grid a { color: color-mix(in srgb, var(--dark-ink) 75%, transparent); font-size: .95rem; }
+    .shop-grid a:hover { color: var(--dark-ink); }
 
-    footer { padding: 40px 0; color: var(--muted); font-size: .9rem; }
-    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); padding-top: 28px; }
-    .footer-inner nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    footer { background: var(--dark); color: color-mix(in srgb, var(--dark-ink) 60%, transparent); font-size: .85rem; padding: 0 0 36px; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; border-top: 1px solid color-mix(in srgb, var(--dark-ink) 15%, transparent); padding-top: 24px; }
+    .footer-inner nav { display: flex; flex-wrap: wrap; gap: 18px; }
     .footer-inner a { text-decoration: none; }
-    .footer-inner a:hover { color: var(--text); }
+    .footer-inner a:hover { color: var(--dark-ink); }
   </style>
 </head>
 <body>
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">Segno<span>.</span></a>
+      <a href="https://darthome.it" class="logo">DART<small>Trieste</small></a>
       <ul class="nav-links">
-        <li><a href="#caratteristiche">Caratteristiche</a></li>
-        <li><a href="#tecniche">Tecniche</a></li>
-        <li><a href="#specifiche">Specifiche</a></li>
+        <li><a href="#perche">Il balsamo</a></li>
+        <li><a href="#come-si-usa">Come si usa</a></li>
+        <li><a href="#acquista">Prezzo</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://darthome.it">Mobili e quadri</a></li>
       </ul>
-      <a href="#prezzi" class="btn btn-primary">Acquista</a>
+      <a href="#acquista" class="btn btn-primary">Acquista</a>
     </div>
   </header>
 
@@ -246,175 +246,143 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Il taccuino di tutti i giorni</span>
-          <h1>Ogni idea merita <em>un buon foglio</em>.</h1>
-          <p class="lead">Segno è il taccuino da disegno con carta da 200 g/m² senza acidi e rilegatura cucita che si apre completamente. Per schizzi, china, marker e acquerello leggero. Quando lo finisci, ne prendi un altro: è sempre lo stesso, sempre disponibile.</p>
+          <span class="eyebrow">Dal laboratorio DART · Trieste</span>
+          <h1>Il legno ha bisogno di <em>cura</em>, non di vernice.</h1>
+          <p class="lead">DART Touch è il balsamo nutriente e protettivo che usiamo in laboratorio per finire i mobili che restauriamo. Ora puoi usarlo anche a casa, per dare nuova vita a tavoli, cassettiere e oggetti in legno.</p>
           <div class="hero-actions">
-            <a href="#prezzi" class="btn btn-primary">Scegli il formato — da 12 €</a>
-            <a href="#tecniche" class="btn btn-ghost">Con cosa si usa</a>
+            <a href="#acquista" class="btn btn-primary">Acquista — 120 ml</a>
+            <a href="#come-si-usa" class="btn btn-ghost">Come si usa</a>
           </div>
-          <div class="hero-stats">
-            <div><strong>200 g/m²</strong><span>carta senza acidi</span></div>
-            <div><strong>96</strong><span>pagine per taccuino</span></div>
-            <div><strong>180°</strong><span>apertura piatta</span></div>
-          </div>
+          <ul class="hero-points">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Nutre le fibre e ravviva il colore naturale</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Protegge da secchezza, aloni e piccoli graffi</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Finitura satinata e morbida al tatto</li>
+          </ul>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <!-- Illustrazione del prodotto: sostituibile con una foto reale -->
-          <svg viewBox="0 0 240 220" fill="none">
-            <ellipse cx="120" cy="206" rx="100" ry="8" fill="var(--text)" opacity=".08"/>
-            <!-- taccuino aperto -->
-            <path d="M120 40 C95 30 55 30 22 38 V188 C55 180 95 180 120 190 Z" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-            <path d="M120 40 C145 30 185 30 218 38 V188 C185 180 145 180 120 190 Z" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-            <path d="M120 40 V190" stroke="var(--border)" stroke-width="2"/>
-            <path d="M22 188 C55 180 95 180 120 190 C145 180 185 180 218 188 V196 C185 188 145 188 120 198 C95 188 55 188 22 196 Z" fill="var(--accent)"/>
-            <!-- schizzo pagina sinistra -->
-            <circle cx="70" cy="95" r="26" stroke="var(--text)" stroke-width="2" opacity=".75"/>
-            <path d="M44 130 q26 -18 52 0" stroke="var(--text)" stroke-width="2" opacity=".55"/>
-            <path d="M40 150 h60 M40 160 h44" stroke="var(--muted)" stroke-width="1.5" opacity=".5"/>
-            <!-- macchia di colore pagina destra -->
-            <path d="M145 70 c20 -14 52 -8 58 14 c6 22 -12 40 -34 38 c-24 -2 -40 -34 -24 -52z" fill="var(--ochre)" opacity=".55"/>
-            <path d="M150 140 c14 -8 34 -6 44 4" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" opacity=".8"/>
-            <!-- matita -->
-            <g transform="rotate(-28 170 160)">
-              <rect x="120" y="154" width="96" height="12" rx="2" fill="var(--ochre)"/>
-              <rect x="208" y="154" width="12" height="12" fill="var(--text)" opacity=".7"/>
-              <path d="M120 154 L104 160 L120 166 Z" fill="#e8c9a0"/>
-              <path d="M108 158.5 L104 160 L108 161.5 Z" fill="var(--text)"/>
-            </g>
-          </svg>
+        <div class="hero-photo">
+          <img src="assets/dart-touch.jpg" alt="Barattolo in latta di DART Touch, balsamo per legno nutriente e protettivo da 120 ml" width="1179" height="1150">
         </div>
       </div>
     </section>
 
-    <!-- CARATTERISTICHE -->
-    <section class="features" id="caratteristiche">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Perché Segno</span>
-          <h2>Un taccuino fatto per essere finito.</h2>
-          <p>Pochi formati, una sola carta, qualità costante: lo ritrovi sempre uguale sullo scaffale, da un taccuino all'altro.</p>
+    <!-- VALORI -->
+    <div class="values">
+      <div class="container values-grid">
+        <div class="value">
+          <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.7 6.3 3 3L8 19H5v-3z"/><path d="m16 5 3 3"/></svg></div>
+          <div><strong>Provato sui nostri mobili</strong><span>Lo stesso balsamo dei pezzi restaurati da DART</span></div>
         </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-            </div>
-            <h3>Carta da 200 g/m²</h3>
-            <p>Grana fine e senza acidi: regge china, marker e velature d'acquerello senza trasparire.</p>
+        <div class="value">
+          <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+          <div><strong>Preparato a Trieste</strong><span>In piccoli lotti, nel nostro laboratorio</span></div>
+        </div>
+        <div class="value">
+          <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="11" rx="1"/><path d="M16 11h4l3 3v4h-7"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
+          <div><strong>Spedizione in tutta Italia</strong><span>Oppure ritiro gratuito in negozio</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERCHÉ -->
+    <section id="perche">
+      <div class="container story-grid">
+        <div class="story">
+          <span class="eyebrow"><b>01</b> Il balsamo</span>
+          <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:20px">Nato al banco di <em>restauro</em>.</h2>
+          <p>Ogni mobile che passa dal nostro laboratorio, alla fine, riceve lo stesso gesto: una mano di balsamo, lasciata assorbire e poi lucidata a panno. È il momento in cui il legno torna caldo, profondo, vivo.</p>
+          <p>DART Touch è quel balsamo, in un barattolo di latta da tenere a portata di mano. Per mantenere belli i pezzi che hai già e per prenderti cura di quelli che porterai a casa.</p>
+          <blockquote>“Un mobile restaurato dura una vita, se gli dai un po' di attenzione ogni tanto.”</blockquote>
+        </div>
+        <div class="props">
+          <article class="prop">
+            <h3>Nutriente</h3>
+            <p>Penetra nelle fibre e restituisce al legno secco elasticità e profondità di colore.</p>
           </article>
-          <article class="feature">
-            <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
-            </div>
-            <h3>Apertura a 180°</h3>
-            <p>Rilegatura cucita a filo: il taccuino resta piatto e puoi disegnare anche sulla doppia pagina.</p>
+          <article class="prop">
+            <h3>Protettivo</h3>
+            <p>Lascia un velo che respinge polvere e umidità e attenua i segni dell'uso quotidiano.</p>
           </article>
-          <article class="feature">
-            <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.8a1.8 1.8 0 0 1-1.6-2.7L7.2 9.5"/><path d="M11 19h8.2a1.8 1.8 0 0 0 1.6-2.7l-1.2-2.1"/><path d="m14 16-3 3 3 3"/><path d="M8.3 13.6 7.2 9.5 3.1 10.6"/><path d="m9.3 5.7 1.1-1.9a1.8 1.8 0 0 1 3.1 0l3.9 6.7"/><path d="m13.4 10.6 4.1-1.1 1.1 4.1"/></svg>
-            </div>
-            <h3>Copertina riciclata</h3>
-            <p>Cartone rigido 100% riciclato con angoli arrotondati: resiste nello zaino per mesi.</p>
-          </article>
-          <article class="feature">
-            <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
-            </div>
-            <h3>Sempre disponibile</h3>
-            <p>Stessa carta, stesse misure, ogni volta. Con l'abbonamento ti arriva il prossimo prima di finire l'ultimo.</p>
+          <article class="prop">
+            <h3>Facile da usare</h3>
+            <p>Un panno morbido e qualche minuto: nessun attrezzo, nessun odore forte di solventi.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- TECNICHE -->
-    <section id="tecniche">
+    <!-- COME SI USA -->
+    <section class="howto" id="come-si-usa">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Con cosa si usa</span>
-          <h2>Una carta, tante tecniche.</h2>
-          <p>Testata con gli strumenti che trovi in negozio.</p>
+          <span class="eyebrow"><b>02</b> Come si usa</span>
+          <h2>Tre gesti, <em>quindici minuti</em>.</h2>
         </div>
         <div class="steps">
           <div class="step">
-            <h3>Matita e carboncino</h3>
-            <p>La grana leggera trattiene il pigmento e permette sfumature morbide senza lucidare.</p>
+            <h3>Pulisci</h3>
+            <p>Togli la polvere con un panno asciutto. Il legno deve essere pulito e ben asciutto.</p>
           </div>
           <div class="step">
-            <h3>China e marker</h3>
-            <p>Linee nette, nessuna sbavatura e nessun passaggio sul retro, anche con marker ad alcol.</p>
+            <h3>Stendi</h3>
+            <p>Preleva poco balsamo con un panno di cotone e stendilo seguendo la venatura, in strato sottile.</p>
           </div>
           <div class="step">
-            <h3>Acquerello leggero</h3>
-            <p>Regge velature e lavis senza deformarsi troppo. Per acquerello pesante consigliamo un blocco dedicato.</p>
+            <h3>Lucida</h3>
+            <p>Lascia assorbire 10–15 minuti, poi lucida con un panno pulito fino a ottenere una finitura satinata.</p>
           </div>
         </div>
+        <p class="tip">Consiglio: per i mobili d'uso quotidiano ripeti ogni 3–6 mesi. Prova sempre prima su una piccola zona nascosta.</p>
       </div>
     </section>
 
-    <!-- SPECIFICHE -->
-    <section class="specs" id="specifiche">
+    <!-- SUPERFICI -->
+    <section>
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Scheda tecnica</span>
-          <h2>Specifiche</h2>
+          <span class="eyebrow"><b>03</b> Dove usarlo</span>
+          <h2>Per il legno che <em>vivi</em> ogni giorno.</h2>
+          <p>Ideale su legno grezzo, cerato o trattato a olio. Non adatto a superfici verniciate lucide o laccate.</p>
         </div>
-        <table class="spec-table">
-          <tbody>
-            <tr><th scope="row">Formati</th><td>A6 (10,5 × 14,8 cm), A5 (14,8 × 21 cm), A4 (21 × 29,7 cm)</td></tr>
-            <tr><th scope="row">Carta</th><td>200 g/m², bianco naturale, senza acidi</td></tr>
-            <tr><th scope="row">Pagine</th><td>96 (48 fogli)</td></tr>
-            <tr><th scope="row">Rilegatura</th><td>Cucita a filo, apertura piatta a 180°</td></tr>
-            <tr><th scope="row">Copertina</th><td>Cartone rigido 100% riciclato</td></tr>
-            <tr><th scope="row">Dettagli</th><td>Elastico di chiusura, segnalibro in tessuto, tasca interna</td></tr>
-            <tr><th scope="row">Colori copertina</th><td>Blu inchiostro, Ocra, Grafite</td></tr>
-          </tbody>
-        </table>
+        <ul class="surfaces">
+          <li>Mobili antichi</li>
+          <li>Tavoli e sedie</li>
+          <li>Cassettiere e credenze</li>
+          <li>Taglieri e utensili</li>
+          <li>Cornici e oggetti</li>
+          <li>Mobili dipinti a mano</li>
+          <li class="no">Vernici lucide</li>
+          <li class="no">Laccati</li>
+        </ul>
       </div>
     </section>
 
-    <!-- PREZZI -->
-    <section id="prezzi">
+    <!-- ACQUISTA -->
+    <section id="acquista" style="padding-top:0">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Prezzi</span>
-          <h2>Scegli il tuo formato.</h2>
-          <p>Disponibile in negozio e online. Con l'abbonamento “Ricarica” ricevi un taccuino ogni due mesi con il 15% di sconto.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="plan">
-            <h3>Tascabile A6</h3>
-            <div class="price">12 € <small>IVA incl.</small></div>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Sta in tasca e in borsa</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ideale per appunti e schizzi veloci</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 10,20 € ogni 2 mesi</li>
-            </ul>
-            <a href="#ordina" class="btn btn-ghost">Scegli A6</a>
-          </article>
-          <article class="plan featured">
-            <span class="badge">Più scelto</span>
-            <h3>Classico A5</h3>
-            <div class="price">18 € <small>IVA incl.</small></div>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Il formato da disegno quotidiano</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Doppia pagina panoramica</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 15,30 € ogni 2 mesi</li>
-            </ul>
-            <a href="#ordina" class="btn btn-primary">Scegli A5</a>
-          </article>
-          <article class="plan">
-            <h3>Studio A4</h3>
-            <div class="price">26 € <small>IVA incl.</small></div>
-            <ul>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Spazio per studi e tavole</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Perfetto per corsi e accademia</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Ricarica: 22,10 € ogni 2 mesi</li>
-            </ul>
-            <a href="#ordina" class="btn btn-ghost">Scegli A4</a>
-          </article>
+        <div class="buy-card">
+          <img src="assets/dart-touch.jpg" alt="" width="1179" height="1150" loading="lazy">
+          <div>
+            <span class="eyebrow">Balsamo per legno · 120 ml</span>
+            <h3>DART Touch</h3>
+            <p class="sub">Nutriente · Protettivo</p>
+            <div class="price">18,00 €</div>
+            <p class="price-note">Prezzo finale. Spedizione in tutta Italia o ritiro gratuito in negozio a Trieste.</p>
+            <div class="buy-row">
+              <div class="qty" role="group" aria-label="Quantità">
+                <button type="button" data-step="-1" aria-label="Diminuisci">−</button>
+                <output id="qty" aria-live="polite">1</output>
+                <button type="button" data-step="1" aria-label="Aumenta">+</button>
+              </div>
+              <a class="btn btn-primary" id="buy" href="mailto:assistenza@darthome.it?subject=Ordine%20DART%20Touch%20(1%20barattolo)">Ordina ora</a>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Formato</dt><dd>Barattolo in latta, 120 ml</dd></div>
+              <div><dt>Finitura</dt><dd>Satinata, naturale</dd></div>
+              <div><dt>Resa indicativa</dt><dd>Circa 3–4 m² per barattolo</dd></div>
+              <div><dt>Ingredienti</dt><dd>Cere e oli naturali</dd></div>
+              <div><dt>Prodotto da</dt><dd>DART, Trieste</dd></div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
@@ -423,42 +391,55 @@
     <section id="faq" style="padding-top:0">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Domande frequenti</span>
+          <span class="eyebrow"><b>04</b> Domande frequenti</span>
           <h2>FAQ</h2>
         </div>
         <div class="faq-list">
           <details>
-            <summary>Posso usare l'acquerello?</summary>
-            <p>Sì, per velature e acquerello leggero. Con molta acqua la carta può ondularsi un po': per lavori bagnati consigliamo un blocco per acquerello da 300 g/m².</p>
+            <summary>Posso usarlo sui mobili dipinti a mano?</summary>
+            <p>Sì, su pitture acriliche e a gesso ben asciutte crea un velo protettivo e ravviva i colori. È lo stesso trattamento che riserviamo ai pezzi dipinti in laboratorio.</p>
           </details>
           <details>
-            <summary>I marker passano sul retro?</summary>
-            <p>No, con marker ad alcol e a base d'acqua la pagina successiva resta pulita. Con passate molto insistite consigliamo di usare solo il fronte.</p>
+            <summary>Va bene per taglieri e utensili da cucina?</summary>
+            <p>Sì, nutre il legno e lo protegge dall'acqua. Lascia assorbire bene e lucida a fondo prima dell'uso.</p>
           </details>
           <details>
-            <summary>Come funziona l'abbonamento “Ricarica”?</summary>
-            <p>Scegli formato e colore: ogni due mesi ricevi un nuovo taccuino con il 15% di sconto, oppure lo ritiri in negozio. Puoi mettere in pausa o annullare quando vuoi.</p>
+            <summary>Quanto dura un barattolo?</summary>
+            <p>Si usa in strato sottile: con 120 ml tratti un tavolo e diversi mobili, e il barattolo dura per molti mesi di manutenzione.</p>
           </details>
           <details>
-            <summary>Fate sconti per scuole e corsi?</summary>
-            <p>Sì, per ordini da 10 pezzi in su applichiamo un prezzo dedicato. Scrivici dal modulo qui sotto.</p>
+            <summary>Lo trovo anche in negozio?</summary>
+            <p>Sì, nel nostro negozio di Via Luigi Cadorna 13 a Trieste, insieme ai mobili restaurati e ai quadri originali.</p>
+          </details>
+          <details>
+            <summary>Posso restituirlo?</summary>
+            <p>Hai 14 giorni dalla consegna per il recesso, se il barattolo è integro e non aperto. Trovi tutti i dettagli nella pagina <a href="https://darthome.it">Resi e rimborsi</a>.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section id="ordina" style="padding-top:0">
+    <!-- NEGOZIO -->
+    <section class="shop">
       <div class="container">
-        <div class="cta">
-          <h2>Il prossimo foglio bianco ti aspetta.</h2>
-          <p>Lascia la tua email: riceverai il 10% di sconto sul primo taccuino e le novità sui nuovi colori.</p>
-          <form id="signup" novalidate>
-            <label for="email" class="sr-only" style="position:absolute;left:-9999px">Email</label>
-            <input id="email" type="email" name="email" placeholder="La tua email" autocomplete="email" required>
-            <button class="btn btn-primary" type="submit">Iscrivimi</button>
-          </form>
-          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        <div class="section-head">
+          <span class="eyebrow" style="color:var(--sage)">Il negozio</span>
+          <h2>Un laboratorio <em>prima</em> che un negozio.</h2>
+          <p>DART restaura mobili d'epoca e li dipinge a mano, uno per uno, a Trieste. Vieni a trovarci per vedere i pezzi e chiedere consigli sul trattamento del legno.</p>
+        </div>
+        <div class="shop-grid">
+          <div>
+            <h3>Dove siamo</h3>
+            <p>Via Luigi Cadorna 13<br>34123 Trieste (TS)</p>
+          </div>
+          <div>
+            <h3>Orari</h3>
+            <p>Martedì – venerdì 10–13, 16–19<br>Sabato 10–13</p>
+          </div>
+          <div>
+            <h3>Contatti</h3>
+            <p><a href="tel:+393662936810">366 293 6810</a><br><a href="mailto:assistenza@darthome.it">assistenza@darthome.it</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -466,29 +447,29 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© 2026 Segno. Tutti i diritti riservati.</span>
+      <span>© 2026 DART di Dejana Mandic · Trieste</span>
       <nav>
-        <a href="#">Privacy</a>
-        <a href="#">Termini</a>
-        <a href="#">Contatti</a>
+        <a href="https://darthome.it">darthome.it</a>
+        <a href="https://www.instagram.com/dart_trieste_/">Instagram</a>
+        <a href="https://darthome.it">Termini di vendita</a>
+        <a href="https://darthome.it">Privacy</a>
       </nav>
     </div>
   </footer>
 
   <script>
-    // Demo: validazione lato client del form di iscrizione (nessun invio reale).
-    document.getElementById('signup').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var input = document.getElementById('email');
-      var msg = document.getElementById('form-msg');
-      if (!input.checkValidity()) {
-        msg.textContent = 'Inserisci un indirizzo email valido.';
-        input.focus();
-        return;
-      }
-      msg.textContent = 'Grazie! Ti scriveremo presto.';
-      this.reset();
-    });
+    // Selettore quantità: aggiorna il link d'ordine via email.
+    (function () {
+      var n = 1, out = document.getElementById('qty'), buy = document.getElementById('buy');
+      document.querySelectorAll('.qty button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          n = Math.min(20, Math.max(1, n + Number(b.dataset.step)));
+          out.textContent = n;
+          var label = n === 1 ? '1 barattolo' : n + ' barattoli';
+          buy.href = 'mailto:assistenza@darthome.it?subject=' + encodeURIComponent('Ordine DART Touch (' + label + ')');
+        });
+      });
+    })();
   </script>
 </body>
 </html>
