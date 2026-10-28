@@ -24,6 +24,9 @@ I ritocchi sono leggeri e non cambiano il pezzo: lo mostrano meglio.
 Con --per-wordpress non tocca il sito: salva in per-wordpress/foto/ le foto
 ritoccate in JPEG grande, da caricare sul negozio WordPress, con l'elenco di
 cosa sostituire (ELENCO.md).
+Con --alta-risoluzione fa lo stesso alla risoluzione piena degli originali, in
+JPEG di qualità massima, con i file chiamati come i pezzi e un ELENCO.txt, in
+foto-alta-risoluzione/ (non pubblicata: è da comprimere e mandare così com'è).
 
 Richiede Pillow e numpy (pip install pillow numpy).
 """
@@ -33,7 +36,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageCms, ImageFilter
 
 from immagini import originale, scrivi_varianti
 
@@ -43,6 +46,7 @@ DATI = RADICE / "data"
 TEMA = "https://www.darthome.it/wp-content/themes/dart-child/assets/img/"
 PER_WP = RADICE / "per-wordpress" / "foto"
 LATO_WP = 2048  # lato lungo delle copie per WordPress: basta per lo zoom e pesa poco
+ALTA = RADICE / "foto-alta-risoluzione"
 
 
 # ---------------------------------------------------------------- originali
@@ -159,13 +163,26 @@ def salva(im, nome):
     return scrivi_varianti(im, nome)
 
 
-def salva_per_wordpress(im, nome):
-    """Copia JPEG grande, da caricare sul negozio al posto della foto vecchia."""
-    PER_WP.mkdir(parents=True, exist_ok=True)
+def salva_copia(im, nome, alta=False):
+    """Copia JPEG da caricare sul negozio al posto della foto vecchia. Con alta: risoluzione
+    piena, qualità massima, colori senza sottocampionamento e profilo sRGB dichiarato."""
+    cartella = ALTA if alta else PER_WP
+    cartella.mkdir(parents=True, exist_ok=True)
+    if alta:
+        srgb = ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes()
+        im.save(cartella / f"{nome}.jpg", "JPEG", quality=95, subsampling=0, optimize=True, progressive=True,
+                icc_profile=srgb)
+        return im.size
     im = im.copy()
     im.thumbnail((LATO_WP, LATO_WP), Image.LANCZOS)
-    im.save(PER_WP / f"{nome}.jpg", "JPEG", quality=86, optimize=True, progressive=True)
+    im.save(cartella / f"{nome}.jpg", "JPEG", quality=86, optimize=True, progressive=True)
     return im.size
+
+
+def nome_leggibile(p, pos, nuova):
+    """«Bordeaux in fiore - foto principale»: per chi riceve le foto, il nome del pezzo dice già tutto."""
+    dove = "nuova foto principale" if nuova else ("foto principale" if pos == 1 else f"foto {pos}")
+    return re.sub(r'[\\/:*?"<>|]', "-", f"{p['nome']} - {dove}")
 
 
 def scrivi_elenco(righe):
@@ -179,7 +196,7 @@ def scrivi_elenco(righe):
         "| Pezzo | Foto sul negozio | Cosa fare | File | Perché |",
         "|---|---|---|---|---|",
     ]
-    for p, pos, origine, nuova, file, motivo in righe:
+    for p, pos, origine, nuova, file, motivo, _ in righe:
         pezzo = f"{p['nome']} (ID {p['id']})" + ("" if p["disponibile"] else " · venduto, facoltativo")
         if nuova:
             foto = f"nessuna: è una foto in più, ricavata da {Path(origine).stem}"
@@ -189,6 +206,25 @@ def scrivi_elenco(righe):
             azione = "Sostituirla"
         testo.append(f"| {pezzo} | {foto} | {azione} | `{file}` | {motivo} |")
     (PER_WP / "ELENCO.md").write_text("\n".join(testo) + "\n", encoding="utf-8")
+
+
+def scrivi_elenco_alta(righe):
+    """foto-alta-risoluzione/ELENCO.txt: testo semplice, si apre ovunque."""
+    testo = [
+        "DART - foto ritoccate in alta risoluzione",
+        "",
+        "Ogni foto è alla risoluzione piena del file caricato sul negozio, in JPEG di qualità massima.",
+        "I ritocchi sono leggeri: il pezzo è lo stesso, si vede meglio.",
+        "Generato da: python3 strumenti/ritocca.py --alta-risoluzione",
+    ]
+    for p, pos, origine, nuova, file, motivo, (w, h) in righe:
+        if nuova:
+            dove = f"foto in più, da mettere come immagine principale (ricavata da {Path(origine).stem})"
+        else:
+            dove = f"al posto di {Path(origine).stem}, " + ("l’immagine principale" if pos == 1 else f"la {pos}ª foto")
+        testo += ["", file, f"  Pezzo: {p['nome']} (ID {p['id']})" + ("" if p["disponibile"] else ", venduto"),
+                  f"  Sul negozio: {dove}", f"  Ritocco: {motivo[:1].lower() + motivo[1:]}", f"  Dimensioni: {w} × {h} pixel"]
+    (ALTA / "ELENCO.txt").write_text("\n".join(testo) + "\n", encoding="utf-8")
 
 
 def cancella(nome):
@@ -230,8 +266,9 @@ def main():
     regole = json.loads((DATI / "ritocchi.json").read_text(encoding="utf-8"))
     pezzi = json.loads((DATI / "pezzi.json").read_text(encoding="utf-8"))
     temi = {"hero": TEMA + "hero.jpg", "negozio": TEMA + "negozio.jpg"}
-    per_wp = "--per-wordpress" in sys.argv
-    righe = []  # per l'elenco di --per-wordpress
+    alta = "--alta-risoluzione" in sys.argv
+    per_wp = "--per-wordpress" in sys.argv or alta
+    righe = []  # per l'elenco di --per-wordpress e --alta-risoluzione
 
     for nome, r in regole["foto"].items():
         p, f = trova(pezzi, nome, r.get("origine"))
@@ -255,8 +292,10 @@ def main():
         im = tono(im, r.get("luce", 1.0), r.get("bilanciamento", 0.0))
         if per_wp:
             if f:
-                salva_per_wordpress(im, nome)
-                righe.append((p, posizione(p, f), f["origine"], False, f"{nome}.jpg", r.get("motivo", "")))
+                pos = posizione(p, f)
+                file = nome_leggibile(p, pos, False) if alta else nome
+                misure = salva_copia(im, file, alta)
+                righe.append((p, pos, f["origine"], False, f"{file}.jpg", r.get("motivo", ""), misure))
             continue
         w, h = salva(im, nome)
         if f:
@@ -272,9 +311,13 @@ def main():
         tela, misurata = frontale(im, r["angoli"], proporzione_da_misure(p["misure"]), r.get("margine", 0.006))
         tela = tono(tela, r.get("luce", 1.0), r.get("bilanciamento", 0.0), cast=dominante(im))
         if per_wp:
-            nome = sorgente["file"] if r.get("sostituisci") else f"{slug}-frontale"
-            salva_per_wordpress(tela, nome)
-            righe.append((p, posizione(p, sorgente), sorgente["origine"], not r.get("sostituisci"), f"{nome}.jpg", r.get("motivo", "")))
+            pos, nuova = posizione(p, sorgente), not r.get("sostituisci")
+            if alta:
+                nome = nome_leggibile(p, pos, nuova)
+            else:
+                nome = f"{slug}-frontale" if nuova else sorgente["file"]
+            misure = salva_copia(tela, nome, alta)
+            righe.append((p, pos, sorgente["origine"], nuova, f"{nome}.jpg", r.get("motivo", ""), misure))
             continue
         if r.get("sostituisci"):
             nome = sorgente["file"]
@@ -293,8 +336,12 @@ def main():
 
     if per_wp:
         righe.sort(key=lambda r: (r[0]["nome"], r[1]))
-        scrivi_elenco(righe)
-        print(f"· {len(righe)} foto in {PER_WP.relative_to(RADICE)}, elenco in ELENCO.md")
+        if alta:
+            scrivi_elenco_alta(righe)
+        else:
+            scrivi_elenco(righe)
+        cartella = ALTA if alta else PER_WP
+        print(f"· {len(righe)} foto in {cartella.relative_to(RADICE)}, elenco in {'ELENCO.txt' if alta else 'ELENCO.md'}")
         return
     (DATI / "pezzi.json").write_text(json.dumps(pezzi, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
