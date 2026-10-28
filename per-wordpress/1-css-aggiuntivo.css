@@ -1,0 +1,52 @@
+/* DART — da incollare in WordPress: Aspetto → Personalizza → CSS aggiuntivo → Pubblica.
+   Serve insieme allo snippet 2-snippet-wpcode.php: dà forma a quello che lo snippet aggiunge. */
+
+/* Testi grigi più leggibili, anche per chi vede meno bene */
+:root { --tenue: #6E6358; --dart-tenue: #6E6358; }
+
+/* La riga «Disponibilità» sopra il pulsante ripete quello che c'è già nelle caratteristiche */
+.single-product .ast-stock-detail { display: none; }
+
+/* Sotto «Acquista ora»: WhatsApp, garanzie, misure in scala */
+.dart-scheda { display: grid; gap: 12px; margin-top: 14px; }
+.dart-whatsapp {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 12px 20px; border: 1px solid var(--linea-forte, #CDBDA3); border-radius: 999px;
+  background: transparent; color: var(--inchiostro, #2B2622); font-weight: 500; text-decoration: none;
+}
+.dart-whatsapp:hover { border-color: var(--inchiostro, #2B2622); color: var(--inchiostro, #2B2622); }
+.dart-whatsapp svg { flex: none; color: #1B7D44; }
+.dart-unico { margin: 0; text-align: center; font-family: var(--serif, Georgia, serif); font-style: italic; color: var(--terra, #A9502F); }
+.dart-garanzie {
+  display: grid; gap: 8px; margin: 0; padding: 14px 16px; list-style: none; font-size: 14.5px;
+  background: var(--crema, #FDFBF6); border: 1px solid var(--linea, #E2D7C4); border-radius: var(--raggio-l, 10px);
+}
+.dart-garanzie li { position: relative; margin: 0; padding-left: 22px; }
+.dart-garanzie li::before { content: "✓"; position: absolute; left: 0; color: var(--salvia, #6C8065); font-weight: 700; }
+.dart-garanzie strong { color: var(--inchiostro, #2B2622); }
+.dart-misure {
+  margin: 0; padding: 14px 14px 6px;
+  background: var(--crema, #FDFBF6); border: 1px solid var(--linea, #E2D7C4); border-radius: var(--raggio-l, 10px);
+}
+.dart-misure figcaption { margin-bottom: 6px; font-size: 14px; color: var(--tenue, #6E6358); }
+.dart-misure svg { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+.dart-misure .dart-terra { stroke: var(--linea-forte, #CDBDA3); stroke-width: 1.5; }
+.dart-misure .dart-persona { fill: var(--linea-forte, #CDBDA3); }
+.dart-misure .dart-pezzo { fill: var(--salvia-soft, #E4EADF); stroke: var(--salvia, #6C8065); stroke-width: 1.5; }
+.dart-misure .dart-quota { stroke: var(--tenue, #6E6358); stroke-width: 1; }
+.dart-misure text { fill: var(--testo, #4C443B); font: 500 12px var(--sans, sans-serif); }
+.dart-condividi { margin: 0; font-size: 15px; }
+.dart-condividi a { color: var(--inchiostro, #2B2622); }
+
+/* Pulsante WhatsApp tondo in basso a destra: sopra la pagina, sotto il velo (80) e il pannello (90) del tema */
+.dart-whatsapp-flottante {
+  position: fixed; right: 18px; bottom: 18px; z-index: 70; display: grid; place-items: center;
+  width: 56px; height: 56px; border-radius: 50%; background: #1B7D44; color: #fff; box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+}
+.dart-whatsapp-flottante:hover { background: #166A39; color: #fff; }
+.dart-whatsapp-flottante svg { width: 28px; height: 28px; }
+
+/* Domande frequenti: lo shortcode [dart_domande] */
+.dart-domande details { border-bottom: 1px solid var(--linea, #E2D7C4); }
+.dart-domande summary { padding: 14px 0; cursor: pointer; font-weight: 500; color: var(--inchiostro, #2B2622); }
+.dart-domande p { margin: 0 0 14px; }

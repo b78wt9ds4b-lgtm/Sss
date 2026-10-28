@@ -21,6 +21,10 @@ I ritocchi sono leggeri e non cambiano il pezzo: lo mostrano meglio.
   con "sostituisci" prende il posto della foto di partenza, con "margine"
   si taglia un po' di più sui bordi (frazione del lato corto)
 
+Con --per-wordpress non tocca il sito: salva in per-wordpress/foto/ le foto
+ritoccate in JPEG grande, da caricare sul negozio WordPress, con l'elenco di
+cosa sostituire (ELENCO.md).
+
 Richiede Pillow e numpy (pip install pillow numpy).
 """
 import json
@@ -37,6 +41,8 @@ RADICE = Path(__file__).resolve().parent.parent
 FOTO = RADICE / "docs" / "foto"
 DATI = RADICE / "data"
 TEMA = "https://www.darthome.it/wp-content/themes/dart-child/assets/img/"
+PER_WP = RADICE / "per-wordpress" / "foto"
+LATO_WP = 2048  # lato lungo delle copie per WordPress: basta per lo zoom e pesa poco
 
 
 # ---------------------------------------------------------------- originali
@@ -153,6 +159,38 @@ def salva(im, nome):
     return scrivi_varianti(im, nome)
 
 
+def salva_per_wordpress(im, nome):
+    """Copia JPEG grande, da caricare sul negozio al posto della foto vecchia."""
+    PER_WP.mkdir(parents=True, exist_ok=True)
+    im = im.copy()
+    im.thumbnail((LATO_WP, LATO_WP), Image.LANCZOS)
+    im.save(PER_WP / f"{nome}.jpg", "JPEG", quality=86, optimize=True, progressive=True)
+    return im.size
+
+
+def scrivi_elenco(righe):
+    """per-wordpress/foto/ELENCO.md: per ogni file, il pezzo e cosa farne sul negozio."""
+    testo = [
+        "# Foto ritoccate da caricare su WordPress",
+        "",
+        "Generato da `python3 strumenti/ritocca.py --per-wordpress`. «Foto sul negozio» è il nome",
+        "della foto nella Libreria media; la posizione conta la prima foto della scheda come 1ª.",
+        "",
+        "| Pezzo | Foto sul negozio | Cosa fare | File | Perché |",
+        "|---|---|---|---|---|",
+    ]
+    for p, pos, origine, nuova, file, motivo in righe:
+        pezzo = f"{p['nome']} (ID {p['id']})" + ("" if p["disponibile"] else " · venduto, facoltativo")
+        if nuova:
+            foto = f"nessuna: è una foto in più, ricavata da {Path(origine).stem}"
+            azione = "Caricarla come immagine principale; quella di adesso passa nella galleria"
+        else:
+            foto = f"{Path(origine).stem} · " + ("immagine principale" if pos == 1 else f"{pos}ª foto")
+            azione = "Sostituirla"
+        testo.append(f"| {pezzo} | {foto} | {azione} | `{file}` | {motivo} |")
+    (PER_WP / "ELENCO.md").write_text("\n".join(testo) + "\n", encoding="utf-8")
+
+
 def cancella(nome):
     """Toglie da docs/foto/ tutte le versioni di una foto (WebP e JPEG del catalogo)."""
     for f in FOTO.iterdir():
@@ -171,6 +209,11 @@ def proporzione_da_misure(misure):
     return float(l.group(1).replace(",", ".")) / float(h.group(1).replace(",", "."))
 
 
+def posizione(p, f):
+    """Posizione della foto nella scheda del negozio: 1 = immagine principale."""
+    return [x for x in p["foto"] if not x.get("derivata")].index(f) + 1
+
+
 def trova(pezzi, nome, origine):
     """La foto a cui si applica una regola. Con «origine» la si cerca per il suo percorso
     su WordPress, che non cambia se sul negozio le foto vengono tolte o riordinate."""
@@ -187,6 +230,8 @@ def main():
     regole = json.loads((DATI / "ritocchi.json").read_text(encoding="utf-8"))
     pezzi = json.loads((DATI / "pezzi.json").read_text(encoding="utf-8"))
     temi = {"hero": TEMA + "hero.jpg", "negozio": TEMA + "negozio.jpg"}
+    per_wp = "--per-wordpress" in sys.argv
+    righe = []  # per l'elenco di --per-wordpress
 
     for nome, r in regole["foto"].items():
         p, f = trova(pezzi, nome, r.get("origine"))
@@ -195,6 +240,9 @@ def main():
             print(f"! {nome}: {stato}", file=sys.stderr)
             continue
         if r.get("togli"):
+            if per_wp:
+                print(f"- da togliere sul negozio: {f['origine']}")
+                continue
             p["foto"].remove(f)
             cancella(f["file"])
             print(f"- tolta {f['file']}")
@@ -205,6 +253,11 @@ def main():
             x0, y0, x1, y1 = r["ritaglio"]
             im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
         im = tono(im, r.get("luce", 1.0), r.get("bilanciamento", 0.0))
+        if per_wp:
+            if f:
+                salva_per_wordpress(im, nome)
+                righe.append((p, posizione(p, f), f["origine"], False, f"{nome}.jpg", r.get("motivo", "")))
+            continue
         w, h = salva(im, nome)
         if f:
             f.update(w=w, h=h)
@@ -218,6 +271,11 @@ def main():
         im = originale(sorgente["origine"])
         tela, misurata = frontale(im, r["angoli"], proporzione_da_misure(p["misure"]), r.get("margine", 0.006))
         tela = tono(tela, r.get("luce", 1.0), r.get("bilanciamento", 0.0), cast=dominante(im))
+        if per_wp:
+            nome = sorgente["file"] if r.get("sostituisci") else f"{slug}-frontale"
+            salva_per_wordpress(tela, nome)
+            righe.append((p, posizione(p, sorgente), sorgente["origine"], not r.get("sostituisci"), f"{nome}.jpg", r.get("motivo", "")))
+            continue
         if r.get("sostituisci"):
             nome = sorgente["file"]
             w, h = salva(tela, nome)
@@ -233,6 +291,11 @@ def main():
             avviso = f"  (attenzione: proporzioni dalla foto {misurata:.2f}, dalle misure {attesa:.2f}: controlla le misure)"
         print(f"· frontale {nome}{avviso}")
 
+    if per_wp:
+        righe.sort(key=lambda r: (r[0]["nome"], r[1]))
+        scrivi_elenco(righe)
+        print(f"· {len(righe)} foto in {PER_WP.relative_to(RADICE)}, elenco in ELENCO.md")
+        return
     (DATI / "pezzi.json").write_text(json.dumps(pezzi, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 

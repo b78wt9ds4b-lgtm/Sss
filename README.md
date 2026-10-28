@@ -78,6 +78,10 @@ Il pulsante **Acquista ora** porta al carrello del sito WordPress attuale, così
 
 Spedizione con BRT o Poste Italiane, consegna al piano strada. I testi da aggiornare anche su WordPress sono in `DA-AGGIORNARE-SU-WORDPRESS.md`.
 
+## Migliorare il sito WordPress di adesso
+
+La cartella `per-wordpress/` porta su darthome.it le migliorie del nuovo sito senza cambiare tema: un CSS da incollare, uno snippet per il plugin WPCode («Acquista ora» che porta al pagamento, WhatsApp, garanzie, misure in scala, testi della spedizione, anteprime per Google e WhatsApp), le descrizioni da importare in WooCommerce e le foto ritoccate. Le istruzioni passo passo sono in `per-wordpress/README.md`.
+
 ## Google Shopping e Instagram Shopping
 
 `docs/feed-prodotti.xml` è il catalogo dei pezzi disponibili, nel formato che leggono Google e Meta. Si aggiorna ogni volta che rigeneri il sito. Quando il sito è online su darthome.it:
