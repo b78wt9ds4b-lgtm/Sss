@@ -48,6 +48,16 @@ VENDUTI = [p for p in PEZZI if not p["disponibile"]]
 BASE = NEGOZIO["url"].rstrip("/")
 CORRIERI = "BRT o Poste Italiane"
 REGALI_MAX = 150  # € — soglia della sezione «idee regalo»
+COPERTINA = "armadio-botanico-1"  # foto d'apertura della home: la foto di un pezzo, con il link al pezzo
+
+
+def apertura():
+    """(pezzo, foto) d'apertura; se il pezzo sparisce dal negozio si torna alla foto del tema."""
+    for p in PEZZI:
+        for f in p["foto"]:
+            if f["file"] == COPERTINA:
+                return p, f
+    return None, {"file": "hero", "w": 1050, "h": 1400}
 
 # chiave interna -> percorso (uguale al vecchio sito), nomi e testi
 CATEGORIE = {
@@ -515,7 +525,7 @@ def negozio_ld():
     return {
         "@context": "https://schema.org", "@type": "FurnitureStore", "@id": BASE + "/#negozio",
         "name": "DART", "description": NEGOZIO["descrizione"], "url": BASE + "/",
-        "image": BASE + "/foto/hero-1200.webp", "logo": BASE + "/logo.png",
+        "image": f"{BASE}/foto/{apertura()[1]['file']}-1200.webp", "logo": BASE + "/logo.png",
         "telephone": "+39 " + NEGOZIO["telefono"], "email": NEGOZIO["email"],
         "address": {"@type": "PostalAddress", "streetAddress": NEGOZIO["indirizzo"],
                     "postalCode": NEGOZIO["cap"], "addressLocality": NEGOZIO["citta"],
@@ -568,29 +578,35 @@ def home():
   </div>
 </section>"""
 
+    pezzo_copertina, foto_copertina = apertura()
+    if pezzo_copertina:
+        didascalia = f'<a href="{r}pezzo/{pezzo_copertina["slug"]}/">In copertina · {e(pezzo_copertina["nome"])}</a>'
+        alt_copertina = (f"{pezzo_copertina['nome']}: armadio d’epoca color salvia dipinto a mano con fiori e foglie, "
+                         "tra una palma e una damigiana di vetro verde")
+    else:
+        didascalia = "<span>Restaurati e dipinti a mano a Trieste</span>"
+        alt_copertina = "Un mobile dipinto a mano da DART, con uccelli sulle ante, e quadri originali alle pareti"
     corpo = f"""<section class="apertura">
-  <div class="contenitore">
-    <div>
-      <p class="occhiello">Trieste · dal laboratorio</p>
-      <h1>Mobili che <em>raccontano</em> qualcosa</h1>
-      <p class="lead">Mobili d’epoca restaurati e dipinti a mano, quadri originali e piccole sculture. Ogni pezzo è unico e arriva a casa tua, in tutta Italia.</p>
-      <div class="azioni">
-        <a class="btn btn-scuro" href="negozio/">Guarda i {len(DISPONIBILI)} pezzi disponibili</a>
-        <a class="btn btn-chiaro" href="#come-funziona">Come funziona</a>
-      </div>
-      {rassicura_html()}
+  <figure class="apertura-foto">
+    {immagine(r, foto_copertina, alt_copertina, "(min-width: 900px) 50vw, 100vw", lazy=False)}
+    <figcaption>{didascalia}</figcaption>
+  </figure>
+  <div class="apertura-testo">
+    <p class="occhiello">Restauro e pittura · Trieste</p>
+    <h1>Opere da <em>abitare</em></h1>
+    <p class="lead">Mobili d’epoca restaurati e dipinti a mano nel nostro atelier di Trieste, accanto a quadri originali e piccole sculture in legno. Ogni pezzo esiste in un solo esemplare.</p>
+    <div class="azioni">
+      <a class="btn btn-scuro" href="negozio/">Scopri la collezione</a>
+      <a class="link-freccia" href="#laboratorio">Dentro il laboratorio →</a>
     </div>
-    <figure>
-      {immagine(r, {"file": "hero", "w": 1050, "h": 1400}, "Un mobile dipinto a mano da DART, con uccelli sulle ante, e quadri originali alle pareti", "(min-width: 760px) 45vw, 100vw", lazy=False)}
-      <figcaption>Restaurati e dipinti a mano a Trieste</figcaption>
-    </figure>
   </div>
 </section>
-<section class="forza" aria-label="Perché DART">
+<section class="forza" aria-label="Il servizio DART">
   <ul>
-    <li>{ICONE['unico']}<strong>Pezzi unici, dipinti a mano</strong><span>Niente repliche: ogni pezzo esiste in un solo esemplare.</span></li>
-    <li>{ICONE['pacco']}<strong>Imballati a mano, uno per uno</strong><span>Spediti in tutta Italia con {CORRIERI}.</span></li>
-    <li>{ICONE['lucchetto']}<strong>Prezzi finali, senza sorprese</strong><span>La spedizione è scritta in ogni scheda, prima di pagare.</span></li>
+    <li><strong>Esemplare unico</strong><span>Ogni pezzo esiste una volta sola. Quando trova casa, non torna.</span></li>
+    <li><strong>Spedizione curata</strong><span>Imballato a mano in atelier, spedito in tutta Italia con {CORRIERI}.</span></li>
+    <li><strong>Reso in 14 giorni</strong><span>Hai 14 giorni dalla consegna per ripensarci, senza dover spiegare il motivo.</span></li>
+    <li><strong>Contatto diretto</strong><span>Altre foto, un video, una misura in più: ti risponde l’atelier su WhatsApp.</span></li>
   </ul>
 </section>
 <section class="sezione">
@@ -638,9 +654,8 @@ def home():
 <section class="sezione sezione-alt" id="contatti">
   <div class="contenitore">{blocco_chiusura()}</div>
 </section>"""
-    eroe = {"file": "hero", "w": 1050, "h": 1400}
-    precarica = (f'<link rel="preload" as="image" href="{foto_url(r, "hero", 800)}" imagesrcset="{srcset(r, eroe)}" '
-                 'imagesizes="(min-width: 760px) 45vw, 100vw" fetchpriority="high">\n')
+    precarica = (f'<link rel="preload" as="image" href="{foto_url(r, foto_copertina["file"], 800)}" '
+                 f'imagesrcset="{srcset(r, foto_copertina)}" imagesizes="(min-width: 900px) 50vw, 100vw" fetchpriority="high">\n')
     return pagina(percorso="index.html", titolo="DART — Mobili d’epoca dipinti a mano e quadri originali · Trieste",
                   descrizione=NEGOZIO["descrizione"], corpo=corpo, dati_strutturati=[negozio_ld(), domande_ld()],
                   testa=precarica)
@@ -1051,8 +1066,8 @@ def main():
     global OG_HOME
     if not immagini:
         print("Pillow non è installato: salto anteprime social e foto JPEG (pip install pillow).", file=sys.stderr)
-    OG_HOME = og_social("home", "hero", "Trieste · dal laboratorio", "Mobili che raccontano qualcosa", "",
-                        "Mobili d’epoca dipinti a mano e quadri originali. Pezzi unici, spedizione in tutta Italia.",
+    OG_HOME = og_social("home", apertura()[1]["file"], "Atelier · Trieste", "Opere da abitare", "",
+                        "Mobili d’epoca dipinti a mano, quadri originali e sculture. Ogni pezzo esiste una volta sola.",
                         "Mobili d’epoca restaurati e dipinti a mano da DART")
     indirizzi = [home()]
     primo = DISPONIBILI[0]
