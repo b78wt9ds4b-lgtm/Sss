@@ -1,5 +1,7 @@
-"""Immagini derivate dalle foto, usate da costruisci.py.
+"""Immagini del sito, usate da importa.py, ritocca.py e costruisci.py.
 
+- Varianti WebP di ogni foto (400, 800 e 1200 px di larghezza): il
+  browser scarica la più piccola che basta per lo schermo.
 - Anteprime social (1200×630, JPEG): quello che compare quando un pezzo
   viene condiviso su WhatsApp, Facebook o Instagram. Foto a sinistra,
   nome e prezzo a destra.
@@ -12,22 +14,76 @@ o disponibilità, l'immagine viene rifatta e i social non mostrano quella
 vecchia rimasta in memoria.
 """
 import hashlib
+import io
 import json
 import re
+import time
+import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 RADICE = Path(__file__).resolve().parent.parent
 FOTO = RADICE / "docs" / "foto"
 SOCIAL = FOTO / "social"
 FONT = RADICE / "strumenti" / "fonts" / "Fraunces.ttf"
+ORIGINALI = RADICE / ".originali"  # copie degli originali scaricati, non pubblicate
+
+# Larghezze di ogni foto sul sito (srcset). Le foto molto dettagliate (quadri
+# materici) vengono compresse un po' di più invece di pesare il doppio delle altre.
+LARGHEZZE = (400, 800, 1200)
+PESO_MAX = {400: 45_000, 800: 120_000, 1200: 230_000}
 
 SABBIA = (246, 240, 230)
 INCHIOSTRO = (43, 38, 34)
 TENUE = (122, 111, 99)
 TERRA = (169, 80, 47)
 W, H = 1200, 630
+
+
+def chiave(url):
+    """Identità stabile di una foto: il suo percorso su WordPress, es. «2026/10/IMG_6651.jpg»."""
+    return url.split("/uploads/", 1)[-1] if "/uploads/" in url else "tema/" + url.rsplit("/", 1)[-1]
+
+
+def scarica(url, tentativi=5):
+    """Scarica un indirizzo; se la connessione salta riprova, aspettando 2, 4, 8, 16 secondi."""
+    for n in range(tentativi):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (DART)"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read()
+        except OSError:
+            if n == tentativi - 1:
+                raise
+            time.sleep(2 ** (n + 1))
+
+
+def originale(url):
+    """L'originale ad alta risoluzione, scaricato una volta sola in .originali/."""
+    ORIGINALI.mkdir(exist_ok=True)
+    copia = ORIGINALI / chiave(url).replace("/", "-")
+    if not copia.exists():
+        copia.write_bytes(scarica(url))
+    return ImageOps.exif_transpose(Image.open(io.BytesIO(copia.read_bytes()))).convert("RGB")
+
+
+def scrivi_varianti(im, nome):
+    """Salva la foto in docs/foto/ alle LARGHEZZE; restituisce larghezza e altezza della più grande."""
+    for w in LARGHEZZE:
+        copia = im
+        if copia.width > w:
+            copia = copia.resize((w, round(copia.height * w / copia.width)), Image.LANCZOS)
+        if w == LARGHEZZE[0]:  # rimpicciolendo molto si perde nitidezza: un velo di contrasto sui bordi
+            copia = copia.filter(ImageFilter.UnsharpMask(radius=0.8, percent=40, threshold=2))
+        for qualita in (78, 72, 66, 60):
+            buf = io.BytesIO()
+            copia.save(buf, "WEBP", quality=qualita, method=6)
+            if buf.tell() <= PESO_MAX[w]:
+                break
+        (FOTO / f"{nome}-{w}.webp").write_bytes(buf.getvalue())
+    larg = min(im.width, LARGHEZZE[-1])
+    return larg, round(im.height * larg / im.width)
 
 
 def _font(dimensione, peso=400, ottica=72):

@@ -23,40 +23,23 @@ I ritocchi sono leggeri e non cambiano il pezzo: lo mostrano meglio.
 
 Richiede Pillow e numpy (pip install pillow numpy).
 """
-import io
 import json
 import re
 import sys
-import urllib.request
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageFilter
+
+from immagini import originale, scrivi_varianti
 
 RADICE = Path(__file__).resolve().parent.parent
-ORIGINALI = RADICE / ".originali"
 FOTO = RADICE / "docs" / "foto"
 DATI = RADICE / "data"
 TEMA = "https://www.darthome.it/wp-content/themes/dart-child/assets/img/"
-LARGHEZZE = (600, 1200)
 
 
 # ---------------------------------------------------------------- originali
-
-def chiave(url):
-    """Identità stabile di una foto: il suo percorso su WordPress, es. «2026/10/IMG_6651.jpg»."""
-    return url.split("/uploads/", 1)[-1] if "/uploads/" in url else "tema/" + url.rsplit("/", 1)[-1]
-
-
-def originale(url):
-    ORIGINALI.mkdir(exist_ok=True)
-    copia = ORIGINALI / chiave(url).replace("/", "-")
-    if not copia.exists():
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (ritocca DART)"})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            copia.write_bytes(r.read())
-    return ImageOps.exif_transpose(Image.open(io.BytesIO(copia.read_bytes()))).convert("RGB")
-
 
 # ---------------------------------------------------------------- geometria
 
@@ -167,20 +150,13 @@ def tono(im, luce=1.0, bilanciamento=0.0, cast=None, livelli=0.5):
 # ---------------------------------------------------------------- salvataggio
 
 def salva(im, nome):
-    for w in LARGHEZZE:
-        copia = im.copy()
-        if copia.width > w:
-            copia = copia.resize((w, round(copia.height * w / copia.width)), Image.LANCZOS)
-        copia = copia.filter(ImageFilter.UnsharpMask(radius=1.0, percent=55, threshold=2))
-        copia.save(FOTO / f"{nome}-{w}.webp", "WEBP", quality=80, method=6)
-    larg = min(im.width, LARGHEZZE[-1])
-    return larg, round(im.height * larg / im.width)
+    return scrivi_varianti(im, nome)
 
 
 def cancella(nome):
     """Toglie da docs/foto/ tutte le versioni di una foto (WebP e JPEG del catalogo)."""
     for f in FOTO.iterdir():
-        if re.fullmatch(re.escape(nome) + r"-(600|1200)\.webp|" + re.escape(nome) + r"(-[0-9a-f]{8})?\.jpg", f.name):
+        if re.fullmatch(re.escape(nome) + r"-\d+\.webp|" + re.escape(nome) + r"(-[0-9a-f]{8})?\.jpg", f.name):
             f.unlink()
 
 

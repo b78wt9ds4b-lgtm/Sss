@@ -123,12 +123,27 @@ def prima_frase(s):
     return re.split(r"(?<=[.!?])\s", testo_semplice(s))[0] if s else ""
 
 
+# Larghezze delle varianti di ogni foto in docs/foto/ (LARGHEZZE in immagini.py).
+VARIANTI = (400, 800, 1200)
+
+
 def foto_url(r, nome, w):
     return f"{r}foto/{nome}-{w}.webp"
 
 
+def srcset(r, foto):
+    """Le varianti con la loro larghezza vera (una foto stretta non arriva a 1200 px)."""
+    viste, voci = set(), []
+    for v in VARIANTI:
+        larg = min(v, foto["w"])
+        if larg not in viste:
+            viste.add(larg)
+            voci.append(f"{foto_url(r, foto['file'], v)} {larg}w")
+    return ", ".join(voci)
+
+
 def immagine(r, foto, alt, sizes, lazy=True):
-    """<img> con le due larghezze generate da importa.py.
+    """<img> con le varianti di immagini.py: il browser scarica la più piccola che basta.
 
     Le foto molto più larghe o più strette del riquadro verticale del sito
     (i quadri orizzontali, per esempio) si mostrano intere invece che tagliate.
@@ -136,8 +151,7 @@ def immagine(r, foto, alt, sizes, lazy=True):
     caricamento = 'loading="lazy"' if lazy else 'fetchpriority="high"'
     rapporto = foto["w"] / foto["h"]
     classe = ' class="intera"' if rapporto > 0.95 or rapporto < 0.62 else ""
-    return (f'<img{classe} src="{foto_url(r, foto["file"], 600)}" '
-            f'srcset="{foto_url(r, foto["file"], 600)} 600w, {foto_url(r, foto["file"], 1200)} {foto["w"]}w" '
+    return (f'<img{classe} src="{foto_url(r, foto["file"], 800)}" srcset="{srcset(r, foto)}" '
             f'sizes="{sizes}" width="{foto["w"]}" height="{foto["h"]}" alt="{e(alt)}" {caricamento} decoding="async">')
 
 
@@ -225,6 +239,11 @@ def og_social(nome_file, foto, occhiello, titolo, prezzo="", nota="", alt=""):
 
 OG_HOME = None  # calcolata in main()
 
+# Precarica le pagine del sito quando il dito o il mouse si posa su un link: si aprono subito.
+# Mai i link verso altri siti né quelli segnati nofollow (come «Acquista», che riempirebbe il carrello).
+SPECULAZIONE = json.dumps({"prefetch": [{"where": {"and": [
+    {"href_matches": "/*"}, {"not": {"selector_matches": "[rel~=nofollow]"}}]}, "eagerness": "moderate"}]})
+
 
 # ---------------------------------------------------------------- impaginazione
 
@@ -234,13 +253,13 @@ def menu_voci(r):
         (f"{r}{CATEGORIE['mobili']['percorso']}", "Mobili", "mobili"),
         (f"{r}{CATEGORIE['quadri']['percorso']}", "Quadri", "quadri"),
         (f"{r}{CATEGORIE['sculture']['percorso']}", "Sculture", "sculture"),
-        (f"{r}#domande" if r == "" else f"{r}index.html#domande", "Domande", "domande"),
+        (f"{r}#domande", "Domande", "domande"),
         (f"{r}contatti/", "Contatti", "contatti"),
     ]
 
 
 def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo="website", og_extra="",
-           dati_strutturati=None, classe_body="", wa_messaggio=None, indicizza=True):
+           dati_strutturati=None, classe_body="", wa_messaggio=None, indicizza=True, testa="", base=""):
     """Avvolge il corpo nel documento completo e lo scrive in docs/<percorso>."""
     r = "../" * percorso.count("/")
     canonico = BASE + "/" + (percorso[:-len("index.html")] if percorso.endswith("index.html") else percorso)
@@ -257,7 +276,7 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
     documento = f"""<!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
+{base}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(titolo)}</title>
 <meta name="description" content="{e(descrizione)}">
@@ -279,12 +298,13 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
 <link rel="preload" href="{r}fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{r}fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{r}stile.css">
-{ld}</head>
+<script type="speculationrules">{SPECULAZIONE}</script>
+{testa}{ld}</head>
 <body class="{classe_body}">
 <a class="salta" href="#contenuto">Vai al contenuto</a>
 <header class="testata">
   <div class="contenitore">
-    <a class="marchio" href="{home}"><img src="{r}logo.png" alt="" width="32" height="32">DART</a>
+    <a class="marchio" href="{home}"><img src="{r}logo-64.png" alt="" width="32" height="32">DART</a>
     <nav class="menu" aria-label="Principale"><ul>{menu}</ul></nav>
     <div class="testata-azioni">
       <a class="icona-btn" href="{NEGOZIO['instagram']}" aria-label="DART su Instagram">{ICONE['instagram']}</a>
@@ -300,7 +320,7 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
   <div class="contenitore">
     <div class="piede-griglia">
       <div>
-        <a class="marchio" href="{home}"><img src="{r}logo.png" alt="" width="32" height="32">DART</a>
+        <a class="marchio" href="{home}"><img src="{r}logo-64.png" alt="" width="32" height="32">DART</a>
         <p>Mobili d’epoca restaurati e dipinti a mano, quadri originali e sculture. Dal laboratorio di Trieste a casa tua, in tutta Italia.</p>
       </div>
       <div>
@@ -328,8 +348,8 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
       <p>Operazione non soggetta a IVA ai sensi dell’art. 1, commi 54-89, Legge 190/2014 — regime forfettario. I prezzi indicati sono finali. Vendita esclusivamente in Italia. © {date.today().year} DART</p>
     </div>
   </div>
+  <a class="wa-flottante" href="{wa_link}" aria-label="Scrivici su WhatsApp">{ICONE['whatsapp']}</a>
 </footer>
-<a class="wa-flottante" href="{wa_link}" aria-label="Scrivici su WhatsApp">{ICONE['whatsapp']}</a>
 <script src="{r}sito.js" defer></script>
 </body>
 </html>
@@ -618,8 +638,12 @@ def home():
 <section class="sezione sezione-alt" id="contatti">
   <div class="contenitore">{blocco_chiusura()}</div>
 </section>"""
+    eroe = {"file": "hero", "w": 1050, "h": 1400}
+    precarica = (f'<link rel="preload" as="image" href="{foto_url(r, "hero", 800)}" imagesrcset="{srcset(r, eroe)}" '
+                 'imagesizes="(min-width: 760px) 45vw, 100vw" fetchpriority="high">\n')
     return pagina(percorso="index.html", titolo="DART — Mobili d’epoca dipinti a mano e quadri originali · Trieste",
-                  descrizione=NEGOZIO["descrizione"], corpo=corpo, dati_strutturati=[negozio_ld(), domande_ld()])
+                  descrizione=NEGOZIO["descrizione"], corpo=corpo, dati_strutturati=[negozio_ld(), domande_ld()],
+                  testa=precarica)
 
 
 def catalogo(percorso, titolo_h1, testo, pezzi, attivo, titolo, descrizione, og):
@@ -654,6 +678,7 @@ def catalogo(percorso, titolo_h1, testo, pezzi, attivo, titolo, descrizione, og)
 </div>
 <nav class="filtri" aria-label="Categorie"><div class="contenitore">{chip_html}</div></nav>
 <div class="contenitore catalogo-corpo">
+  <h2 class="sr">Pezzi disponibili</h2>
   {corpo_disp}
   {corpo_venduti}
 </div>
@@ -670,6 +695,58 @@ def catalogo(percorso, titolo_h1, testo, pezzi, attivo, titolo, descrizione, og)
                   for i, p in enumerate(disponibili)]}}
     return pagina(percorso=percorso, titolo=titolo, descrizione=descrizione, corpo=corpo,
                   attivo=attivo, og=og, dati_strutturati=[elenco])
+
+
+def misura(misure, lettere):
+    """Il numero dopo «H», «L» o «Ø» in «H 199 · L 110 · P 50 cm»."""
+    m = re.search(r"(?:%s)\s*([\d.,]+)" % lettere, misure or "")
+    return float(m.group(1).replace(",", ".")) if m else None
+
+
+def disegno_misure(p):
+    """Il pezzo in scala accanto a una persona alta 170 cm: si capisce subito quanto è grande.
+
+    Solo per mobili e quadri con altezza e larghezza; i quadri sono appesi con il centro a 150 cm.
+    """
+    alt, larg = misura(p["misure"], "H"), misura(p["misure"], "L|Ø")
+    if p["categoria"] not in ("mobili", "quadri") or not (alt and larg):
+        return ""
+    quadro = p["categoria"] == "quadri"
+    persona = 170
+    da_terra = 150 - alt / 2 if quadro else 0
+    W, H, terra, x_persona = 340, 230, 200, 30
+    # pixel per centimetro: tutto deve stare in altezza, e in larghezza con la persona (58 cm),
+    # i margini e l'etichetta dell'altezza a destra del pezzo
+    scala = min(170 / max(persona, da_terra + alt), (W - x_persona - 46 - 56) / (larg + 58))
+    s = lambda cm: round(cm * scala, 1)
+    # persona stilizzata, alta 170 cm (larga circa 58)
+    px, top = x_persona + s(29), terra - s(persona)
+    u = s(persona)
+    sagoma = (f'<circle cx="{px}" cy="{top + 0.075 * u:.1f}" r="{0.07 * u:.1f}"/>'
+              f'<rect x="{px - 0.12 * u:.1f}" y="{top + 0.16 * u:.1f}" width="{0.24 * u:.1f}" height="{0.39 * u:.1f}" rx="{0.05 * u:.1f}"/>'
+              f'<rect x="{px - 0.17 * u:.1f}" y="{top + 0.17 * u:.1f}" width="{0.04 * u:.1f}" height="{0.35 * u:.1f}" rx="{0.02 * u:.1f}"/>'
+              f'<rect x="{px + 0.13 * u:.1f}" y="{top + 0.17 * u:.1f}" width="{0.04 * u:.1f}" height="{0.35 * u:.1f}" rx="{0.02 * u:.1f}"/>'
+              f'<rect x="{px - 0.105 * u:.1f}" y="{top + 0.53 * u:.1f}" width="{0.095 * u:.1f}" height="{0.47 * u:.1f}" rx="{0.03 * u:.1f}"/>'
+              f'<rect x="{px + 0.01 * u:.1f}" y="{top + 0.53 * u:.1f}" width="{0.095 * u:.1f}" height="{0.47 * u:.1f}" rx="{0.03 * u:.1f}"/>')
+    x0 = px + s(29) + 46
+    y0 = terra - s(da_terra) - s(alt)
+    fmt = lambda cm: f"{cm:g}".replace(".", ",")
+    tonda = "Ø" in p["misure"]
+    etichetta_l = f"{'Ø ' if tonda else ''}{fmt(larg)} cm"
+    disegno = (f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="{e(p["nome"])}: alto {fmt(alt)} cm e largo {fmt(larg)} cm, '
+               f'accanto a una persona alta 170 cm">'
+               f'<line class="md-terra" x1="10" y1="{terra}" x2="{W - 10}" y2="{terra}"/>'
+               f'<g class="md-persona">{sagoma}</g>'
+               f'<text class="md-testo" x="{px}" y="{terra + 18}" text-anchor="middle">1,70 m</text>'
+               f'<rect class="md-pezzo" x="{x0}" y="{y0:.1f}" width="{s(larg)}" height="{s(alt)}" rx="2"/>'
+               f'<line class="md-quota" x1="{x0}" y1="{y0 + s(alt) + 10:.1f}" x2="{x0 + s(larg)}" y2="{y0 + s(alt) + 10:.1f}"/>'
+               f'<text class="md-testo" x="{x0 + s(larg) / 2:.1f}" y="{y0 + s(alt) + 24:.1f}" text-anchor="middle">{etichetta_l}</text>'
+               f'<line class="md-quota" x1="{x0 + s(larg) + 10:.1f}" y1="{y0:.1f}" x2="{x0 + s(larg) + 10:.1f}" y2="{y0 + s(alt):.1f}"/>'
+               f'<text class="md-testo" x="{x0 + s(larg) + 16:.1f}" y="{y0 + s(alt) / 2 + 4:.1f}">{fmt(alt)} cm</text>'
+               '</svg>')
+    nota = "appeso con il centro a 1,50 m da terra" if quadro else "appoggiato a terra"
+    return (f'<figure class="misure-disegno"><figcaption>Quanto è grande: in scala accanto a una persona alta 1,70 m, '
+            f'{nota}.</figcaption>{disegno}</figure>')
 
 
 def suggeriti(p):
@@ -701,7 +778,7 @@ def scheda(p):
     if len(foto) > 1:
         miniature = '<div class="miniature">' + "".join(
             f'<button type="button" aria-label="Foto {i + 1}" aria-current="{str(i == 0).lower()}">'
-            f'<img src="{foto_url(r, f["file"], 600)}" alt="" loading="lazy" width="64" height="80"></button>'
+            f'<img src="{foto_url(r, f["file"], 400)}" alt="" loading="lazy" width="64" height="80"></button>'
             for i, f in enumerate(foto)) + f'</div><p class="galleria-conta" aria-live="polite">1 di {len(foto)}</p>'
 
     costo = numero(p["spedizione"])
@@ -712,7 +789,7 @@ def scheda(p):
             compra = NEGOZIO["acquisto_online"].format(id=p["id"])
         prezzo = euro(p["prezzo"]) if p["prezzo"] else "Prezzo su richiesta"
         if compra:
-            azioni = (f'<a class="btn btn-scuro btn-pieno btn-grande" href="{compra}">{ICONE["carrello"]}Acquista ora</a>'
+            azioni = (f'<a class="btn btn-scuro btn-pieno btn-grande" href="{compra}" rel="nofollow">{ICONE["carrello"]}Acquista ora</a>'
                       f'<a class="btn btn-chiaro btn-pieno" href="{wa(msg)}">{ICONE["whatsapp"]}Chiedi altre foto o un video</a>')
         else:
             azioni = (f'<a class="btn btn-whatsapp btn-pieno btn-grande" href="{wa(msg)}">'
@@ -758,9 +835,9 @@ def scheda(p):
     spec.append(("Disponibilità", "Pezzo unico disponibile" if p["disponibile"] else "Venduto"))
     if p["disponibile"]:
         if p["spedizione"]:
-            spec.append(("Spedizione in Italia", p["spedizione"]))
+            spec.append(("Spedizione in Italia", euro(numero(p["spedizione"])) or p["spedizione"]))
         if p["spedizione_isole"]:
-            spec.append(("Spedizione in Sicilia e Sardegna", p["spedizione_isole"]))
+            spec.append(("Spedizione in Sicilia e Sardegna", euro(numero(p["spedizione_isole"])) or p["spedizione_isole"]))
         spec.append(("Consegna", f"Al piano strada, con {CORRIERI}"))
         if tempi(p):
             spec.append(("Tempi", tempi(p).capitalize()))
@@ -782,7 +859,7 @@ def scheda(p):
     barra = ""
     if p["disponibile"]:
         if compra:
-            bottone = f'<a class="btn btn-scuro" href="{compra}" tabindex="-1">Acquista</a>'
+            bottone = f'<a class="btn btn-scuro" href="{compra}" rel="nofollow" tabindex="-1">Acquista</a>'
         else:
             bottone = f'<a class="btn btn-whatsapp" href="{wa(msg)}" tabindex="-1">{ICONE["whatsapp"]}Chiedi</a>'
         barra = f"""<div class="barra-acquisto" aria-hidden="true">
@@ -809,6 +886,7 @@ def scheda(p):
       {misure}
       {acquisto}
       <div class="descrizione">{descr}</div>
+      {disegno_misure(p)}
       <ul class="specifiche">{spec_html}</ul>
       <div class="fisarmonica">
         <details><summary>Spedizione e consegna</summary>
@@ -918,10 +996,14 @@ def pagina_404():
     corpo = """<div class="contenitore pagina">
   <h1>Questa pagina non c’è</h1>
   <p>Forse il pezzo che cercavi è stato venduto, o l’indirizzo è cambiato.</p>
-  <p><a class="btn btn-scuro" href="/negozio/">Guarda i pezzi disponibili</a></p>
+  <p><a class="btn btn-scuro" href="negozio/">Guarda i pezzi disponibili</a></p>
 </div>"""
+    # La 404 viene mostrata a qualsiasi indirizzo: i percorsi relativi partono dalla radice
+    # del sito, che sull'anteprima di GitHub Pages è /<repository>/ e sul dominio è /.
+    base = ("<script>document.write('<base href=\"' + (location.hostname.endsWith('.github.io') ? "
+            "'/' + location.pathname.split('/')[1] + '/' : '/') + '\">')</script>\n")
     pagina(percorso="404.html", titolo="Pagina non trovata — DART", descrizione="Pagina non trovata.",
-           corpo=corpo, indicizza=False)
+           corpo=corpo, indicizza=False, base=base)
 
 
 def feed_prodotti():
@@ -1004,10 +1086,11 @@ def main():
         for f in list((DOCS / "foto").glob("*.jpg")) + list((DOCS / "foto" / "social").glob("*.jpg")):
             if f.relative_to(DOCS).as_posix() not in USATE:
                 f.unlink()
-    # via le foto che nessun pezzo usa più (tolte dal negozio o dai ritocchi)
+    # via le foto che nessun pezzo usa più (tolte dal negozio o dai ritocchi) e le misure non più usate
     in_uso = {f["file"] for p in PEZZI for f in p["foto"]} | {"hero", "negozio"}
     for f in (DOCS / "foto").glob("*.webp"):
-        if re.fullmatch(r"(.+)-(600|1200)\.webp", f.name) and f.name.rsplit("-", 1)[0] not in in_uso:
+        m = re.fullmatch(r"(.+)-(\d+)\.webp", f.name)
+        if m and (m.group(1) not in in_uso or int(m.group(2)) not in VARIANTI):
             f.unlink()
 
     oggi = date.today().isoformat()

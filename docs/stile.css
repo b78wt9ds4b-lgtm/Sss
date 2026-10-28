@@ -30,13 +30,13 @@
   --linea-forte: #CDBDA3;
   --inchiostro:  #2B2622;
   --testo:       #4C443B;
-  --tenue:       #7A6F63;
+  --tenue:       #6E6358;
   --salvia:      #6C8065;
   --salvia-soft: #E4EADF;
   --terra:       #A9502F;
   --terra-soft:  #F6E4DC;
   --oro:         #A98436;
-  --whatsapp:    #1F8A4C;
+  --whatsapp:    #1B7D44;
 
   --gutter: 20px;
   --larghezza: 1240px;
@@ -90,7 +90,7 @@ button { font: inherit; color: inherit; }
 .btn-chiaro { background: transparent; color: var(--inchiostro); border-color: var(--linea-forte); }
 .btn-chiaro:hover { border-color: var(--inchiostro); }
 .btn-whatsapp { background: var(--whatsapp); color: #fff; }
-.btn-whatsapp:hover { background: #17713d; }
+.btn-whatsapp:hover { background: #166A39; }
 .btn-pieno { width: 100%; }
 .btn-grande { min-height: 56px; font-size: 16.5px; font-weight: 600; }
 .btn-crema { background: var(--crema); color: var(--inchiostro); }
@@ -192,6 +192,8 @@ button { font: inherit; color: inherit; }
   .pezzo a:hover .pezzo-foto img:first-child { transform: scale(1.03); }
   .pezzo a:hover .pezzo-foto img + img { opacity: 1; }
 }
+/* senza mouse la seconda foto non si vede mai: così non viene nemmeno scaricata */
+@media (hover: none) { .pezzo-foto img + img { display: none; } }
 .etichette { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; flex-wrap: wrap; gap: 6px; pointer-events: none; }
 .etichetta { display: inline-block; background: var(--crema); color: var(--inchiostro); font: 600 11px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; }
 .etichetta-venduto { background: var(--inchiostro); color: var(--crema); }
@@ -214,7 +216,8 @@ button { font: inherit; color: inherit; }
 .chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--linea-forte); background: var(--crema); text-decoration: none; font-size: 14px; color: var(--testo); cursor: pointer; }
 .chip:hover { border-color: var(--inchiostro); }
 .chip[aria-current="page"], .chip[aria-pressed="true"] { background: var(--inchiostro); border-color: var(--inchiostro); color: var(--crema); }
-.chip small { opacity: .7; font-size: 12px; }
+.chip small { color: var(--tenue); font-size: 12px; }
+.chip[aria-current="page"] small, .chip[aria-pressed="true"] small { color: inherit; opacity: .8; }
 .catalogo-testa { padding-top: 40px; padding-bottom: 24px; }
 .catalogo-testa h1 { font-size: clamp(36px, 7vw, 56px); }
 .catalogo-testa p { max-width: 38em; margin: 12px 0 0; }
@@ -346,6 +349,14 @@ button { font: inherit; color: inherit; }
 .specifiche li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--linea); font-size: 15px; }
 .specifiche li span:first-child { color: var(--tenue); }
 .specifiche li span:last-child { color: var(--inchiostro); text-align: right; }
+.misure-disegno { margin: 0 0 24px; padding: 16px 16px 8px; background: var(--crema); border: 1px solid var(--linea); border-radius: var(--raggio-l); }
+.misure-disegno figcaption { font-size: 14px; color: var(--tenue); margin-bottom: 8px; }
+.misure-disegno svg { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+.md-terra { stroke: var(--linea-forte); stroke-width: 1.5; }
+.md-persona { fill: var(--linea-forte); }
+.md-pezzo { fill: var(--salvia-soft); stroke: var(--salvia); stroke-width: 1.5; }
+.md-quota { stroke: var(--tenue); stroke-width: 1; }
+.md-testo { fill: var(--testo); font: 500 12px var(--sans); }
 .fisarmonica details { border-bottom: 1px solid var(--linea); }
 .fisarmonica summary { list-style: none; cursor: pointer; padding: 16px 0; font-weight: 500; color: var(--inchiostro); display: flex; justify-content: space-between; align-items: center; }
 .fisarmonica summary::-webkit-details-marker { display: none; }
@@ -392,5 +403,6 @@ button { font: inherit; color: inherit; }
 /* Pulsante WhatsApp flottante */
 .wa-flottante { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 56px; height: 56px; border-radius: 50%; background: var(--whatsapp); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0, 0, 0, .2); }
 .wa-flottante svg { width: 28px; height: 28px; }
+.piede .wa-flottante, .piede .wa-flottante:hover { color: #fff; text-decoration: none; }
 /* Sulle schede la barra d’acquisto ha già il suo pulsante WhatsApp */
 @media (max-width: 899px) { .ha-barra .wa-flottante { display: none; } }

@@ -3,25 +3,24 @@
 Scrive data/pezzi.json e le foto in docs/foto/.
 Va lanciato una volta sola, o di nuovo per riallinearsi al vecchio sito:
     python3 strumenti/importa.py
+Con --tutte-le-foto riscarica e riconverte anche le foto già presenti
+(serve se cambiano le misure o la compressione in immagini.py).
 Richiede Pillow (pip install pillow).
 """
 import html
-import io
 import json
 import re
 import sys
-import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image
+
+from immagini import LARGHEZZE, originale, scarica, scrivi_varianti
 
 SITO = "https://www.darthome.it"
 RADICE = Path(__file__).resolve().parent.parent
 FOTO = RADICE / "docs" / "foto"
 DATI = RADICE / "data"
-
-# Larghezze generate per ogni foto (srcset).
-LARGHEZZE = (600, 1200)
 
 # Pezzi di prova da non importare.
 ESCLUSI = {"cartolina"}
@@ -36,12 +35,6 @@ CATEGORIE = {
 
 # Correzioni ai testi del vecchio sito.
 CORREZIONI = {"Mibile": "Mobile", "Acrilico si tela": "Acrilico su tela"}
-
-
-def scarica(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (importa DART)"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
 
 
 def testo(s):
@@ -68,21 +61,16 @@ def specifiche(slug):
     return {testo(k): testo(v) for k, v in righe}
 
 
-def salva_foto(url, nome, larghezze=LARGHEZZE, forza=False):
-    """Salva la foto in WebP alle larghezze indicate; restituisce le proporzioni."""
-    destinazioni = [FOTO / f"{nome}-{w}.webp" for w in larghezze]
-    if not forza and all(d.exists() for d in destinazioni):
+TUTTE = "--tutte-le-foto" in sys.argv
+
+
+def salva_foto(url, nome, forza=False):
+    """Salva la foto in WebP alle LARGHEZZE di immagini.py; restituisce le proporzioni."""
+    destinazioni = [FOTO / f"{nome}-{w}.webp" for w in LARGHEZZE]
+    if not (forza or TUTTE) and all(d.exists() for d in destinazioni):
         with Image.open(destinazioni[-1]) as im:
             return im.width, im.height
-    with Image.open(io.BytesIO(scarica(url))) as im:
-        im = ImageOps.exif_transpose(im).convert("RGB")
-        for w, dest in zip(larghezze, destinazioni):
-            copia = im.copy()
-            if copia.width > w:
-                copia = copia.resize((w, round(copia.height * w / copia.width)), Image.LANCZOS)
-            copia.save(dest, "WEBP", quality=78, method=6)
-        larghezza = min(im.width, larghezze[-1])
-        return larghezza, round(im.height * larghezza / im.width)
+    return scrivi_varianti(originale(url), nome)
 
 
 def euro(minori):
@@ -120,7 +108,7 @@ def importa_pezzi():
             w, h = salva_foto(img["src"], nome, forza=prima.get(nome) not in (None, img["src"]))
             foto.append({"file": f"{slug}-{i + 1}", "w": w, "h": h, "origine": img["src"]})
         prezzo = euro(p["prices"]["price"])
-        misure = spec.get("Misure", "")
+        misure = re.sub(r"(\d)\.(\d)", r"\1,\2", spec.get("Misure", ""))  # 1.8 -> 1,8
         pezzi.append({
             "id": p["id"],
             "slug": slug,

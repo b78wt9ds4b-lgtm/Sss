@@ -1,252 +1,5 @@
 [
   {
-    "id": 491,
-    "slug": "armadio-botanico",
-    "pubblicato": "2026-10-22",
-    "nome": "Armadio botanico",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Un armadio dalle proporzioni slanciate, completamente reinterpretato da DART attraverso una composizione botanica dipinta a mano che attraversa ante e cassetti.</p>\n<p>Il fondo verde-grigio fa da base a fiori, foglie e piccoli dettagli nei toni del rosa, bordeaux, verde e avorio. La decorazione non è applicata come semplice ornamento: segue la struttura del mobile e trasforma l’intero fronte in una composizione unica.</p>\n<p>La disposizione asimmetrica di ante e cassetti lo rende anche particolarmente funzionale, con diversi spazi contenitivi racchiusi in un mobile dalla profondità contenuta.</p>\n<p>Un pezzo pensato per chi non cerca semplicemente un armadio, ma qualcosa capace di dare identità alla stanza.</p>",
-    "prezzo": 1400.0,
-    "disponibile": true,
-    "misure": "H 199 · L 110 · P 50 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "150,00 €",
-    "spedizione_isole": "200,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "armadio-botanico-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6651.jpg"
-      },
-      {
-        "file": "armadio-botanico-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6699.jpg"
-      },
-      {
-        "file": "armadio-botanico-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6701-1.jpg"
-      },
-      {
-        "file": "armadio-botanico-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6702.jpg"
-      },
-      {
-        "file": "armadio-botanico-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6704.jpg"
-      },
-      {
-        "file": "armadio-botanico-6",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6705.jpg"
-      },
-      {
-        "file": "armadio-botanico-7",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6706.jpg"
-      }
-    ]
-  },
-  {
-    "id": 428,
-    "slug": "nuotatrici",
-    "pubblicato": "2026-09-26",
-    "nome": "Nuotatrici",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Quadro originale che rappresenta le nuotatrici</p>",
-    "prezzo": 180.0,
-    "disponibile": true,
-    "misure": "H 50 · L 70 · P 3 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "nuotatrici-frontale",
-        "w": 1200,
-        "h": 854,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
-        "derivata": true
-      },
-      {
-        "file": "nuotatrici-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg"
-      }
-    ]
-  },
-  {
-    "id": 496,
-    "slug": "fiori-di-mezzanotte",
-    "pubblicato": "2026-10-22",
-    "nome": "Fiori di mezzanotte",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Un’esplosione di fiori e colori delicati emerge da un fondo blu profondo, creando un contrasto elegante e suggestivo.</p>\n<p>Sfumature di malva, rosa antico, giallo e verde salvia si intrecciano in una composizione ricca di movimento e personalità.</p>",
-    "prezzo": 180.0,
-    "disponibile": true,
-    "misure": "H 70 · L 50 · P 18 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "fiori-di-mezzanotte-1",
-        "w": 1200,
-        "h": 1700,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6505.jpg"
-      },
-      {
-        "file": "fiori-di-mezzanotte-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6506.jpg"
-      },
-      {
-        "file": "fiori-di-mezzanotte-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6509.jpg"
-      },
-      {
-        "file": "fiori-di-mezzanotte-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6508.jpg"
-      }
-    ]
-  },
-  {
-    "id": 378,
-    "slug": "tavolo-antico",
-    "pubblicato": "2026-09-23",
-    "nome": "Tavolo antico",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm<br />\nLarghezza 124 cm<br />\nProfondità 70 cm</p>\n<p>Non allungabile.</p>",
-    "prezzo": 900.0,
-    "disponibile": true,
-    "misure": "H 80 · L 124 · P 70 cm",
-    "tecnica": "",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolo-antico-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5145.jpg"
-      },
-      {
-        "file": "tavolo-antico-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5150.jpg"
-      },
-      {
-        "file": "tavolo-antico-3",
-        "w": 1200,
-        "h": 1088,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5152.jpg"
-      },
-      {
-        "file": "tavolo-antico-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5155.jpg"
-      },
-      {
-        "file": "tavolo-antico-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5147.jpg"
-      }
-    ]
-  },
-  {
-    "id": 431,
-    "slug": "la-regina-rossa",
-    "pubblicato": "2026-09-26",
-    "nome": "La regina rossa",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura fatta dai frammenti dei mobili.<br />\nPezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 30 · L 20 cm",
-    "tecnica": "Pittura a mano su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "la-regina-rossa-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5933.jpg"
-      },
-      {
-        "file": "la-regina-rossa-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5932.jpg"
-      }
-    ]
-  },
-  {
-    "id": 435,
-    "slug": "pesce-doro",
-    "pubblicato": "2026-09-26",
-    "nome": "Pesce d’Oro",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 23 · L 36 cm",
-    "tecnica": "Pittura su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "pesce-doro-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
-      },
-      {
-        "file": "pesce-doro-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
-      },
-      {
-        "file": "pesce-doro-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
-      }
-    ]
-  },
-  {
     "id": 388,
     "slug": "quadro-con-vaso-dorato",
     "pubblicato": "2026-09-23",
@@ -607,7 +360,7 @@
     "descrizione": "<p>Un’esplosione di fiori dalle tonalità calde e delicate, che prende vita su un intenso sfondo bordeaux. Il vaso a righe bianche e nere crea un contrasto contemporaneo, dando carattere e personalità alla composizione.</p>\n<p>Un quadro dipinto a mano, pensato per portare colore, eleganza e un tocco artistico negli ambienti.</p>",
     "prezzo": 250.0,
     "disponibile": true,
-    "misure": "H 90 · L 60 · P 1.8 cm",
+    "misure": "H 90 · L 60 · P 1,8 cm",
     "tecnica": "Acrilico su tela",
     "spedizione": "35,00 €",
     "spedizione_isole": "85,00 €",
@@ -637,7 +390,7 @@
     "descrizione": "<p>Una composizione floreale dalle delicate sfumature rosa e malva, che risaltano su un profondo sfondo verde oliva. Il vaso a righe verticali aggiunge un contrasto grafico e contemporaneo.</p>\n<p>Un quadro dipinto a mano, dall’eleganza naturale e dal carattere raffinato.</p>",
     "prezzo": 250.0,
     "disponibile": true,
-    "misure": "H 90 · L 60 · P 1.8 cm",
+    "misure": "H 90 · L 60 · P 1,8 cm",
     "tecnica": "Acrilico su tela",
     "spedizione": "35,00 €",
     "spedizione_isole": "85,00 €",
@@ -660,6 +413,253 @@
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6406.jpg"
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "slug": "armadio-botanico",
+    "pubblicato": "2026-10-22",
+    "nome": "Armadio botanico",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>Un armadio dalle proporzioni slanciate, completamente reinterpretato da DART attraverso una composizione botanica dipinta a mano che attraversa ante e cassetti.</p>\n<p>Il fondo verde-grigio fa da base a fiori, foglie e piccoli dettagli nei toni del rosa, bordeaux, verde e avorio. La decorazione non è applicata come semplice ornamento: segue la struttura del mobile e trasforma l’intero fronte in una composizione unica.</p>\n<p>La disposizione asimmetrica di ante e cassetti lo rende anche particolarmente funzionale, con diversi spazi contenitivi racchiusi in un mobile dalla profondità contenuta.</p>\n<p>Un pezzo pensato per chi non cerca semplicemente un armadio, ma qualcosa capace di dare identità alla stanza.</p>",
+    "prezzo": 1400.0,
+    "disponibile": true,
+    "misure": "H 199 · L 110 · P 50 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "150,00 €",
+    "spedizione_isole": "200,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "armadio-botanico-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6651.jpg"
+      },
+      {
+        "file": "armadio-botanico-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6699.jpg"
+      },
+      {
+        "file": "armadio-botanico-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6701-1.jpg"
+      },
+      {
+        "file": "armadio-botanico-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6702.jpg"
+      },
+      {
+        "file": "armadio-botanico-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6704.jpg"
+      },
+      {
+        "file": "armadio-botanico-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6705.jpg"
+      },
+      {
+        "file": "armadio-botanico-7",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6706.jpg"
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "slug": "nuotatrici",
+    "pubblicato": "2026-09-26",
+    "nome": "Nuotatrici",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale che rappresenta le nuotatrici</p>",
+    "prezzo": 180.0,
+    "disponibile": true,
+    "misure": "H 50 · L 70 · P 3 cm",
+    "tecnica": "Acrilico su tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "nuotatrici-frontale",
+        "w": 1200,
+        "h": 854,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
+        "derivata": true
+      },
+      {
+        "file": "nuotatrici-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg"
+      }
+    ]
+  },
+  {
+    "id": 496,
+    "slug": "fiori-di-mezzanotte",
+    "pubblicato": "2026-10-22",
+    "nome": "Fiori di mezzanotte",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Un’esplosione di fiori e colori delicati emerge da un fondo blu profondo, creando un contrasto elegante e suggestivo.</p>\n<p>Sfumature di malva, rosa antico, giallo e verde salvia si intrecciano in una composizione ricca di movimento e personalità.</p>",
+    "prezzo": 180.0,
+    "disponibile": true,
+    "misure": "H 70 · L 50 · P 18 cm",
+    "tecnica": "Acrilico su tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "fiori-di-mezzanotte-1",
+        "w": 1200,
+        "h": 1700,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6505.jpg"
+      },
+      {
+        "file": "fiori-di-mezzanotte-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6506.jpg"
+      },
+      {
+        "file": "fiori-di-mezzanotte-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6509.jpg"
+      },
+      {
+        "file": "fiori-di-mezzanotte-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6508.jpg"
+      }
+    ]
+  },
+  {
+    "id": 378,
+    "slug": "tavolo-antico",
+    "pubblicato": "2026-09-23",
+    "nome": "Tavolo antico",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm<br />\nLarghezza 124 cm<br />\nProfondità 70 cm</p>\n<p>Non allungabile.</p>",
+    "prezzo": 900.0,
+    "disponibile": true,
+    "misure": "H 80 · L 124 · P 70 cm",
+    "tecnica": "",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolo-antico-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5145.jpg"
+      },
+      {
+        "file": "tavolo-antico-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5150.jpg"
+      },
+      {
+        "file": "tavolo-antico-3",
+        "w": 1200,
+        "h": 1088,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5152.jpg"
+      },
+      {
+        "file": "tavolo-antico-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5155.jpg"
+      },
+      {
+        "file": "tavolo-antico-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5147.jpg"
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "slug": "la-regina-rossa",
+    "pubblicato": "2026-09-26",
+    "nome": "La regina rossa",
+    "categoria": "sculture",
+    "sottotitolo": "",
+    "descrizione": "<p>La scultura fatta dai frammenti dei mobili.<br />\nPezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 30 · L 20 cm",
+    "tecnica": "Pittura a mano su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "la-regina-rossa-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5933.jpg"
+      },
+      {
+        "file": "la-regina-rossa-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5932.jpg"
+      }
+    ]
+  },
+  {
+    "id": 435,
+    "slug": "pesce-doro",
+    "pubblicato": "2026-09-26",
+    "nome": "Pesce d’Oro",
+    "categoria": "sculture",
+    "sottotitolo": "",
+    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 23 · L 36 cm",
+    "tecnica": "Pittura su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "pesce-doro-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
+      },
+      {
+        "file": "pesce-doro-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
+      },
+      {
+        "file": "pesce-doro-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
       }
     ]
   },
@@ -829,60 +829,6 @@
         "w": 1050,
         "h": 1400,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-4.jpg"
-      }
-    ]
-  },
-  {
-    "id": 386,
-    "slug": "credenza-antica",
-    "pubblicato": "2026-09-23",
-    "nome": "Credenza antica",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Mobile antico dei primi del ’900, restaurato e reinterpretato da DART, molto particolare per il contrasto tra il legno lasciato a vista e la finitura verde, con piccoli inserti in vetro nella parte superiore delle ante.</p>\n<p>Ha una presenza importante, ma grazie alle proporzioni rimane facile da inserire anche in ambienti non molto grandi.</p>",
-    "prezzo": 1200.0,
-    "disponibile": false,
-    "misure": "H 145 · L 102 · P 45 cm",
-    "tecnica": "",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "credenza-antica-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/4851E5E5-9623-4528-AC30-0B29E762EE35.jpg"
-      },
-      {
-        "file": "credenza-antica-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/B1452A69-B8E3-4A3C-B453-864370B2ADA0.jpg"
-      },
-      {
-        "file": "credenza-antica-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3DB04131-31CD-4B5E-A7C5-C37F5D873B36.jpg"
-      },
-      {
-        "file": "credenza-antica-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5809.jpg"
-      },
-      {
-        "file": "credenza-antica-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5807.jpg"
-      },
-      {
-        "file": "credenza-antica-6",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5806.jpg"
       }
     ]
   },
@@ -1165,6 +1111,60 @@
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5967.jpg"
+      }
+    ]
+  },
+  {
+    "id": 386,
+    "slug": "credenza-antica",
+    "pubblicato": "2026-09-23",
+    "nome": "Credenza antica",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>Mobile antico dei primi del ’900, restaurato e reinterpretato da DART, molto particolare per il contrasto tra il legno lasciato a vista e la finitura verde, con piccoli inserti in vetro nella parte superiore delle ante.</p>\n<p>Ha una presenza importante, ma grazie alle proporzioni rimane facile da inserire anche in ambienti non molto grandi.</p>",
+    "prezzo": 1200.0,
+    "disponibile": false,
+    "misure": "H 145 · L 102 · P 45 cm",
+    "tecnica": "",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "credenza-antica-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/4851E5E5-9623-4528-AC30-0B29E762EE35.jpg"
+      },
+      {
+        "file": "credenza-antica-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/B1452A69-B8E3-4A3C-B453-864370B2ADA0.jpg"
+      },
+      {
+        "file": "credenza-antica-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3DB04131-31CD-4B5E-A7C5-C37F5D873B36.jpg"
+      },
+      {
+        "file": "credenza-antica-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5809.jpg"
+      },
+      {
+        "file": "credenza-antica-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5807.jpg"
+      },
+      {
+        "file": "credenza-antica-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5806.jpg"
       }
     ]
   },
