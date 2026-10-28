@@ -22,37 +22,37 @@
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6651.jpg"
       },
       {
-        "file": "armadio-botanico-3",
+        "file": "armadio-botanico-2",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6699.jpg"
       },
       {
-        "file": "armadio-botanico-4",
+        "file": "armadio-botanico-3",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6701-1.jpg"
       },
       {
-        "file": "armadio-botanico-5",
+        "file": "armadio-botanico-4",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6702.jpg"
       },
       {
-        "file": "armadio-botanico-6",
+        "file": "armadio-botanico-5",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6704.jpg"
       },
       {
-        "file": "armadio-botanico-7",
+        "file": "armadio-botanico-6",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6705.jpg"
       },
       {
-        "file": "armadio-botanico-8",
+        "file": "armadio-botanico-7",
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6706.jpg"
@@ -79,7 +79,8 @@
         "file": "nuotatrici-frontale",
         "w": 1200,
         "h": 854,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
+        "derivata": true
       },
       {
         "file": "nuotatrici-1",
@@ -265,7 +266,8 @@
         "file": "quadro-con-vaso-dorato-frontale",
         "w": 1200,
         "h": 1686,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg",
+        "derivata": true
       },
       {
         "file": "quadro-con-vaso-dorato-1",
@@ -325,7 +327,8 @@
         "file": "quadro-con-vaso-dorato-2-frontale",
         "w": 809,
         "h": 1914,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg",
+        "derivata": true
       },
       {
         "file": "quadro-con-vaso-dorato-2-1",
@@ -403,7 +406,8 @@
         "file": "quadro-con-i-fiori-frontale",
         "w": 1200,
         "h": 837,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg",
+        "derivata": true
       },
       {
         "file": "quadro-con-i-fiori-1",
@@ -568,7 +572,7 @@
     "prezzo": 130.0,
     "disponibile": true,
     "misure": "H 40 · L 50 cm",
-    "tecnica": "Acrilico su tela",
+    "tecnica": "Acrilico si tela",
     "spedizione": "20,00 €",
     "spedizione_isole": "70,00 €",
     "garanzia": "24 mesi",
@@ -799,7 +803,8 @@
         "file": "quadro-fiori-azzurro-frontale",
         "w": 703,
         "h": 987,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg",
+        "derivata": true
       },
       {
         "file": "quadro-fiori-azzurro-1",
@@ -824,78 +829,6 @@
         "w": 1050,
         "h": 1400,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-4.jpg"
-      }
-    ]
-  },
-  {
-    "id": 426,
-    "slug": "mobile-anni50",
-    "pubblicato": "2026-09-26",
-    "nome": "Mobile anni’50",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Un mobile dal carattere deciso, dove il calore del legno originale incontra il verde petrolio in un contrasto elegante e contemporaneo.</p>\n<p>I quattro ampi cassetti mantengono protagonista la venatura del legno, mentre le maniglie a forma di pesce, realizzate interamente a mano e impreziosite da dettagli in ottone, rendono il pezzo davvero unico.</p>\n<p>Perfetto per dare personalità a un soggiorno, un ingresso o una camera, anche all’interno di un ambiente moderno e minimale.</p>",
-    "prezzo": 950.0,
-    "disponibile": false,
-    "misure": "H 76 · L 163 · P 55 cm",
-    "tecnica": "Restauro e pittura su legno a mano",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "mobile-anni50-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5965.jpg"
-      },
-      {
-        "file": "mobile-anni50-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5966.jpg"
-      },
-      {
-        "file": "mobile-anni50-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5970.jpg"
-      },
-      {
-        "file": "mobile-anni50-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5971.jpg"
-      },
-      {
-        "file": "mobile-anni50-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5972.jpg"
-      },
-      {
-        "file": "mobile-anni50-6",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5973.jpg"
-      },
-      {
-        "file": "mobile-anni50-7",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5974.jpg"
-      },
-      {
-        "file": "mobile-anni50-8",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5975.jpg"
-      },
-      {
-        "file": "mobile-anni50-9",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5967.jpg"
       }
     ]
   },
@@ -1160,6 +1093,78 @@
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6274.jpg"
+      }
+    ]
+  },
+  {
+    "id": 426,
+    "slug": "mobile-anni50",
+    "pubblicato": "2026-09-26",
+    "nome": "Mobile anni’50",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>Un mobile dal carattere deciso, dove il calore del legno originale incontra il verde petrolio in un contrasto elegante e contemporaneo.</p>\n<p>I quattro ampi cassetti mantengono protagonista la venatura del legno, mentre le maniglie a forma di pesce, realizzate interamente a mano e impreziosite da dettagli in ottone, rendono il pezzo davvero unico.</p>\n<p>Perfetto per dare personalità a un soggiorno, un ingresso o una camera, anche all’interno di un ambiente moderno e minimale.</p>",
+    "prezzo": 950.0,
+    "disponibile": false,
+    "misure": "H 76 · L 163 · P 55 cm",
+    "tecnica": "Restauro e pittura su legno a mano",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "mobile-anni50-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5965.jpg"
+      },
+      {
+        "file": "mobile-anni50-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5966.jpg"
+      },
+      {
+        "file": "mobile-anni50-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5970.jpg"
+      },
+      {
+        "file": "mobile-anni50-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5971.jpg"
+      },
+      {
+        "file": "mobile-anni50-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5972.jpg"
+      },
+      {
+        "file": "mobile-anni50-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5973.jpg"
+      },
+      {
+        "file": "mobile-anni50-7",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5974.jpg"
+      },
+      {
+        "file": "mobile-anni50-8",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5975.jpg"
+      },
+      {
+        "file": "mobile-anni50-9",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5967.jpg"
       }
     ]
   },

@@ -1,10 +1,12 @@
 {
   "foto": {
     "armadio-botanico-2": {
+      "origine": "2026/10/IMG_6683.jpg",
       "togli": true,
       "motivo": "Pagina di un libro di scuola, caricata per sbaglio"
     },
     "tavolo-antico-3": {
+      "origine": "2026/09/IMG_5152.jpg",
       "ritaglio": [
         0,
         0,
@@ -14,28 +16,34 @@
       "motivo": "Tolte la mano e la scarpa in basso"
     },
     "sgabello-rosso-1": {
+      "origine": "2026/09/sgabello-1.jpg",
       "luce": 1.12,
       "bilanciamento": 0.4,
       "motivo": "Foto scura e gialla"
     },
     "sgabello-rosso-3": {
+      "origine": "2026/09/sgabello-3.jpg",
       "luce": 1.15,
       "bilanciamento": 0.4,
       "motivo": "Foto scura e gialla"
     },
     "tavolino-rotondo-3": {
+      "origine": "2026/09/rotondo-3.jpg",
       "luce": 1.12,
       "motivo": "Foto scura"
     },
     "tavolino-3": {
+      "origine": "2026/09/CE82F886-C0E1-44D0-A875-6E01C34E6DC2.jpg",
       "luce": 1.08,
       "motivo": "Foto scura"
     },
     "bordeaux-in-fiore-2": {
+      "origine": "2026/10/IMG_6409.jpg",
       "luce": 1.08,
       "motivo": "Foto scura"
     },
     "floraison-2": {
+      "origine": "2026/10/IMG_6405.jpg",
       "luce": 1.1,
       "motivo": "Foto scura"
     }
@@ -43,6 +51,7 @@
   "frontali": {
     "nuotatrici": {
       "da": "nuotatrici-1",
+      "origine": "2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
       "angoli": [
         [
           0.065,
@@ -66,6 +75,7 @@
     },
     "quadro-con-vaso-dorato": {
       "da": "quadro-con-vaso-dorato-1",
+      "origine": "2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg",
       "angoli": [
         [
           0.159,
@@ -89,6 +99,7 @@
     },
     "quadro-con-vaso-dorato-2": {
       "da": "quadro-con-vaso-dorato-2-1",
+      "origine": "2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg",
       "angoli": [
         [
           0.276,
@@ -113,6 +124,7 @@
     },
     "quadro-con-i-fiori": {
       "da": "quadro-con-i-fiori-5",
+      "origine": "2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg",
       "angoli": [
         [
           0.048,
@@ -136,6 +148,7 @@
     },
     "quadro-con-i-fiori-2": {
       "da": "quadro-con-i-fiori-2-1",
+      "origine": "2026/09/7541F9A4-DE92-4856-9191-184C64923F5A.jpg",
       "sostituisci": true,
       "angoli": [
         [
@@ -159,6 +172,7 @@
     },
     "fiori-di-mezzanotte": {
       "da": "fiori-di-mezzanotte-1",
+      "origine": "2026/10/IMG_6505.jpg",
       "sostituisci": true,
       "angoli": [
         [
@@ -183,6 +197,7 @@
     },
     "bordeaux-in-fiore": {
       "da": "bordeaux-in-fiore-1",
+      "origine": "2026/10/IMG_6408.jpg",
       "sostituisci": true,
       "angoli": [
         [
@@ -207,6 +222,7 @@
     },
     "floraison": {
       "da": "floraison-1",
+      "origine": "2026/10/IMG_6403.jpg",
       "sostituisci": true,
       "angoli": [
         [
@@ -231,6 +247,7 @@
     },
     "quadro-fiori-azzurro": {
       "da": "quadro-fiori-azzurro-1",
+      "origine": "2026/09/q-fiori-azzurro-1.jpg",
       "angoli": [
         [
           0.159,

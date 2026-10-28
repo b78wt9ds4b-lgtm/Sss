@@ -1004,6 +1004,11 @@ def main():
         for f in list((DOCS / "foto").glob("*.jpg")) + list((DOCS / "foto" / "social").glob("*.jpg")):
             if f.relative_to(DOCS).as_posix() not in USATE:
                 f.unlink()
+    # via le foto che nessun pezzo usa più (tolte dal negozio o dai ritocchi)
+    in_uso = {f["file"] for p in PEZZI for f in p["foto"]} | {"hero", "negozio"}
+    for f in (DOCS / "foto").glob("*.webp"):
+        if re.fullmatch(r"(.+)-(600|1200)\.webp", f.name) and f.name.rsplit("-", 1)[0] not in in_uso:
+            f.unlink()
 
     oggi = date.today().isoformat()
     voci = "".join(f"<url><loc>{u}</loc><lastmod>{oggi}</lastmod></url>\n" for u in indirizzi)

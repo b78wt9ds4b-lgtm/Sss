@@ -13,6 +13,9 @@ I ritocchi sono leggeri e non cambiano il pezzo: lo mostrano meglio.
 - luce: schiarisce le foto scure (1 = invariata, 1.15 = più luminosa)
 - bilanciamento: toglie in parte la dominante gialla della luce di casa
   (0 = niente, 1 = del tutto)
+- origine: il percorso della foto su WordPress (es. «2026/10/IMG_6651.jpg»);
+  così la regola resta sulla foto giusta anche se sul negozio cambiano
+  l'ordine o il numero delle foto
 - frontali: per i quadri, una foto dritta e pulita della sola tela,
   ricavata dagli angoli indicati (in frazioni) e messa per prima;
   con "sostituisci" prende il posto della foto di partenza, con "margine"
@@ -40,17 +43,19 @@ LARGHEZZE = (600, 1200)
 
 # ---------------------------------------------------------------- originali
 
-def originale(nome, url):
+def chiave(url):
+    """Identità stabile di una foto: il suo percorso su WordPress, es. «2026/10/IMG_6651.jpg»."""
+    return url.split("/uploads/", 1)[-1] if "/uploads/" in url else "tema/" + url.rsplit("/", 1)[-1]
+
+
+def originale(url):
     ORIGINALI.mkdir(exist_ok=True)
-    trovati = [f for f in ORIGINALI.iterdir() if f.stem == nome]
-    if trovati:
-        dati = trovati[0].read_bytes()
-    else:
+    copia = ORIGINALI / chiave(url).replace("/", "-")
+    if not copia.exists():
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (ritocca DART)"})
         with urllib.request.urlopen(req, timeout=60) as r:
-            dati = r.read()
-        (ORIGINALI / f"{nome}{Path(url).suffix.lower() or '.jpg'}").write_bytes(dati)
-    return ImageOps.exif_transpose(Image.open(io.BytesIO(dati))).convert("RGB")
+            copia.write_bytes(r.read())
+    return ImageOps.exif_transpose(Image.open(io.BytesIO(copia.read_bytes()))).convert("RGB")
 
 
 # ---------------------------------------------------------------- geometria
@@ -190,48 +195,61 @@ def proporzione_da_misure(misure):
     return float(l.group(1).replace(",", ".")) / float(h.group(1).replace(",", "."))
 
 
+def trova(pezzi, nome, origine):
+    """La foto a cui si applica una regola. Con «origine» la si cerca per il suo percorso
+    su WordPress, che non cambia se sul negozio le foto vengono tolte o riordinate."""
+    for p in pezzi:
+        for f in p["foto"]:
+            if f.get("derivata"):
+                continue
+            if (f.get("origine", "").endswith("/" + origine)) if origine else f["file"] == nome:
+                return p, f
+    return None, None
+
+
 def main():
     regole = json.loads((DATI / "ritocchi.json").read_text(encoding="utf-8"))
     pezzi = json.loads((DATI / "pezzi.json").read_text(encoding="utf-8"))
-    per_nome = {f["file"]: (p, f) for p in pezzi for f in p["foto"]}
     temi = {"hero": TEMA + "hero.jpg", "negozio": TEMA + "negozio.jpg"}
 
     for nome, r in regole["foto"].items():
-        if nome not in per_nome and nome not in temi:
-            print(f"! {nome}: foto non trovata, salto", file=sys.stderr)
+        p, f = trova(pezzi, nome, r.get("origine"))
+        if f is None and nome not in temi:
+            stato = "già tolta dal negozio" if r.get("togli") else "foto non trovata, salto"
+            print(f"! {nome}: {stato}", file=sys.stderr)
             continue
         if r.get("togli"):
-            if nome in per_nome:
-                p, f = per_nome[nome]
-                p["foto"].remove(f)
-            cancella(nome)
-            print(f"- tolta {nome}")
+            p["foto"].remove(f)
+            cancella(f["file"])
+            print(f"- tolta {f['file']}")
             continue
-        url = per_nome[nome][1]["origine"] if nome in per_nome else temi[nome]
-        im = originale(nome, url)
+        nome = f["file"] if f else nome
+        im = originale(f["origine"] if f else temi[nome])
         if "ritaglio" in r:
             x0, y0, x1, y1 = r["ritaglio"]
             im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
         im = tono(im, r.get("luce", 1.0), r.get("bilanciamento", 0.0))
         w, h = salva(im, nome)
-        if nome in per_nome:
-            per_nome[nome][1].update(w=w, h=h)
+        if f:
+            f.update(w=w, h=h)
         print(f"· ritoccata {nome}")
 
     for slug, r in regole["frontali"].items():
-        p = next(q for q in pezzi if q["slug"] == slug)
-        sorgente = next(f for f in p["foto"] if f["file"] == r["da"])
-        im = originale(r["da"], sorgente["origine"])
+        p, sorgente = trova(pezzi, r["da"], r.get("origine"))
+        if sorgente is None or p["slug"] != slug:
+            print(f"! {slug}: foto di partenza non trovata, salto", file=sys.stderr)
+            continue
+        im = originale(sorgente["origine"])
         tela, misurata = frontale(im, r["angoli"], proporzione_da_misure(p["misure"]), r.get("margine", 0.006))
         tela = tono(tela, r.get("luce", 1.0), r.get("bilanciamento", 0.0), cast=dominante(im))
         if r.get("sostituisci"):
-            nome = r["da"]
+            nome = sorgente["file"]
             w, h = salva(tela, nome)
             sorgente.update(w=w, h=h)
         else:
             nome = f"{slug}-frontale"
             w, h = salva(tela, nome)
-            voce = {"file": nome, "w": w, "h": h, "origine": sorgente["origine"]}
+            voce = {"file": nome, "w": w, "h": h, "origine": sorgente["origine"], "derivata": True}
             p["foto"] = [voce] + [f for f in p["foto"] if f["file"] != nome]
         attesa = proporzione_da_misure(p["misure"])
         avviso = ""

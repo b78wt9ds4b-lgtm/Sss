@@ -68,10 +68,10 @@ def specifiche(slug):
     return {testo(k): testo(v) for k, v in righe}
 
 
-def salva_foto(url, nome, larghezze=LARGHEZZE):
+def salva_foto(url, nome, larghezze=LARGHEZZE, forza=False):
     """Salva la foto in WebP alle larghezze indicate; restituisce le proporzioni."""
     destinazioni = [FOTO / f"{nome}-{w}.webp" for w in larghezze]
-    if all(d.exists() for d in destinazioni):
+    if not forza and all(d.exists() for d in destinazioni):
         with Image.open(destinazioni[-1]) as im:
             return im.width, im.height
     with Image.open(io.BytesIO(scarica(url))) as im:
@@ -98,6 +98,12 @@ def date_pubblicazione():
 def importa_pezzi():
     prodotti = json.loads(scarica(f"{SITO}/wp-json/wc/store/v1/products?per_page=100"))
     date = date_pubblicazione()
+    # foto già scaricate e da dove venivano: se sul negozio una foto è stata tolta
+    # o spostata, allo stesso nome corrisponde un'altra foto e va riscaricata
+    prima = {}
+    if (DATI / "pezzi.json").exists():
+        for p in json.loads((DATI / "pezzi.json").read_text(encoding="utf-8")):
+            prima.update({f["file"]: f.get("origine") for f in p["foto"]})
     pezzi = []
     for p in prodotti:
         slug = p["slug"]
@@ -110,7 +116,8 @@ def importa_pezzi():
         sottotitolo = re.split(r"\s·\s(?=(H|Ø|\d))", breve)[0] if breve else ""
         foto = []
         for i, img in enumerate(p["images"]):
-            w, h = salva_foto(img["src"], f"{slug}-{i + 1}")
+            nome = f"{slug}-{i + 1}"
+            w, h = salva_foto(img["src"], nome, forza=prima.get(nome) not in (None, img["src"]))
             foto.append({"file": f"{slug}-{i + 1}", "w": w, "h": h, "origine": img["src"]})
         prezzo = euro(p["prices"]["price"])
         misure = spec.get("Misure", "")
