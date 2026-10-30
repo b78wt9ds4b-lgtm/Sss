@@ -34,6 +34,14 @@ cd prove && npm ci && npx playwright test        # prove nel browser (vedi prove
 
 Poi salva su GitHub (commit e push): l'hosting pubblica `docs/` così com'è.
 
+**Prezzi e venduti vanno tenuti allineati.** Il nuovo sito copia prezzi e disponibilità dal
+negozio: se su WordPress cambia un prezzo o si vende un pezzo, finché il sito non viene
+rigenerato e ripubblicato mostra il dato vecchio, mentre il carrello mostra quello nuovo (il 30
+ottobre, in un'ora e mezza, un prezzo è cambiato). Prima di pubblicare in produzione va deciso
+chi lo fa e quando. La soluzione consigliata è un aggiornamento automatico, per esempio ogni ora
+con GitHub Actions (importa, ritocca, costruisci, controlla, pubblica), da preparare insieme alla
+scelta dell'hosting. In alternativa, a mano dopo ogni modifica sul negozio.
+
 ## 3. Copia di prova (anteprima)
 
 Per far vedere il sito prima di pubblicarlo, senza che Google lo trovi:

@@ -61,25 +61,20 @@ async function nienteFuoriSchermo(page, dove) {
   expect(r.fuori, `${dove}: elementi fuori dallo schermo`).toEqual([]);
 }
 
-/** Scorre fino in fondo, e la galleria fino all'ultima foto, così le foto con loading="lazy"
-    partono; poi controlla che nessuna sia rotta. */
+/** Porta sullo schermo una foto alla volta, come chi scorre la pagina e la galleria (le foto con
+    loading="lazy" partono solo lì vicino, e in WebKit il margine è stretto), aspetta che arrivi e
+    controlla che non sia rotta. */
 async function fotoTutteArrivate(page) {
-  await page.evaluate(async () => {
-    const pausa = () => new Promise(r => setTimeout(r, 40));
-    for (const riga of document.querySelectorAll('.galleria-nastro, .miniature')) {
-      for (let x = 0; x <= riga.scrollWidth; x += riga.clientWidth / 2) { riga.scrollLeft = x; await pausa(); }
-    }
-    for (let y = 0; y < document.body.scrollHeight; y += window.innerHeight / 2) {
-      window.scrollTo(0, y);
-      await pausa();
-    }
-  });
-  const foto = stato => page.$$eval('img', (ims, stato) => ims
-    .filter(i => i.getAttribute('src') && !i.closest('noscript, dialog') && i.offsetParent !== null)
-    .filter(i => (stato === 'in arrivo' ? !i.complete : i.complete && i.naturalWidth === 0))
-    .map(i => i.currentSrc || i.src), stato);
-  await expect.poll(() => foto('in arrivo'), { message: 'foto ancora in arrivo', timeout: 20000 }).toEqual([]);
-  expect(await foto('rotte'), 'foto che non arrivano').toEqual([]);
+  const foto = page.locator('img[src]');
+  const rotte = [];
+  for (let i = 0, n = await foto.count(); i < n; i++) {
+    const f = foto.nth(i);
+    if (!(await f.isVisible())) continue; // la seconda foto delle schede, nascosta sui touch
+    await f.scrollIntoViewIfNeeded();
+    await expect.poll(() => f.evaluate(im => im.complete), { message: `foto in arrivo: ${await f.getAttribute('src')}`, timeout: 15000 }).toBe(true);
+    if (!(await f.evaluate(im => im.naturalWidth > 0))) rotte.push(await f.evaluate(im => im.currentSrc || im.src));
+  }
+  expect(rotte, 'foto che non arrivano').toEqual([]);
 }
 
 module.exports = { pezzi, negozio, disponibili, venduti, conPiuFoto, acquisto, tutteLePagine, sorveglia, nienteFuoriSchermo, fotoTutteArrivate };

@@ -6,6 +6,7 @@ const { tutteLePagine, sorveglia, fotoTutteArrivate } = require('./aiuti');
 for (const url of tutteLePagine()) {
   test(`/${url}`, async ({ page }, info) => {
     test.skip(!info.project.name.endsWith('-telefono'), 'una larghezza per motore basta: le altre sono in dimensioni.spec.js');
+    test.setTimeout(120_000); // la home e il negozio hanno decine di foto, guardate una per una
     const errori = sorveglia(page);
     const r = await page.goto(url);
     expect(r.status()).toBe(200);
