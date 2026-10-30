@@ -110,4 +110,6 @@ La cartella `per-wordpress/` porta su darthome.it le migliorie del nuovo sito se
 
 Per far vedere il sito senza che Google lo trovi: `python3 strumenti/anteprima.py` crea `anteprima/`, una copia chiusa a Google da caricare su Netlify o Cloudflare Pages. Non usare GitHub Pages dalla cartella `/docs` come anteprima: pubblicherebbe il sito vero, indicizzabile.
 
+Il resoconto del collaudo del 30 ottobre 2026 (che cosa è stato verificato, errori corretti, velocità prima e dopo, che cosa manca) è in `COLLAUDO.md`.
+
 Installazione da zero, scelta dell’hosting, passaggio da WordPress (sottodominio per il negozio, Stripe, DNS, reindirizzamenti), controlli dopo la pubblicazione, backup e ripristino: `PUBBLICAZIONE.md`.
