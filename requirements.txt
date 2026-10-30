@@ -1,0 +1,6 @@
+# Librerie Python per gli strumenti in strumenti/ (provate con Python 3.13).
+#   python3 -m pip install -r requirements.txt
+# Versioni fissate: chi installa da zero ottiene le stesse foto e le stesse pagine.
+pillow==13.0.0   # foto: varianti WebP, miniature, anteprime social (importa, ritocca, costruisci)
+                 # la 13 corregge più di 40 vulnerabilità della 12.3 nell'apertura di immagini malformate
+numpy==2.5.3     # solo ritocca.py

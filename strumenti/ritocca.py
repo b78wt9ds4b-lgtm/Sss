@@ -43,7 +43,8 @@ from immagini import originale, scrivi_varianti
 RADICE = Path(__file__).resolve().parent.parent
 FOTO = RADICE / "docs" / "foto"
 DATI = RADICE / "data"
-TEMA = "https://www.darthome.it/wp-content/themes/dart-child/assets/img/"
+WORDPRESS = json.loads((DATI / "negozio.json").read_text(encoding="utf-8"))["wordpress"].rstrip("/")
+TEMA = f"{WORDPRESS}/wp-content/themes/dart-child/assets/img/"
 PER_WP = RADICE / "per-wordpress" / "foto"
 LATO_WP = 2048  # lato lungo delle copie per WordPress: basta per lo zoom e pesa poco
 ALTA = RADICE / "foto-alta-risoluzione"

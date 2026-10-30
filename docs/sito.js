@@ -51,13 +51,15 @@
   /* Galleria della scheda pezzo */
   var nastro = document.querySelector('.galleria-nastro');
   if (nastro) {
-    /* Le foto dopo la prima hanno l'indirizzo in data-src: si scaricano a pagina caricata,
-       o appena si tocca la galleria, così non tolgono banda alla foto principale */
+    /* Le foto dopo la prima hanno l'indirizzo in data-src (in src c'è la miniatura): si scaricano
+       a pagina caricata, o appena si tocca la galleria, così non tolgono banda alla foto principale */
     var differite = Array.prototype.slice.call(nastro.querySelectorAll('img[data-src]'));
     var caricaFoto = function () {
       differite.forEach(function (im) {
+        im.sizes = im.getAttribute('data-sizes');
         im.srcset = im.getAttribute('data-srcset');
         im.src = im.getAttribute('data-src');
+        im.removeAttribute('data-sizes');
         im.removeAttribute('data-srcset');
         im.removeAttribute('data-src');
       });
@@ -119,13 +121,15 @@
   }
 
   /* Barra d'acquisto fissa (solo telefono): compare quando i pulsanti principali sono
-     usciti in alto dallo schermo. Prima di arrivarci non serve, e coprirebbe le misure */
+     usciti in alto dallo schermo. Prima di arrivarci non serve, e coprirebbe le misure.
+     Il margine in basso enorme conta come «sullo schermo» anche tutto ciò che sta sotto: così
+     «fuori» vuol dire solo «sopra», e la barra si aggiorna anche dopo un salto (un link, il
+     tasto Home, il tocco sulla barra di stato) che non passa sopra i pulsanti */
   var barra = document.querySelector('.barra-acquisto');
   var azioni = document.querySelector('.scheda-azioni');
   if (barra && azioni && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (voci) {
-      var v = voci[0];
-      barra.classList.toggle('visibile', !v.isIntersecting && v.boundingClientRect.top < 0);
-    }).observe(azioni);
+      barra.classList.toggle('visibile', !voci[0].isIntersecting);
+    }, { rootMargin: '0px 0px 100000px 0px' }).observe(azioni);
   }
 })();

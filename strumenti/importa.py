@@ -17,10 +17,11 @@ from PIL import Image
 
 from immagini import LARGHEZZE, originale, scarica, scrivi_varianti
 
-SITO = "https://www.darthome.it"
 RADICE = Path(__file__).resolve().parent.parent
 FOTO = RADICE / "docs" / "foto"
 DATI = RADICE / "data"
+# il negozio WordPress, dove restano carrello e pagamento (data/negozio.json, «wordpress»)
+SITO = json.loads((DATI / "negozio.json").read_text(encoding="utf-8"))["wordpress"].rstrip("/")
 
 # Pezzi di prova da non importare.
 ESCLUSI = {"cartolina"}

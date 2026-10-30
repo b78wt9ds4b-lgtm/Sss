@@ -13,13 +13,17 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
 | `data/descrizioni.json` | Le descrizioni dei pezzi riscritte per il nuovo sito (hanno la precedenza su quelle importate) |
 | `data/domande.json` | Le domande frequenti (home e pagina contatti) |
 | `data/recensioni.json` | Le recensioni dei clienti: finché è vuoto, la sezione non compare |
-| `data/negozio.json` | Indirizzo, orari, telefono, WhatsApp, social, link alle pagine legali |
+| `data/negozio.json` | Indirizzo del sito (`url`) e del negozio WordPress (`wordpress`), link d’acquisto, orari, telefono, WhatsApp, social, pagine legali |
 | `data/ritocchi.json` | I ritocchi alle foto: quali togliere, schiarire, ritagliare, e i quadri da raddrizzare |
 | `strumenti/importa.py` | Copia pezzi e foto dal vecchio sito WordPress |
 | `strumenti/costruisci.py` | Genera le pagine HTML in `docs/` partendo da `data/` |
 | `strumenti/immagini.py` | Converte le foto in WebP a 400, 800 e 1200 px (più le miniature da 200 px della galleria), crea le anteprime per WhatsApp e i social e le foto JPEG per i cataloghi |
 | `strumenti/ritocca.py` | Applica i ritocchi di `data/ritocchi.json` partendo dalle foto originali |
-| `strumenti/controlla.py` | Controlla le pagine generate (collegamenti, foto, dati per Google) e, a richiesta, che prezzi e venduti siano ancora quelli del negozio |
+| `strumenti/controlla.py` | Controlla le pagine generate (collegamenti, foto, dati per Google, indicizzazione) e, a richiesta, che prezzi e venduti siano ancora quelli del negozio |
+| `strumenti/servi.py` | Mostra `docs/` sul computer come lo servirà l’hosting (pagina 404, indirizzi con la barra, gzip) |
+| `strumenti/anteprima.py` | Crea una copia di prova del sito chiusa a Google, da mettere online per farla vedere |
+| `prove/` | Prove nel browser (Playwright) dei percorsi principali, delle dimensioni dello schermo e dell’accessibilità |
+| `requirements.txt` | Le librerie Python, con le versioni provate |
 
 ## Modificare i contenuti
 
@@ -28,18 +32,18 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
 2. Rigenera le pagine:
 
    ```
-   pip install pillow          # una volta sola
+   python3 -m pip install -r requirements.txt     # una volta sola
    python3 strumenti/costruisci.py
    ```
 
-   Senza Pillow le pagine si generano lo stesso, ma senza le anteprime per i social.
+   Senza Pillow le pagine si generano lo stesso, ma senza le anteprime per i social e con miniature più pesanti.
 3. Per vedere il sito sul computer:
 
    ```
-   cd docs && python3 -m http.server 8000
+   python3 strumenti/servi.py
    ```
 
-   poi apri http://localhost:8000.
+   poi apri http://localhost:8000. Si comporta come l’hosting: un indirizzo sbagliato mostra la pagina 404.
 4. Prima di pubblicare, fai i controlli automatici:
 
    ```
@@ -97,6 +101,13 @@ La cartella `per-wordpress/` porta su darthome.it le migliorie del nuovo sito se
 - **Google**: in [Merchant Center](https://merchants.google.com) aggiungi il feed `https://www.darthome.it/feed-prodotti.xml`. I pezzi possono comparire gratis nella scheda Shopping di Google.
 - **Instagram e Facebook**: in Commerce Manager crea un catalogo con lo stesso indirizzo come origine dati. Poi puoi taggare i pezzi nei post di Instagram.
 
-## Pubblicare un’anteprima
+## Prove
 
-Su GitHub vai in **Settings → Pages**, scegli il ramo e la cartella `/docs`.
+- `python3 strumenti/controlla.py` controlla le pagine generate senza browser (vedi sopra).
+- In `prove/` ci sono le prove nel browser, con Chromium, Firefox e WebKit, telefono e computer: percorsi d’acquisto, galleria, venduti, 404, schermi da 320 a 1440 px, accessibilità. Come lanciarle e l’elenco di che cosa controllano: `prove/README.md`.
+
+## Copia di prova e pubblicazione
+
+Per far vedere il sito senza che Google lo trovi: `python3 strumenti/anteprima.py` crea `anteprima/`, una copia chiusa a Google da caricare su Netlify o Cloudflare Pages. Non usare GitHub Pages dalla cartella `/docs` come anteprima: pubblicherebbe il sito vero, indicizzabile.
+
+Installazione da zero, scelta dell’hosting, passaggio da WordPress (sottodominio per il negozio, Stripe, DNS, reindirizzamenti), controlli dopo la pubblicazione, backup e ripristino: `PUBBLICAZIONE.md`.

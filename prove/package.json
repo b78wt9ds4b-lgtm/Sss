@@ -1,0 +1,13 @@
+{
+  "name": "dart-prove",
+  "private": true,
+  "description": "Prove nel browser del sito generato in docs/ (servito da strumenti/servi.py)",
+  "scripts": {
+    "prove": "playwright test",
+    "prove-chromium": "playwright test --project=chromium-telefono --project=chromium-computer"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "axe-core": "4.10.2"
+  }
+}

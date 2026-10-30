@@ -3,3 +3,7 @@ __pycache__/
 .DS_Store
 .originali/
 foto-alta-risoluzione/
+prove/node_modules/
+prove/test-results/
+prove/playwright-report/
+anteprima/

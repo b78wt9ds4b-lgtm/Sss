@@ -265,7 +265,8 @@ def menu_voci(r):
 
 
 def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo="website", og_extra="",
-           dati_strutturati=None, classe_body="", wa_messaggio=None, indicizza=True, testa="", base=""):
+           dati_strutturati=None, classe_body="", wa_messaggio=None, indicizza=True, testa="", base="",
+           caratteri_subito=False):
     """Avvolge il corpo nel documento completo e lo scrive in docs/<percorso>."""
     r = "../" * percorso.count("/")
     canonico = BASE + "/" + (percorso[:-len("index.html")] if percorso.endswith("index.html") else percorso)
@@ -281,8 +282,12 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
     # una pagina da non indicizzare non ha un indirizzo canonico (per la 404 sarebbe un indirizzo inesistente)
     canonico_tag = f'<link rel="canonical" href="{canonico}">\n' if indicizza else ""
     og_url = f'<meta property="og:url" content="{canonico}">\n' if indicizza else ""
-    # niente preload dei caratteri: con font-display: swap il testo compare subito lo stesso, e il
-    # preload toglieva banda a stile.css e alla foto principale (su rete lenta FCP e LCP arrivavano ~0,2 s dopo)
+    # I caratteri si precaricano solo dove la pagina si apre con un testo (contatti, 404). Dove in apertura
+    # c'è una foto il preload le toglieva banda: con la rete lenta la foto arrivava 0,2–0,3 s dopo, e il
+    # testo compare subito lo stesso (font-display: swap)
+    precarica = (f'<link rel="preload" href="{r}fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
+                 f'<link rel="preload" href="{r}fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
+                 if caratteri_subito else "")
     home = r or "./"
     documento = f"""<!doctype html>
 <html lang="it">
@@ -304,7 +309,7 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
 <meta name="theme-color" content="#F6F0E6">
 <link rel="icon" type="image/png" href="{r}favicon.png">
 <link rel="apple-touch-icon" href="{r}apple-touch-icon.png">
-<link rel="stylesheet" href="{r}stile.css">
+{precarica}<link rel="stylesheet" href="{r}stile.css">
 <script type="speculationrules">{SPECULAZIONE}</script>
 {testa}{ld}</head>
 <body class="{classe_body}">
@@ -378,9 +383,9 @@ def etichette(p):
     return '<span class="etichetta">Pezzo unico</span>' + nuovo
 
 
-def scheda_pezzo(r, p, sizes="(min-width: 1100px) 290px, (min-width: 760px) 31vw, 46vw"):
+def scheda_pezzo(r, p, sizes="(min-width: 1100px) 290px, (min-width: 760px) 31vw, 46vw", subito=False):
     foto = p["foto"]
-    imgs = immagine(r, foto[0], p["nome"], sizes) if foto else ""
+    imgs = immagine(r, foto[0], p["nome"], sizes, lazy=not subito) if foto else ""
     if len(foto) > 1:
         imgs += immagine(r, foto[1], "", sizes)
     conta = (f'<span class="conta-foto">{ICONE["camera"]}{len(foto)}<span class="sr"> foto</span></span>'
@@ -398,11 +403,15 @@ def scheda_pezzo(r, p, sizes="(min-width: 1100px) 290px, (min-width: 760px) 31vw
 </article>"""
 
 
-def griglia(r, pezzi, classe="griglia"):
-    return f'<div class="{classe}">' + "".join(scheda_pezzo(r, p) for p in pezzi) + "</div>"
+def griglia(r, pezzi, classe="griglia", subito=False):
+    """Con subito, la foto del primo pezzo parte senza aspettare (loading="lazy" la farebbe partire
+    solo dopo l'impaginazione): in cima al catalogo è l'immagine più grande visibile all'apertura."""
+    return (f'<div class="{classe}">' + "".join(scheda_pezzo(r, p, subito=subito and i == 0) for i, p in enumerate(pezzi))
+            + "</div>")
 
 
-def blocco_visita(r, titolo_tag="h2"):
+def blocco_visita(r, titolo_tag="h2", in_alto=False):
+    """Contatti e laboratorio. Con in_alto (pagina contatti) la foto si vede all'apertura: parte subito."""
     return f"""<div class="visita">
   <div>
     <p class="occhiello">Contatti</p>
@@ -419,7 +428,7 @@ def blocco_visita(r, titolo_tag="h2"):
     </div>
   </div>
   <a class="mappa" href="{NEGOZIO['mappa']}">
-    {immagine(r, {"file": "negozio", "w": 1050, "h": 1400}, "Il laboratorio DART in via Luigi Cadorna a Trieste", "(min-width: 760px) 50vw, 100vw")}
+    {immagine(r, {"file": "negozio", "w": 1050, "h": 1400}, "Il laboratorio DART in via Luigi Cadorna a Trieste", "(min-width: 760px) 50vw, 100vw", lazy=not in_alto)}
     <span>Il laboratorio a Trieste ↗</span>
   </a>
 </div>"""
@@ -663,7 +672,7 @@ def catalogo(percorso, titolo_h1, testo, pezzi, attivo, titolo, descrizione, og)
     disponibili = [p for p in pezzi if p["disponibile"]]
     venduti = [p for p in pezzi if not p["disponibile"]]
     if disponibili:
-        corpo_disp = griglia(r, disponibili)
+        corpo_disp = griglia(r, disponibili, subito=True)
     else:
         corpo_disp = (f'<p class="vuoto">In questo momento non ci sono pezzi disponibili qui. '
                       f'<a href="{wa("Ciao DART! Avvisatemi quando arrivano nuovi pezzi.")}">Scrivici</a> '
@@ -780,7 +789,11 @@ def scheda(p):
     def slide(i, f):
         img = immagine(r, f, p["nome"] + (" — foto " + str(i + 1) if i else ""), "(min-width: 900px) 55vw, 100vw", lazy=i > 0)
         if i:
-            img = img.replace(' src="', ' data-src="', 1).replace(' srcset="', ' data-srcset="', 1) + f"<noscript>{img}</noscript>"
+            # foto rimandate: la grande parte a pagina caricata (sito.js); intanto, perché l'HTML sia
+            # valido, src è la miniatura da 200 px, che il browser scarica già per le miniature
+            rimandata = (img.replace(' src="', ' data-src="', 1).replace(' srcset="', ' data-srcset="', 1)
+                         .replace(' sizes="', ' data-sizes="', 1).replace('<img', f'<img src="{r}foto/{miniatura(f["file"])}"', 1))
+            img = rimandata + f"<noscript>{img}</noscript>"
         return f'<button type="button" data-grande="{foto_url(r, f["file"], 1200)}" aria-label="Ingrandisci la foto {i + 1}">{img}</button>'
 
     nastro = "".join(slide(i, f) for i, f in enumerate(foto))
@@ -827,7 +840,7 @@ def scheda(p):
                      f'data-titolo="{e(p["nome"])}" data-url="{url}">{ICONE["condividi"]}'
                      f'Condividilo con chi deve decidere con te</a></p>')
     else:
-        msg = f"Ciao DART! Ho visto «{p['nome']}», che è già venduto. Avvisatemi se arriva qualcosa di simile."
+        msg = f"Ciao DART! Ho visto «{p['nome']}» tra i pezzi già venduti. Avvisatemi se arriva qualcosa di simile."
         prezzo = ""
         acquisto = f"""<div class="scheda-prezzo">{etichette(p)}</div>
       <p class="prezzo-nota">Questo pezzo ha già trovato casa. Ne arrivano spesso di nuovi: vuoi che ti avvisiamo?</p>
@@ -989,7 +1002,7 @@ def scheda(p):
 
 
 def contatti():
-    corpo = f"""<div class="contenitore sezione">{blocco_visita("../", "h1")}</div>
+    corpo = f"""<div class="contenitore sezione">{blocco_visita("../", "h1", in_alto=True)}</div>
 <section class="sezione sezione-alt"><div class="contenitore">{blocco_domande("../")}</div></section>
 <section class="sezione"><div class="contenitore">
   <div class="sezione-testa"><div><p class="occhiello">Come funziona</p><h2>Spedizione, consegna e resi</h2></div></div>
@@ -999,7 +1012,7 @@ def contatti():
     return pagina(percorso="contatti/index.html", titolo="Contatti — DART, mobili e quadri dipinti a mano",
                   descrizione=(f"Domande su un pezzo, una spedizione o un ordine? Scrivi a DART su WhatsApp "
                                f"al {NEGOZIO['telefono']} o a {NEGOZIO['email']}."),
-                  corpo=corpo, attivo="contatti", dati_strutturati=[negozio_ld(), domande_ld()])
+                  corpo=corpo, attivo="contatti", dati_strutturati=[negozio_ld(), domande_ld()], caratteri_subito=True)
 
 
 def pagina_404():
@@ -1013,7 +1026,7 @@ def pagina_404():
     base = ("<script>document.write('<base href=\"' + (location.hostname.endsWith('.github.io') ? "
             "'/' + location.pathname.split('/')[1] + '/' : '/') + '\">')</script>\n")
     pagina(percorso="404.html", titolo="Pagina non trovata — DART", descrizione="Pagina non trovata.",
-           corpo=corpo, indicizza=False, base=base)
+           corpo=corpo, indicizza=False, base=base, caratteri_subito=True)
 
 
 def feed_prodotti():

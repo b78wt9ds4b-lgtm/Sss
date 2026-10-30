@@ -14,6 +14,10 @@ Senza programmi esterni verifica che:
 
 Con --negozio confronta data/pezzi.json con il negozio WordPress (prezzi, venduti, pezzi
 nuovi): se qualcosa è cambiato, va rilanciato importa.py.
+
+Indicizzazione: docs/ è il sito vero, quindi nessuna pagina (tranne la 404) deve avere noindex
+e robots.txt non deve chiudere il sito. Con --anteprima CARTELLA controlla invece la copia di
+prova fatta da anteprima.py: lì ogni pagina deve essere chiusa a Google.
 Esce con codice 1 se trova problemi.
 """
 import json
@@ -171,15 +175,19 @@ def controlla_scheda(p, lettore, dati, nome):
         prima, altre = galleria[0], galleria[1:]
         if not prima.get("src") or prima.get("loading") == "lazy" or prima.get("fetchpriority") != "high":
             segnala(nome, "la prima foto della galleria deve partire subito, con priorità alta")
-        if any(a.get("src") or not a.get("data-src") for a in altre):
-            segnala(nome, "le foto dopo la prima devono avere l'indirizzo in data-src")
+        if any(not a.get("data-src") or not a.get("data-srcset") or a.get("srcset") for a in altre):
+            segnala(nome, "le foto dopo la prima devono avere l'indirizzo in data-src e data-srcset")
+        if any(not (a.get("src") or "").endswith("-200.webp") for a in altre):
+            segnala(nome, "le foto rimandate devono avere come src la miniatura da 200 px (HTML valido)")
+        if any(a.get("sizes") and not a.get("srcset") for a in galleria):
+            segnala(nome, "sizes senza srcset (HTML non valido)")
         if len(copie) != len(altre):
             segnala(nome, "manca la copia in <noscript> di qualche foto della galleria")
 
 
 def controlla_negozio():
     """Confronto con il negozio WordPress: prezzi, venduti, pezzi nuovi o tolti."""
-    url = NEGOZIO["url"].rstrip("/") + "/wp-json/wc/store/v1/products?per_page=100"
+    url = NEGOZIO["wordpress"].rstrip("/") + "/wp-json/wc/store/v1/products?per_page=100"
     with urllib.request.urlopen(url, timeout=60) as r:
         negozio = {x["id"]: x for x in json.load(r)}
     nostri = {p["id"]: p for p in PEZZI}
@@ -199,17 +207,55 @@ def controlla_negozio():
             segnala("dati", f"{p['nome']} (ID {i}) non è più sul negozio")
 
 
+def controlla_indicizzazione(pagina, lettore):
+    """Il sito vero si fa trovare: una pagina con noindex in docs/ è un resto di una copia di prova."""
+    if lettore.noindex and pagina.name != "404.html":
+        segnala(pagina.relative_to(DOCS).as_posix(), "noindex: nel sito vero la pagina sparirebbe da Google")
+
+
+def controlla_anteprima(cartella):
+    """La copia di prova è chiusa a Google in ogni pagina, e non porta sitemap né catalogo prodotti."""
+    pagine = sorted(cartella.rglob("*.html"))
+    for f in pagine:
+        lettore = Lettore()
+        lettore.feed(f.read_text(encoding="utf-8"))
+        if not lettore.noindex:
+            segnala(f.relative_to(cartella).as_posix(), "manca noindex: Google potrebbe indicizzare la copia di prova")
+    robots = cartella / "robots.txt"
+    if not robots.is_file() or "Disallow: /\n" not in robots.read_text(encoding="utf-8"):
+        segnala("robots.txt", "nella copia di prova deve chiudere tutto (Disallow: /)")
+    if "noindex" not in ((cartella / "_headers").read_text(encoding="utf-8") if (cartella / "_headers").is_file() else ""):
+        segnala("_headers", "manca X-Robots-Tag: noindex")
+    for f in ("sitemap.xml", "feed-prodotti.xml"):
+        if (cartella / f).exists():
+            segnala(f, "non deve stare nella copia di prova")
+    return pagine
+
+
 def main():
+    if "--anteprima" in sys.argv:
+        cartella = Path(sys.argv[sys.argv.index("--anteprima") + 1]).resolve()
+        pagine = controlla_anteprima(cartella)
+        for riga in problemi:
+            print("✗", riga)
+        print(f"Copia di prova: {len(pagine)} pagine controllate, {len(problemi)} problemi.")
+        sys.exit(1 if problemi else 0)
     pagine = sorted(DOCS.rglob("*.html"))
     per_slug = {p["slug"]: p for p in PEZZI}
     for f in pagine:
         nome, lettore, dati = controlla_pagina(f)
+        controlla_indicizzazione(f, lettore)
         parti = f.relative_to(DOCS).parts
         if len(parti) == 3 and parti[0] == "pezzo" and parti[1] in per_slug:
             controlla_scheda(per_slug[parti[1]], lettore, dati, nome)
     for p in PEZZI:
         if not (DOCS / "pezzo" / p["slug"] / "index.html").is_file():
             segnala("dati", f"manca la scheda di {p['nome']}")
+    robots = (DOCS / "robots.txt").read_text(encoding="utf-8") if (DOCS / "robots.txt").is_file() else ""
+    if "Disallow: /\n" in robots or "Sitemap:" not in robots:
+        segnala("robots.txt", "il sito vero deve essere aperto ai motori di ricerca e indicare la sitemap")
+    if (DOCS / "_headers").exists():
+        segnala("_headers", "file della copia di prova finito nel sito vero")
     if "--negozio" in sys.argv:
         controlla_negozio()
     for riga in problemi:
