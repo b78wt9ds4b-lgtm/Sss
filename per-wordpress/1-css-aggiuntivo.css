@@ -3,6 +3,9 @@
 
 /* Testi grigi più leggibili, anche per chi vede meno bene */
 :root { --tenue: #6E6358; --dart-tenue: #6E6358; }
+/* La nota sull'IVA nel piede era chiara due volte (colore al 68% e opacità al 60%): circa 2,7:1 sul
+   fondo scuro, sotto il minimo di 4,5:1. Così resta tenue ma si legge (7,8:1) */
+footer.piede .legale-nota { opacity: 1; color: rgba(253, 251, 246, .7); }
 
 /* La riga «Disponibilità» sopra il pulsante ripete quello che c'è già nelle caratteristiche */
 .single-product .ast-stock-detail { display: none; }

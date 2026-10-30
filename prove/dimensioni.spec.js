@@ -33,6 +33,12 @@ for (const url of PAGINE) {
         await page.locator('.apri-menu').click();
       }
 
+      if (url.startsWith('pezzo/') && w > h && h <= 520) {
+        // telefono in orizzontale: la foto della galleria sta tutta nello schermo
+        const alta = await page.locator('.galleria-nastro button').first().evaluate(b => b.getBoundingClientRect().height);
+        expect(alta, `${dove}: la foto è più alta dello schermo`).toBeLessThanOrEqual(h);
+      }
+
       const piccoli = await page.$$eval('main button, main .btn, .chip, .icona-btn, .apri-menu, .miniature button', els => els
         .filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden')
         .map(el => { const b = el.getBoundingClientRect(); return { t: (el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 30), w: Math.round(b.width), h: Math.round(b.height) }; })
