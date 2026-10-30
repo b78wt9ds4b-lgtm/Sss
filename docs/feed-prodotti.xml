@@ -24,6 +24,23 @@
 <g:shipping><g:country>IT</g:country><g:price>100.00 EUR</g:price></g:shipping>
 </item>
 <item>
+<g:id>fiori-di-mezzanotte</g:id>
+<g:title>Fiori di mezzanotte – quadro originale dipinto a mano</g:title>
+<g:description>Un’esplosione di fiori dai colori delicati che emerge da un fondo blu profondo. Malva, rosa antico, giallo e verde salvia si intrecciano in una composizione piena di movimento. Il contrasto tra il blu e i toni pastello fa risaltare il quadro su una parete chiara: è perfetto sopra un divano, una credenza o la testiera del letto. Acrilico su tela, H 70 · L 50 cm, dipinto a mano e firmato. Un pezzo unico. Misure: H 70 · L 50 · P 18 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/fiori-di-mezzanotte/</g:link>
+<g:image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-1-1a1cf96a.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-3-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-4-1200.webp</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>200.00 EUR</g:price>
+<g:condition>new</g:condition>
+<g:brand>DART</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:product_type>Quadri</g:product_type>
+<g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
+</item>
+<item>
 <g:id>armadio-botanico</g:id>
 <g:title>Armadio botanico – mobile d’epoca restaurato e dipinto a mano</g:title>
 <g:description>Un armadio alto e slanciato, con un giardino dipinto a mano che corre su ante e cassetti. Su un fondo verde-grigio sbocciano fiori e foglie nei toni del rosa, del bordeaux e dell’avorio: il decoro segue le linee del mobile, così l’intero fronte diventa un unico disegno. Dentro c’è più spazio di quanto sembri: ante e cassetti sono disposti in modo asimmetrico e ti danno vani diversi per abiti, biancheria e piccoli oggetti. La profondità di 50 cm lo rende comodo anche in camere e corridoi non troppo grandi. È il pezzo giusto se cerchi un armadio che non sparisca contro il muro, ma che dia carattere a tutta la stanza. Misure: H 199 · L 110 · P 50 cm.</g:description>
@@ -44,29 +61,13 @@
 <g:shipping><g:country>IT</g:country><g:price>150.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>fiori-di-mezzanotte</g:id>
-<g:title>Fiori di mezzanotte – quadro originale dipinto a mano</g:title>
-<g:description>Un’esplosione di fiori dai colori delicati che emerge da un fondo blu profondo. Malva, rosa antico, giallo e verde salvia si intrecciano in una composizione piena di movimento. Il contrasto tra il blu e i toni pastello fa risaltare il quadro su una parete chiara: è perfetto sopra un divano, una credenza o la testiera del letto. Acrilico su tela, H 70 · L 50 cm, dipinto a mano e firmato. Un pezzo unico. Misure: H 70 · L 50 · P 18 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/fiori-di-mezzanotte/</g:link>
-<g:image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-1-1a1cf96a.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-3-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/fiori-di-mezzanotte-4-1200.webp</g:additional_image_link>
-<g:availability>in_stock</g:availability>
-<g:price>180.00 EUR</g:price>
-<g:condition>new</g:condition>
-<g:brand>DART</g:brand>
-<g:identifier_exists>no</g:identifier_exists>
-<g:product_type>Quadri</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
-</item>
-<item>
-<g:id>bordeaux-in-fiore</g:id>
-<g:title>Bordeaux in fiore – quadro originale dipinto a mano</g:title>
-<g:description>Un’esplosione di fiori dai toni caldi e delicati su un intenso fondo bordeaux. Il vaso a righe bianche e nere aggiunge un contrasto grafico, moderno. È un quadro grande (H 90 · L 60 cm) e avvolgente: scalda un soggiorno, una sala da pranzo o una camera, ed è perfetto con mobili in legno e pareti chiare. Acrilico su tela, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 90 · L 60 · P 1,8 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/bordeaux-in-fiore/</g:link>
-<g:image_link>https://www.darthome.it/foto/bordeaux-in-fiore-1-f8b11c3a.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/bordeaux-in-fiore-2-1200.webp</g:additional_image_link>
+<g:id>floraison</g:id>
+<g:title>Floraison – quadro originale dipinto a mano</g:title>
+<g:description>Fiori dalle sfumature rosa e malva su un profondo fondo verde oliva, in un vaso a righe verticali che dà un tocco grafico e contemporaneo. I toni sono raffinati e naturali: un quadro che si abbina facilmente al legno, al lino, al verde delle piante. Alto 90 cm e largo 60, è ideale sopra un divano, una credenza o il letto. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Ha le stesse misure di «Bordeaux in fiore»: insieme formano una bella coppia. Misure: H 90 · L 60 · P 1,8 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/floraison/</g:link>
+<g:image_link>https://www.darthome.it/foto/floraison-1-22dd6630.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/floraison-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/floraison-3-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>250.00 EUR</g:price>
 <g:condition>new</g:condition>
@@ -76,13 +77,12 @@
 <g:shipping><g:country>IT</g:country><g:price>35.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>floraison</g:id>
-<g:title>Floraison – quadro originale dipinto a mano</g:title>
-<g:description>Fiori dalle sfumature rosa e malva su un profondo fondo verde oliva, in un vaso a righe verticali che dà un tocco grafico e contemporaneo. I toni sono raffinati e naturali: un quadro che si abbina facilmente al legno, al lino, al verde delle piante. Alto 90 cm e largo 60, è ideale sopra un divano, una credenza o il letto. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Ha le stesse misure di «Bordeaux in fiore»: insieme formano una bella coppia. Misure: H 90 · L 60 · P 1,8 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/floraison/</g:link>
-<g:image_link>https://www.darthome.it/foto/floraison-1-22dd6630.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/floraison-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/floraison-3-1200.webp</g:additional_image_link>
+<g:id>bordeaux-in-fiore</g:id>
+<g:title>Bordeaux in fiore – quadro originale dipinto a mano</g:title>
+<g:description>Un’esplosione di fiori dai toni caldi e delicati su un intenso fondo bordeaux. Il vaso a righe bianche e nere aggiunge un contrasto grafico, moderno. È un quadro grande (H 90 · L 60 cm) e avvolgente: scalda un soggiorno, una sala da pranzo o una camera, ed è perfetto con mobili in legno e pareti chiare. Acrilico su tela, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 90 · L 60 · P 1,8 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/bordeaux-in-fiore/</g:link>
+<g:image_link>https://www.darthome.it/foto/bordeaux-in-fiore-1-f8b11c3a.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/bordeaux-in-fiore-2-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>250.00 EUR</g:price>
 <g:condition>new</g:condition>
@@ -110,13 +110,13 @@
 <g:shipping><g:country>IT</g:country><g:price>100.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>pesce-doro</g:id>
-<g:title>Pesce d’Oro – scultura in legno dipinta a mano</g:title>
-<g:description>Un pezzo di legno modellato dal tempo, trasformato in un pesce che nuota nell’aria. La parte anteriore è dipinta in blu scuro, il corpo sfuma nell’oro; un’asta in metallo lo tiene sospeso sopra una base in legno. Largo 36 cm, sta bene su una libreria, una consolle o un mobile del soggiorno. Ogni venatura è diversa: non ne esiste un altro uguale. Dipinto a mano, pezzo unico. Misure: H 23 · L 36 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/pesce-doro/</g:link>
-<g:image_link>https://www.darthome.it/foto/pesce-doro-1-5ef7b2a2.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/pesce-doro-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/pesce-doro-3-1200.webp</g:additional_image_link>
+<g:id>equilibrio</g:id>
+<g:title>Equilibrio – scultura in legno dipinta a mano</g:title>
+<g:description>Una piccola scultura in bilico: una figura in legno dipinto di grigio-azzurro sostiene un’asta da cui pendono dischi di madreperla, che si muovono e catturano la luce. Alta 40 cm, è perfetta su una mensola, una scrivania o vicino a una finestra. Un oggetto poetico, da guardare o da regalare a chi cerca il proprio equilibrio. Dipinta a mano, pezzo unico. Misure: H 40 · L 18 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/equilibrio/</g:link>
+<g:image_link>https://www.darthome.it/foto/equilibrio-1-7a2e11bf.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/equilibrio-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/equilibrio-3-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>50.00 EUR</g:price>
 <g:condition>new</g:condition>
@@ -141,13 +141,28 @@
 <g:shipping><g:country>IT</g:country><g:price>15.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>equilibrio</g:id>
-<g:title>Equilibrio – scultura in legno dipinta a mano</g:title>
-<g:description>Una piccola scultura in bilico: una figura in legno dipinto di grigio-azzurro sostiene un’asta da cui pendono dischi di madreperla, che si muovono e catturano la luce. Alta 40 cm, è perfetta su una mensola, una scrivania o vicino a una finestra. Un oggetto poetico, da guardare o da regalare a chi cerca il proprio equilibrio. Dipinta a mano, pezzo unico. Misure: H 40 · L 18 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/equilibrio/</g:link>
-<g:image_link>https://www.darthome.it/foto/equilibrio-1-7a2e11bf.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/equilibrio-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/equilibrio-3-1200.webp</g:additional_image_link>
+<g:id>pesce-doro</g:id>
+<g:title>Pesce d’Oro – scultura in legno dipinta a mano</g:title>
+<g:description>Un pezzo di legno modellato dal tempo, trasformato in un pesce che nuota nell’aria. La parte anteriore è dipinta in blu scuro, il corpo sfuma nell’oro; un’asta in metallo lo tiene sospeso sopra una base in legno. Largo 36 cm, sta bene su una libreria, una consolle o un mobile del soggiorno. Ogni venatura è diversa: non ne esiste un altro uguale. Dipinto a mano, pezzo unico. Misure: H 23 · L 36 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/pesce-doro/</g:link>
+<g:image_link>https://www.darthome.it/foto/pesce-doro-1-5ef7b2a2.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/pesce-doro-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/pesce-doro-3-1200.webp</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>50.00 EUR</g:price>
+<g:condition>new</g:condition>
+<g:brand>DART</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:product_type>Sculture</g:product_type>
+<g:shipping><g:country>IT</g:country><g:price>15.00 EUR</g:price></g:shipping>
+</item>
+<item>
+<g:id>la-regina-rossa</g:id>
+<g:title>La regina rossa – scultura in legno dipinta a mano</g:title>
+<g:description>Una scultura nata da un frammento di mobile antico: la gamba intagliata di un vecchio arredo, dipinta di rosso acceso e incoronata da una piccola galleria in ottone. Su una base in legno, diventa una regina. Alta 30 cm, è perfetta su una mensola, una libreria o un comodino. Un oggetto ironico ed elegante, e un regalo che non passa inosservato. Dipinta a mano, pezzo unico. Misure: H 30 · L 20 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/la-regina-rossa/</g:link>
+<g:image_link>https://www.darthome.it/foto/la-regina-rossa-1-289fe086.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/la-regina-rossa-2-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>50.00 EUR</g:price>
 <g:condition>new</g:condition>
@@ -172,44 +187,13 @@
 <g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>la-regina-rossa</g:id>
-<g:title>La regina rossa – scultura in legno dipinta a mano</g:title>
-<g:description>Una scultura nata da un frammento di mobile antico: la gamba intagliata di un vecchio arredo, dipinta di rosso acceso e incoronata da una piccola galleria in ottone. Su una base in legno, diventa una regina. Alta 30 cm, è perfetta su una mensola, una libreria o un comodino. Un oggetto ironico ed elegante, e un regalo che non passa inosservato. Dipinta a mano, pezzo unico. Misure: H 30 · L 20 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/la-regina-rossa/</g:link>
-<g:image_link>https://www.darthome.it/foto/la-regina-rossa-1-289fe086.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/la-regina-rossa-2-1200.webp</g:additional_image_link>
-<g:availability>in_stock</g:availability>
-<g:price>50.00 EUR</g:price>
-<g:condition>new</g:condition>
-<g:brand>DART</g:brand>
-<g:identifier_exists>no</g:identifier_exists>
-<g:product_type>Sculture</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>15.00 EUR</g:price></g:shipping>
-</item>
-<item>
-<g:id>quadro-con-vaso-dorato</g:id>
-<g:title>Giardino di Mezzanotte – quadro originale dipinto a mano</g:title>
-<g:description>Un mazzo di fiori bianchi e rosa antico, con qualche bacca scura, che esce da un grande vaso dorato su un fondo blu notte. L’oro cattura la luce e cambia durante il giorno. Elegante ma non freddo, sta bene in soggiorno o in camera, sopra un mobile in legno o su una parete chiara che lo faccia risaltare. Acrilico su tela, H 70 · L 50 cm, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 70 · L 50 · P 3 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/quadro-con-vaso-dorato/</g:link>
-<g:image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-frontale-8ef320b0.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-1-1200.webp</g:additional_image_link>
-<g:availability>in_stock</g:availability>
-<g:price>180.00 EUR</g:price>
-<g:condition>new</g:condition>
-<g:brand>DART</g:brand>
-<g:identifier_exists>no</g:identifier_exists>
-<g:product_type>Quadri</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
-</item>
-<item>
-<g:id>quadro-con-vaso-dorato-2</g:id>
-<g:title>Bouquet Notturno – quadro originale dipinto a mano</g:title>
-<g:description>Una composizione verticale di fiori chiari e piccole bacche scure su un fondo viola profondo, con un vaso dorato alla base. Il formato stretto e alto (H 70 · L 30 cm) è prezioso per gli spazi difficili: tra due finestre, accanto a una porta, in un corridoio o in coppia con un altro quadro. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Misure: H 70 · L 30 · P 3 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/quadro-con-vaso-dorato-2/</g:link>
-<g:image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-frontale-63a93ee9.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-1-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-3-1200.webp</g:additional_image_link>
+<g:id>quadro-con-i-fiori-2</g:id>
+<g:title>Bouquet Mediterraneo – quadro originale dipinto a mano</g:title>
+<g:description>Rose e fiori tondi in arancio, corallo e rosa, raccolti in una cesta su un fondo azzurro intenso. È un quadro allegro e solare, che sa di Mediterraneo. Il formato orizzontale, non troppo grande, è perfetto in cucina, in un ingresso o in una piccola parete che ha bisogno di colore. Sta bene anche in una composizione insieme ad altri quadri. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Misure: H 40 · L 50 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/quadro-con-i-fiori-2/</g:link>
+<g:image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-1-b340b274.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-3-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>130.00 EUR</g:price>
 <g:condition>new</g:condition>
@@ -217,6 +201,22 @@
 <g:identifier_exists>no</g:identifier_exists>
 <g:product_type>Quadri</g:product_type>
 <g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
+</item>
+<item>
+<g:id>tavolino</g:id>
+<g:title>Tavolino – mobile d’epoca restaurato e dipinto a mano</g:title>
+<g:description>Un tavolino restaurato con un mazzo di fiori astratti dipinto a mano sul piano: un piccolo quadro da usare tutti i giorni. Il piano misura 60 × 41 cm e il tavolino è alto 71: funziona come scrittoio per il portatile, come consolle all’ingresso o come appoggio accanto alla finestra. Il cassetto frontale tiene a portata di mano chiavi, posta e piccole cose. Delicato e luminoso, porta colore in un angolo della casa senza appesantirlo. Misure: H 71 · L 60 · P 41 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/tavolino/</g:link>
+<g:image_link>https://www.darthome.it/foto/tavolino-1-c635b58c.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/tavolino-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/tavolino-3-1200.webp</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>300.00 EUR</g:price>
+<g:condition>refurbished</g:condition>
+<g:brand>DART</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:product_type>Mobili</g:product_type>
+<g:shipping><g:country>IT</g:country><g:price>50.00 EUR</g:price></g:shipping>
 </item>
 <item>
 <g:id>quadro-con-i-fiori</g:id>
@@ -238,31 +238,31 @@
 <g:shipping><g:country>IT</g:country><g:price>35.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>tavolino</g:id>
-<g:title>Tavolino – mobile d’epoca restaurato e dipinto a mano</g:title>
-<g:description>Un tavolino restaurato con un mazzo di fiori astratti dipinto a mano sul piano: un piccolo quadro da usare tutti i giorni. Il piano misura 60 × 41 cm e il tavolino è alto 71: funziona come scrittoio per il portatile, come consolle all’ingresso o come appoggio accanto alla finestra. Il cassetto frontale tiene a portata di mano chiavi, posta e piccole cose. Delicato e luminoso, porta colore in un angolo della casa senza appesantirlo. Misure: H 71 · L 60 · P 41 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/tavolino/</g:link>
-<g:image_link>https://www.darthome.it/foto/tavolino-1-c635b58c.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/tavolino-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/tavolino-3-1200.webp</g:additional_image_link>
-<g:availability>in_stock</g:availability>
-<g:price>300.00 EUR</g:price>
-<g:condition>refurbished</g:condition>
-<g:brand>DART</g:brand>
-<g:identifier_exists>no</g:identifier_exists>
-<g:product_type>Mobili</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>50.00 EUR</g:price></g:shipping>
-</item>
-<item>
-<g:id>quadro-con-i-fiori-2</g:id>
-<g:title>Bouquet Mediterraneo – quadro originale dipinto a mano</g:title>
-<g:description>Rose e fiori tondi in arancio, corallo e rosa, raccolti in una cesta su un fondo azzurro intenso. È un quadro allegro e solare, che sa di Mediterraneo. Il formato orizzontale, non troppo grande, è perfetto in cucina, in un ingresso o in una piccola parete che ha bisogno di colore. Sta bene anche in una composizione insieme ad altri quadri. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Misure: H 40 · L 50 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/quadro-con-i-fiori-2/</g:link>
-<g:image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-1-b340b274.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-con-i-fiori-2-3-1200.webp</g:additional_image_link>
+<g:id>quadro-con-vaso-dorato-2</g:id>
+<g:title>Bouquet Notturno – quadro originale dipinto a mano</g:title>
+<g:description>Una composizione verticale di fiori chiari e piccole bacche scure su un fondo viola profondo, con un vaso dorato alla base. Il formato stretto e alto (H 70 · L 30 cm) è prezioso per gli spazi difficili: tra due finestre, accanto a una porta, in un corridoio o in coppia con un altro quadro. Acrilico su tela, dipinto a mano e firmato. Un pezzo unico. Misure: H 70 · L 30 · P 3 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/quadro-con-vaso-dorato-2/</g:link>
+<g:image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-frontale-63a93ee9.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-1-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-2-3-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
 <g:price>130.00 EUR</g:price>
+<g:condition>new</g:condition>
+<g:brand>DART</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:product_type>Quadri</g:product_type>
+<g:shipping><g:country>IT</g:country><g:price>20.00 EUR</g:price></g:shipping>
+</item>
+<item>
+<g:id>quadro-con-vaso-dorato</g:id>
+<g:title>Giardino di Mezzanotte – quadro originale dipinto a mano</g:title>
+<g:description>Un mazzo di fiori bianchi e rosa antico, con qualche bacca scura, che esce da un grande vaso dorato su un fondo blu notte. L’oro cattura la luce e cambia durante il giorno. Elegante ma non freddo, sta bene in soggiorno o in camera, sopra un mobile in legno o su una parete chiara che lo faccia risaltare. Acrilico su tela, H 70 · L 50 cm, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 70 · L 50 · P 3 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/quadro-con-vaso-dorato/</g:link>
+<g:image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-frontale-8ef320b0.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-con-vaso-dorato-1-1200.webp</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>180.00 EUR</g:price>
 <g:condition>new</g:condition>
 <g:brand>DART</g:brand>
 <g:identifier_exists>no</g:identifier_exists>
@@ -288,21 +288,37 @@
 <g:shipping><g:country>IT</g:country><g:price>100.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>mobile-art-deco</g:id>
-<g:title>Mobile Art Déco – mobile d’epoca restaurato e dipinto a mano</g:title>
-<g:description>Un mobile Art Déco dalle linee eleganti, restaurato e dipinto a mano: le ante sono decorate con diverse tonalità di verde. Alto 94 cm e largo 110, è la misura giusta per un ingresso, un soggiorno o una sala da pranzo: dentro tiene piatti, bicchieri o tutto quello che vuoi tenere in ordine, e sopra c’è spazio per lampade, vasi e quadri. Un pezzo originale e pieno di personalità: il fascino di un mobile d’epoca, con un colore che lo rende attuale. Misure: H 94 · L 110 · P 54 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/mobile-art-deco/</g:link>
-<g:image_link>https://www.darthome.it/foto/mobile-art-deco-1-f97b2408.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-3-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-4-1200.webp</g:additional_image_link>
+<g:id>quadro-fiori-azzurro</g:id>
+<g:title>Azzurro e Oro – quadro originale dipinto a mano</g:title>
+<g:description>Un vaso dorato e una fioritura fitta di rosa, prugna e verde salvia su un fondo azzurro pieno. È un quadro luminoso, che porta in casa un’aria fresca e allegra. Grande e verticale, è perfetto accanto a un mobile alto, in un ingresso o sopra una cassettiera. Acrilico su tela, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 70 · L 100 · P 4 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/quadro-fiori-azzurro/</g:link>
+<g:image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-frontale-14b83aba.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-1-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-3-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-4-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
-<g:price>750.00 EUR</g:price>
+<g:price>220.00 EUR</g:price>
+<g:condition>new</g:condition>
+<g:brand>DART</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:product_type>Quadri</g:product_type>
+<g:shipping><g:country>IT</g:country><g:price>35.00 EUR</g:price></g:shipping>
+</item>
+<item>
+<g:id>sgabello-rosso</g:id>
+<g:title>Sgabello rosso con fiori – mobile d’epoca restaurato e dipinto a mano</g:title>
+<g:description>Uno sgabellino d’epoca dipinto a mano color corallo, con grandi foglie scure e fiorellini sul piano. È basso (23 cm), quindi è perfetto come poggiapiedi, come seduta per bambini o come piccolo piano d’appoggio accanto al divano o in bagno. La maniglia intagliata nel piano permette di spostarlo con una mano. Un regalo originale, o un modo semplice per portare un po’ di colore in casa. Misure: H 23 · L 40 · P 22 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/sgabello-rosso/</g:link>
+<g:image_link>https://www.darthome.it/foto/sgabello-rosso-1-b6bd5265.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/sgabello-rosso-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/sgabello-rosso-3-1200.webp</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>70.00 EUR</g:price>
 <g:condition>refurbished</g:condition>
 <g:brand>DART</g:brand>
 <g:identifier_exists>no</g:identifier_exists>
 <g:product_type>Mobili</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>100.00 EUR</g:price></g:shipping>
 </item>
 <item>
 <g:id>tavolino-rotondo</g:id>
@@ -322,37 +338,21 @@
 <g:shipping><g:country>IT</g:country><g:price>50.00 EUR</g:price></g:shipping>
 </item>
 <item>
-<g:id>sgabello-rosso</g:id>
-<g:title>Sgabello rosso con fiori – mobile d’epoca restaurato e dipinto a mano</g:title>
-<g:description>Uno sgabellino d’epoca dipinto a mano color corallo, con grandi foglie scure e fiorellini sul piano. È basso (23 cm), quindi è perfetto come poggiapiedi, come seduta per bambini o come piccolo piano d’appoggio accanto al divano o in bagno. La maniglia intagliata nel piano permette di spostarlo con una mano. Un regalo originale, o un modo semplice per portare un po’ di colore in casa. Misure: H 23 · L 40 · P 22 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/sgabello-rosso/</g:link>
-<g:image_link>https://www.darthome.it/foto/sgabello-rosso-1-b6bd5265.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/sgabello-rosso-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/sgabello-rosso-3-1200.webp</g:additional_image_link>
+<g:id>mobile-art-deco</g:id>
+<g:title>Mobile Art Déco – mobile d’epoca restaurato e dipinto a mano</g:title>
+<g:description>Un mobile Art Déco dalle linee eleganti, restaurato e dipinto a mano: le ante sono decorate con diverse tonalità di verde. Alto 94 cm e largo 110, è la misura giusta per un ingresso, un soggiorno o una sala da pranzo: dentro tiene piatti, bicchieri o tutto quello che vuoi tenere in ordine, e sopra c’è spazio per lampade, vasi e quadri. Un pezzo originale e pieno di personalità: il fascino di un mobile d’epoca, con un colore che lo rende attuale. Misure: H 94 · L 110 · P 54 cm.</g:description>
+<g:link>https://www.darthome.it/pezzo/mobile-art-deco/</g:link>
+<g:image_link>https://www.darthome.it/foto/mobile-art-deco-1-f97b2408.jpg</g:image_link>
+<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-2-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-3-1200.webp</g:additional_image_link>
+<g:additional_image_link>https://www.darthome.it/foto/mobile-art-deco-4-1200.webp</g:additional_image_link>
 <g:availability>in_stock</g:availability>
-<g:price>70.00 EUR</g:price>
+<g:price>750.00 EUR</g:price>
 <g:condition>refurbished</g:condition>
 <g:brand>DART</g:brand>
 <g:identifier_exists>no</g:identifier_exists>
 <g:product_type>Mobili</g:product_type>
-</item>
-<item>
-<g:id>quadro-fiori-azzurro</g:id>
-<g:title>Azzurro e Oro – quadro originale dipinto a mano</g:title>
-<g:description>Un vaso dorato e una fioritura fitta di rosa, prugna e verde salvia su un fondo azzurro pieno. È un quadro luminoso, che porta in casa un’aria fresca e allegra. Grande e verticale, è perfetto accanto a un mobile alto, in un ingresso o sopra una cassettiera. Acrilico su tela, dipinto a mano e firmato. Un originale, l’unico esemplare. Misure: H 70 · L 100 · P 4 cm.</g:description>
-<g:link>https://www.darthome.it/pezzo/quadro-fiori-azzurro/</g:link>
-<g:image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-frontale-14b83aba.jpg</g:image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-1-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-2-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-3-1200.webp</g:additional_image_link>
-<g:additional_image_link>https://www.darthome.it/foto/quadro-fiori-azzurro-4-1200.webp</g:additional_image_link>
-<g:availability>in_stock</g:availability>
-<g:price>220.00 EUR</g:price>
-<g:condition>new</g:condition>
-<g:brand>DART</g:brand>
-<g:identifier_exists>no</g:identifier_exists>
-<g:product_type>Quadri</g:product_type>
-<g:shipping><g:country>IT</g:country><g:price>35.00 EUR</g:price></g:shipping>
+<g:shipping><g:country>IT</g:country><g:price>100.00 EUR</g:price></g:shipping>
 </item>
 </channel>
 </rss>

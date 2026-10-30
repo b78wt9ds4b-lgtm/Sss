@@ -33,6 +33,7 @@ ORIGINALI = RADICE / ".originali"  # copie degli originali scaricati, non pubbli
 # materici) vengono compresse un po' di più invece di pesare il doppio delle altre.
 LARGHEZZE = (400, 800, 1200)
 PESO_MAX = {400: 45_000, 800: 120_000, 1200: 230_000}
+MINIATURA = 200  # miniature della galleria nella scheda: riquadri da 64 px, nitidi anche su schermi 3x
 
 SABBIA = (246, 240, 230)
 INCHIOSTRO = (43, 38, 34)
@@ -82,6 +83,8 @@ def scrivi_varianti(im, nome):
             if buf.tell() <= PESO_MAX[w]:
                 break
         (FOTO / f"{nome}-{w}.webp").write_bytes(buf.getvalue())
+    # la miniatura era della foto di prima: costruisci.py la rifà da quella nuova
+    (FOTO / f"{nome}-{MINIATURA}.webp").unlink(missing_ok=True)
     larg = min(im.width, LARGHEZZE[-1])
     return larg, round(im.height * larg / im.width)
 
@@ -175,15 +178,13 @@ def anteprima_social(nome_file, foto, occhiello, titolo, prezzo="", nota=""):
     return relativo
 
 
-MINIATURA = 200  # miniature della galleria nella scheda: riquadri da 64 px, nitidi anche su schermi 3x
-
-
 def miniatura(foto):
     """Variante piccola di una foto per le miniature della galleria, ricavata da quella da 800 px.
-    Si rifà quando la foto di partenza cambia, per esempio dopo un ritocco. Restituisce il nome del file."""
+    Si fa solo se manca: quando la foto cambia (importa.py, ritocca.py) scrivi_varianti cancella la
+    vecchia. Non si guardano le date dei file, che dopo un git clone sono casuali. Restituisce il nome."""
     sorgente = FOTO / f"{foto}-800.webp"
     dest = FOTO / f"{foto}-{MINIATURA}.webp"
-    if not dest.exists() or dest.stat().st_mtime < sorgente.stat().st_mtime:
+    if not dest.exists():
         with Image.open(sorgente) as im:
             im = im.convert("RGB")
             im.thumbnail((MINIATURA, MINIATURA * 3), Image.LANCZOS)

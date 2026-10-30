@@ -41,7 +41,7 @@ DESCRIZIONI = leggi("descrizioni.json")
 for _p in PEZZI:
     _p["descrizione"] = DESCRIZIONI.get(_p["slug"], _p["descrizione"])
 # Dal più recente al più vecchio: le pagine mostrano prima le novità.
-PEZZI.sort(key=lambda p: p.get("pubblicato", ""), reverse=True)
+PEZZI.sort(key=lambda p: (p.get("pubblicato", ""), p["id"]), reverse=True)  # a pari data, l'ultimo creato
 DISPONIBILI = [p for p in PEZZI if p["disponibile"]]
 VENDUTI = [p for p in PEZZI if not p["disponibile"]]
 

@@ -1,418 +1,97 @@
 [
   {
-    "id": 435,
-    "slug": "pesce-doro",
-    "pubblicato": "2026-09-26",
-    "nome": "Pesce d’Oro",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 23 · L 36 cm",
-    "tecnica": "Pittura su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "pesce-doro-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
-      },
-      {
-        "file": "pesce-doro-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
-      },
-      {
-        "file": "pesce-doro-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
-      }
-    ]
-  },
-  {
-    "id": 388,
-    "slug": "quadro-con-vaso-dorato",
-    "pubblicato": "2026-09-23",
-    "nome": "Giardino di Mezzanotte",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Quadro originale, dipinto a mano</p>",
-    "prezzo": 180.0,
-    "disponibile": true,
-    "misure": "H 70 · L 50 · P 3 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-con-vaso-dorato-frontale",
-        "w": 1200,
-        "h": 1686,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg",
-        "derivata": true
-      },
-      {
-        "file": "quadro-con-vaso-dorato-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg"
-      }
-    ]
-  },
-  {
-    "id": 438,
-    "slug": "leviatano-doro",
-    "pubblicato": "2026-09-26",
-    "nome": "Leviatano d’Oro",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura di legno, pezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 30 · L 35 cm",
-    "tecnica": "Pittura su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "leviatano-doro-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5931.jpg"
-      },
-      {
-        "file": "leviatano-doro-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5930.jpg"
-      }
-    ]
-  },
-  {
-    "id": 392,
-    "slug": "quadro-con-vaso-dorato-2",
-    "pubblicato": "2026-09-23",
-    "nome": "Bouquet Notturno",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Quadro originale, rappresenta fiori astratti con il vaso dorato</p>",
-    "prezzo": 130.0,
-    "disponibile": true,
-    "misure": "H 70 · L 30 · P 3 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-con-vaso-dorato-2-frontale",
-        "w": 809,
-        "h": 1914,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg",
-        "derivata": true
-      },
-      {
-        "file": "quadro-con-vaso-dorato-2-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg"
-      },
-      {
-        "file": "quadro-con-vaso-dorato-2-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5838.jpg"
-      },
-      {
-        "file": "quadro-con-vaso-dorato-2-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5840.jpg"
-      }
-    ]
-  },
-  {
-    "id": 442,
-    "slug": "equilibrio",
-    "pubblicato": "2026-09-26",
-    "nome": "Equilibrio",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura di legno e madreperla, rappresenta equilibrio.<br />\nPezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 40 · L 18 cm",
-    "tecnica": "Pittura su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "equilibrio-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5991.jpg"
-      },
-      {
-        "file": "equilibrio-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5993.jpg"
-      },
-      {
-        "file": "equilibrio-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5992.jpg"
-      }
-    ]
-  },
-  {
-    "id": 399,
-    "slug": "quadro-con-i-fiori",
-    "pubblicato": "2026-09-23",
-    "nome": "Giardino di Porcellana",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Quadro originale, dipinto a mano, rappresenta fiori astratti con il vaso</p>",
-    "prezzo": 300.0,
-    "disponibile": true,
-    "misure": "H 70 · L 100 · P 3 cm",
-    "tecnica": "",
-    "spedizione": "35,00 €",
-    "spedizione_isole": "85,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-con-i-fiori-frontale",
-        "w": 1200,
-        "h": 837,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg",
-        "derivata": true
-      },
-      {
-        "file": "quadro-con-i-fiori-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/485964F8-AFF3-4425-9362-A58321609555.jpg"
-      },
-      {
-        "file": "quadro-con-i-fiori-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5833.jpg"
-      },
-      {
-        "file": "quadro-con-i-fiori-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5834.jpg"
-      },
-      {
-        "file": "quadro-con-i-fiori-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5835.jpg"
-      },
-      {
-        "file": "quadro-con-i-fiori-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg"
-      }
-    ]
-  },
-  {
-    "id": 409,
-    "slug": "tavolino",
-    "pubblicato": "2026-09-23",
-    "nome": "Tavolino",
+    "id": 551,
+    "slug": "cassettiera-lunga-dart",
+    "pubblicato": "2026-10-28",
+    "nome": "Cassettiera lunga DART",
     "categoria": "mobili",
     "sottotitolo": "",
-    "descrizione": "<p>Tavolino restaurato e dipinto a mano con fiori astratti in vaso. Un pezzo unico, delicato e luminoso, perfetto per aggiungere un tocco di colore e personalità a qualsiasi angolo della casa.</p>",
-    "prezzo": 300.0,
+    "descrizione": "<p>Cassettiera lunga dalle proporzioni eleganti, completamente reinterpretata da DART in un verde-grigio profondo e sofisticato.</p>\n<p>La struttura pulita e leggermente arrotondata viene alleggerita dalle gambe affusolate, mentre le maniglie color cuoio con dettagli metallici aggiungono un contrasto caldo e contemporaneo.</p>\n<p>I quattro ampi cassetti offrono molto spazio contenitivo senza appesantire il mobile, rendendolo adatto a una camera da letto, a un soggiorno oppure a un ingresso importante.</p>\n<p>Un pezzo unico, restaurato e reinterpretato a mano da DART</p>",
+    "prezzo": 850.0,
     "disponibile": true,
-    "misure": "H 71 · L 60 · P 41 cm",
-    "tecnica": "Restauro e pittura a mano",
-    "spedizione": "50,00 €",
-    "spedizione_isole": "100,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolino-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/37FFA39D-95B9-484B-B6B4-FDA16ACC674D.jpg"
-      },
-      {
-        "file": "tavolino-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/BC3A51E9-050B-4AB7-A30E-FA9E8678FEE5.jpg"
-      },
-      {
-        "file": "tavolino-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/CE82F886-C0E1-44D0-A875-6E01C34E6DC2.jpg"
-      }
-    ]
-  },
-  {
-    "id": 470,
-    "slug": "cassettiera-verde-oliva",
-    "pubblicato": "2026-10-11",
-    "nome": "Cassettiera verde oliva",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Cassettiera restaurata e reinterpretata in un elegante verde oliva, con piano in legno naturale a contrasto. Le maniglie originali e i dettagli lavorati ne valorizzano il carattere vintage. Tre ampi cassetti uniscono funzionalità e stile, rendendola un pezzo unico capace di dare personalità a</p>",
-    "prezzo": 650.0,
-    "disponibile": true,
-    "misure": "H 75 · L 78 · P 50 cm",
+    "misure": "H 76 · L 163 · P 55 cm",
     "tecnica": "Restauro e pittura su legno",
     "spedizione": "100,00 €",
     "spedizione_isole": "150,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "cassettiera-verde-oliva-1",
+        "file": "cassettiera-lunga-dart-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/5463EFB6-1B19-43E3-B140-35B5F72A2582.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6800.jpg"
       },
       {
-        "file": "cassettiera-verde-oliva-2",
+        "file": "cassettiera-lunga-dart-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/81D309BE-BC81-40CE-8401-1CA68D57F7C3.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6801.jpg"
       },
       {
-        "file": "cassettiera-verde-oliva-3",
+        "file": "cassettiera-lunga-dart-3",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/7C0C1E8A-6353-47D2-A599-A5DD66A70921.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6804.jpg"
       },
       {
-        "file": "cassettiera-verde-oliva-4",
+        "file": "cassettiera-lunga-dart-4",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6350.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6803.jpg"
       },
       {
-        "file": "cassettiera-verde-oliva-5",
+        "file": "cassettiera-lunga-dart-5",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6345.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6802.jpg"
+      },
+      {
+        "file": "cassettiera-lunga-dart-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6805.jpg"
       }
     ]
   },
   {
-    "id": 413,
-    "slug": "quadro-con-i-fiori-2",
-    "pubblicato": "2026-09-23",
-    "nome": "Bouquet Mediterraneo",
+    "id": 496,
+    "slug": "fiori-di-mezzanotte",
+    "pubblicato": "2026-10-22",
+    "nome": "Fiori di mezzanotte",
     "categoria": "quadri",
     "sottotitolo": "",
-    "descrizione": "<p>Quadro originale, rappresenta fiori astratti con il vaso</p>",
-    "prezzo": 130.0,
+    "descrizione": "<p>Un’esplosione di fiori e colori delicati emerge da un fondo blu profondo, creando un contrasto elegante e suggestivo.</p>\n<p>Sfumature di malva, rosa antico, giallo e verde salvia si intrecciano in una composizione ricca di movimento e personalità.</p>",
+    "prezzo": 200.0,
     "disponibile": true,
-    "misure": "H 40 · L 50 cm",
-    "tecnica": "Acrilico si tela",
+    "misure": "H 70 · L 50 · P 18 cm",
+    "tecnica": "Acrilico su tela",
     "spedizione": "20,00 €",
     "spedizione_isole": "70,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "quadro-con-i-fiori-2-1",
+        "file": "fiori-di-mezzanotte-1",
         "w": 1200,
-        "h": 846,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/7541F9A4-DE92-4856-9191-184C64923F5A.jpg"
+        "h": 1700,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6505.jpg"
       },
       {
-        "file": "quadro-con-i-fiori-2-2",
+        "file": "fiori-di-mezzanotte-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5863.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6506.jpg"
       },
       {
-        "file": "quadro-con-i-fiori-2-3",
+        "file": "fiori-di-mezzanotte-3",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5862.jpg"
-      }
-    ]
-  },
-  {
-    "id": 473,
-    "slug": "bordeaux-in-fiore",
-    "pubblicato": "2026-10-15",
-    "nome": "Bordeaux in fiore",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Un’esplosione di fiori dalle tonalità calde e delicate, che prende vita su un intenso sfondo bordeaux. Il vaso a righe bianche e nere crea un contrasto contemporaneo, dando carattere e personalità alla composizione.</p>\n<p>Un quadro dipinto a mano, pensato per portare colore, eleganza e un tocco artistico negli ambienti.</p>",
-    "prezzo": 250.0,
-    "disponibile": true,
-    "misure": "H 90 · L 60 · P 1,8 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "35,00 €",
-    "spedizione_isole": "85,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "bordeaux-in-fiore-1",
-        "w": 1200,
-        "h": 1500,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/1ddfdd37-7dea-4c7b-b43d-6af8bbf25ab1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6509.jpg"
       },
       {
-        "file": "bordeaux-in-fiore-2",
-        "w": 1200,
-        "h": 1800,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/9d0f8ae1-ebd0-41bd-8619-f37480f02225.jpg"
-      }
-    ]
-  },
-  {
-    "id": 478,
-    "slug": "floraison",
-    "pubblicato": "2026-10-15",
-    "nome": "Floraison",
-    "categoria": "quadri",
-    "sottotitolo": "",
-    "descrizione": "<p>Una composizione floreale dalle delicate sfumature rosa e malva, che risaltano su un profondo sfondo verde oliva. Il vaso a righe verticali aggiunge un contrasto grafico e contemporaneo.</p>\n<p>Un quadro dipinto a mano, dall’eleganza naturale e dal carattere raffinato.</p>",
-    "prezzo": 250.0,
-    "disponibile": true,
-    "misure": "H 90 · L 60 · P 1,8 cm",
-    "tecnica": "Acrilico su tela",
-    "spedizione": "35,00 €",
-    "spedizione_isole": "85,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "floraison-1",
-        "w": 1200,
-        "h": 1807,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6403.jpg"
-      },
-      {
-        "file": "floraison-2",
+        "file": "fiori-di-mezzanotte-4",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6405.jpg"
-      },
-      {
-        "file": "floraison-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6406.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6508.jpg"
       }
     ]
   },
@@ -477,376 +156,176 @@
     ]
   },
   {
-    "id": 428,
-    "slug": "nuotatrici",
-    "pubblicato": "2026-09-26",
-    "nome": "Nuotatrici",
+    "id": 478,
+    "slug": "floraison",
+    "pubblicato": "2026-10-15",
+    "nome": "Floraison",
     "categoria": "quadri",
     "sottotitolo": "",
-    "descrizione": "<p>Quadro originale che rappresenta le nuotatrici</p>",
-    "prezzo": 180.0,
+    "descrizione": "<p>Una composizione floreale dalle delicate sfumature rosa e malva, che risaltano su un profondo sfondo verde oliva. Il vaso a righe verticali aggiunge un contrasto grafico e contemporaneo.</p>\n<p>Un quadro dipinto a mano, dall’eleganza naturale e dal carattere raffinato.</p>",
+    "prezzo": 250.0,
     "disponibile": true,
-    "misure": "H 50 · L 70 · P 3 cm",
+    "misure": "H 90 · L 60 · P 1,8 cm",
     "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
+    "spedizione": "35,00 €",
+    "spedizione_isole": "85,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "nuotatrici-frontale",
+        "file": "floraison-1",
         "w": 1200,
-        "h": 854,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
-        "derivata": true
+        "h": 1807,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6403.jpg"
       },
       {
-        "file": "nuotatrici-1",
+        "file": "floraison-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6405.jpg"
+      },
+      {
+        "file": "floraison-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6406.jpg"
       }
     ]
   },
   {
-    "id": 496,
-    "slug": "fiori-di-mezzanotte",
-    "pubblicato": "2026-10-22",
-    "nome": "Fiori di mezzanotte",
+    "id": 473,
+    "slug": "bordeaux-in-fiore",
+    "pubblicato": "2026-10-15",
+    "nome": "Bordeaux in fiore",
     "categoria": "quadri",
     "sottotitolo": "",
-    "descrizione": "<p>Un’esplosione di fiori e colori delicati emerge da un fondo blu profondo, creando un contrasto elegante e suggestivo.</p>\n<p>Sfumature di malva, rosa antico, giallo e verde salvia si intrecciano in una composizione ricca di movimento e personalità.</p>",
-    "prezzo": 180.0,
+    "descrizione": "<p>Un’esplosione di fiori dalle tonalità calde e delicate, che prende vita su un intenso sfondo bordeaux. Il vaso a righe bianche e nere crea un contrasto contemporaneo, dando carattere e personalità alla composizione.</p>\n<p>Un quadro dipinto a mano, pensato per portare colore, eleganza e un tocco artistico negli ambienti.</p>",
+    "prezzo": 250.0,
     "disponibile": true,
-    "misure": "H 70 · L 50 · P 18 cm",
+    "misure": "H 90 · L 60 · P 1,8 cm",
     "tecnica": "Acrilico su tela",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
+    "spedizione": "35,00 €",
+    "spedizione_isole": "85,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "fiori-di-mezzanotte-1",
+        "file": "bordeaux-in-fiore-1",
         "w": 1200,
-        "h": 1700,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6505.jpg"
+        "h": 1500,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/1ddfdd37-7dea-4c7b-b43d-6af8bbf25ab1.jpg"
       },
       {
-        "file": "fiori-di-mezzanotte-2",
+        "file": "bordeaux-in-fiore-2",
         "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6506.jpg"
-      },
-      {
-        "file": "fiori-di-mezzanotte-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6509.jpg"
-      },
-      {
-        "file": "fiori-di-mezzanotte-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6508.jpg"
+        "h": 1800,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/9d0f8ae1-ebd0-41bd-8619-f37480f02225.jpg"
       }
     ]
   },
   {
-    "id": 378,
-    "slug": "tavolo-antico",
-    "pubblicato": "2026-09-23",
-    "nome": "Tavolo antico",
+    "id": 470,
+    "slug": "cassettiera-verde-oliva",
+    "pubblicato": "2026-10-11",
+    "nome": "Cassettiera verde oliva",
     "categoria": "mobili",
     "sottotitolo": "",
-    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm</p>\n<p>Larghezza 124 cm</p>\n<p>Profondità 70 cm</p>\n<p>Non allungabile.</p>",
-    "prezzo": 750.0,
+    "descrizione": "<p>Cassettiera restaurata e reinterpretata in un elegante verde oliva, con piano in legno naturale a contrasto. Le maniglie originali e i dettagli lavorati ne valorizzano il carattere vintage. Tre ampi cassetti uniscono funzionalità e stile, rendendola un pezzo unico capace di dare personalità a</p>",
+    "prezzo": 650.0,
     "disponibile": true,
-    "misure": "H 80 · L 124 · P 70 cm",
-    "tecnica": "",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolo-antico-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5145.jpg"
-      },
-      {
-        "file": "tavolo-antico-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5150.jpg"
-      },
-      {
-        "file": "tavolo-antico-3",
-        "w": 1200,
-        "h": 1088,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5152.jpg"
-      },
-      {
-        "file": "tavolo-antico-4",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5155.jpg"
-      },
-      {
-        "file": "tavolo-antico-5",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5147.jpg"
-      }
-    ]
-  },
-  {
-    "id": 431,
-    "slug": "la-regina-rossa",
-    "pubblicato": "2026-09-26",
-    "nome": "La regina rossa",
-    "categoria": "sculture",
-    "sottotitolo": "",
-    "descrizione": "<p>La scultura fatta dai frammenti dei mobili.<br />\nPezzo unico</p>",
-    "prezzo": 50.0,
-    "disponibile": true,
-    "misure": "H 30 · L 20 cm",
-    "tecnica": "Pittura a mano su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "la-regina-rossa-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5933.jpg"
-      },
-      {
-        "file": "la-regina-rossa-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5932.jpg"
-      }
-    ]
-  },
-  {
-    "id": 551,
-    "slug": "cassettiera-lunga-dart",
-    "pubblicato": "2026-10-28",
-    "nome": "Cassettiera lunga DART",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>Cassettiera lunga dalle proporzioni eleganti, completamente reinterpretata da DART in un verde-grigio profondo e sofisticato.</p>\n<p>La struttura pulita e leggermente arrotondata viene alleggerita dalle gambe affusolate, mentre le maniglie color cuoio con dettagli metallici aggiungono un contrasto caldo e contemporaneo.</p>\n<p>I quattro ampi cassetti offrono molto spazio contenitivo senza appesantire il mobile, rendendolo adatto a una camera da letto, a un soggiorno oppure a un ingresso importante.</p>\n<p>Un pezzo unico, restaurato e reinterpretato a mano da DART</p>",
-    "prezzo": 850.0,
-    "disponibile": true,
-    "misure": "H 76 · L 163 · P 55 cm",
+    "misure": "H 75 · L 78 · P 50 cm",
     "tecnica": "Restauro e pittura su legno",
     "spedizione": "100,00 €",
     "spedizione_isole": "150,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "cassettiera-lunga-dart-1",
+        "file": "cassettiera-verde-oliva-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6800.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/5463EFB6-1B19-43E3-B140-35B5F72A2582.jpg"
       },
       {
-        "file": "cassettiera-lunga-dart-2",
+        "file": "cassettiera-verde-oliva-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6801.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/81D309BE-BC81-40CE-8401-1CA68D57F7C3.jpg"
       },
       {
-        "file": "cassettiera-lunga-dart-3",
+        "file": "cassettiera-verde-oliva-3",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6804.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/7C0C1E8A-6353-47D2-A599-A5DD66A70921.jpg"
       },
       {
-        "file": "cassettiera-lunga-dart-4",
+        "file": "cassettiera-verde-oliva-4",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6803.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6350.jpg"
       },
       {
-        "file": "cassettiera-lunga-dart-5",
+        "file": "cassettiera-verde-oliva-5",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6802.jpg"
-      },
-      {
-        "file": "cassettiera-lunga-dart-6",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6805.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6345.jpg"
       }
     ]
   },
   {
-    "id": 18,
-    "slug": "mobile-art-deco",
-    "pubblicato": "2026-09-14",
-    "nome": "Mobile Art Déco",
+    "id": 464,
+    "slug": "mobile-botanico",
+    "pubblicato": "2026-10-08",
+    "nome": "Mobile botanico",
     "categoria": "mobili",
-    "sottotitolo": "Ante decorate nei toni del verde",
-    "descrizione": "<p>Mobile Art Déco restaurato e dipinto a mano, con struttura in legno e ante decorate in diverse tonalità di verde.</p>\n<p>Un pezzo elegante, originale e pieno di carattere, perfetto per dare personalità a un ingresso, soggiorno o sala da pranzo.</p>",
-    "prezzo": 750.0,
-    "disponibile": true,
-    "misure": "H 94 · L 110 · P 54 cm",
+    "sottotitolo": "",
+    "descrizione": "<p>Mobile botanico dipinto a mano</p>\n<p>Un piccolo giardino prende vita sulle ante di questo mobile, decorato a mano con delicati motivi botanici.</p>\n<p>Il verde acqua si abbina al calore del legno naturale, creando un equilibrio raffinato tra colore e materia.</p>\n<p>Un pezzo unico DART, capace di portare freschezza, carattere e originalità in ogni ambiente.</p>\n<p>Dimensioni: H 94 × L 131 × P 58 cm</p>\n<p>Prezzo: 900 €</p>",
+    "prezzo": 600.0,
+    "disponibile": false,
+    "misure": "H 94 · L 131 · P 58 cm",
     "tecnica": "Restauro e pittura a mano su legno",
     "spedizione": "100,00 €",
     "spedizione_isole": "150,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "mobile-art-deco-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-1.jpg"
+        "file": "mobile-botanico-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/AA8F3F8A-4C2C-4C33-B076-0907E94536BD.jpg"
       },
       {
-        "file": "mobile-art-deco-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-2.jpg"
+        "file": "mobile-botanico-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6284.jpg"
       },
       {
-        "file": "mobile-art-deco-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-3.jpg"
+        "file": "mobile-botanico-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6285.jpg"
       },
       {
-        "file": "mobile-art-deco-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-4.jpg"
-      }
-    ]
-  },
-  {
-    "id": 33,
-    "slug": "tavolino-rotondo",
-    "pubblicato": "2026-09-14",
-    "nome": "Tavolino rotondo con base rossa",
-    "categoria": "mobili",
-    "sottotitolo": "Piano decorato, base laccata rossa",
-    "descrizione": "<p>Tavolino rotondo in legno, restaurato e dipinto a mano.</p>\n<p>Il piano è decorato con un vaso e motivi floreali delicati, mentre la base rossa lo rende più vivace e particolare.</p>\n<p>Piccolo, leggero e pieno di carattere, perfetto accanto a una poltrona, in ingresso o come angolo speciale in casa.</p>",
-    "prezzo": 200.0,
-    "disponibile": true,
-    "misure": "H 57 · Ø 40 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "50,00 €",
-    "spedizione_isole": "100,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolino-rotondo-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-1.jpg"
+        "file": "mobile-botanico-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6280.jpg"
       },
       {
-        "file": "tavolino-rotondo-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-2.jpg"
+        "file": "mobile-botanico-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6278.jpg"
       },
       {
-        "file": "tavolino-rotondo-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-3.jpg"
+        "file": "mobile-botanico-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6275.jpg"
       },
       {
-        "file": "tavolino-rotondo-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-4.jpg"
-      }
-    ]
-  },
-  {
-    "id": 49,
-    "slug": "sgabello-rosso",
-    "pubblicato": "2026-09-14",
-    "nome": "Sgabello rosso con fiori",
-    "categoria": "mobili",
-    "sottotitolo": "Color corallo, decoro floreale",
-    "descrizione": "<p>Sgabellino d’epoca, dipinto a mano color corallo con decoro floreale. Un pezzo piccolo e allegro, da usare come seduta bassa o come piano d’appoggio.</p>",
-    "prezzo": 70.0,
-    "disponibile": true,
-    "misure": "H 23 · L 40 · P 22 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "Da concordare",
-    "spedizione_isole": "",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "sgabello-rosso-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-1.jpg"
-      },
-      {
-        "file": "sgabello-rosso-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-2.jpg"
-      },
-      {
-        "file": "sgabello-rosso-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-3.jpg"
-      }
-    ]
-  },
-  {
-    "id": 53,
-    "slug": "quadro-fiori-azzurro",
-    "pubblicato": "2026-09-14",
-    "nome": "Azzurro e Oro",
-    "categoria": "quadri",
-    "sottotitolo": "Acrilico su tela",
-    "descrizione": "<p>Composizione floreale dipinta a mano ad acrilico su tela. Un vaso dorato e una fioritura densa di rosa, prugna e verde salvia su un fondo azzurro pieno.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
-    "prezzo": 220.0,
-    "disponibile": true,
-    "misure": "H 70 · L 100 · P 4 cm",
-    "tecnica": "Acrilico su tela, dipinto a mano",
-    "spedizione": "35,00 €",
-    "spedizione_isole": "85,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-fiori-azzurro-frontale",
-        "w": 703,
-        "h": 987,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg",
-        "derivata": true
-      },
-      {
-        "file": "quadro-fiori-azzurro-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg"
-      },
-      {
-        "file": "quadro-fiori-azzurro-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-2.jpg"
-      },
-      {
-        "file": "quadro-fiori-azzurro-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-3.jpg"
-      },
-      {
-        "file": "quadro-fiori-azzurro-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-4.jpg"
+        "file": "mobile-botanico-7",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6274.jpg"
       }
     ]
   },
@@ -947,152 +426,165 @@
     ]
   },
   {
-    "id": 11,
-    "slug": "credenza-art-deco",
-    "pubblicato": "2026-09-14",
-    "nome": "Credenza Art Déco",
-    "categoria": "mobili",
-    "sottotitolo": "Radica restaurata · interno dipinto a mano",
-    "descrizione": "<p>Mobile Art Déco restaurato con cura, che conserva tutto il fascino delle sue splendide venature originali. L’interno è stato reso unico da una decorazione dipinta interamente a mano, un dettaglio artistico che sorprende ogni volta che si aprono le ante e trasforma questo mobile in un pezzo davvero irripetibile.</p>\n<p>Capiente e versatile, è perfetto come mobile bar, credenza o contenitore per il soggiorno, aggiungendo carattere e personalità a qualsiasi ambiente.</p>",
-    "prezzo": 1000.0,
-    "disponibile": false,
-    "misure": "H 126 · L 96 · P 46 cm",
-    "tecnica": "Restauro conservativo, decorazione interna ad acrilico",
-    "spedizione": "150,00 €",
-    "spedizione_isole": "200,00 €",
+    "id": 442,
+    "slug": "equilibrio",
+    "pubblicato": "2026-09-26",
+    "nome": "Equilibrio",
+    "categoria": "sculture",
+    "sottotitolo": "",
+    "descrizione": "<p>La scultura di legno e madreperla, rappresenta equilibrio.<br />\nPezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 40 · L 18 cm",
+    "tecnica": "Pittura su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "credenza-art-deco-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-1.jpg"
+        "file": "equilibrio-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5991.jpg"
       },
       {
-        "file": "credenza-art-deco-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-2.jpg"
+        "file": "equilibrio-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5993.jpg"
       },
       {
-        "file": "credenza-art-deco-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-3.jpg"
-      },
-      {
-        "file": "credenza-art-deco-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-4.jpg"
-      },
-      {
-        "file": "credenza-art-deco-5",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-5.jpg"
-      },
-      {
-        "file": "credenza-art-deco-6",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-6.jpg"
+        "file": "equilibrio-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5992.jpg"
       }
     ]
   },
   {
-    "id": 403,
-    "slug": "tavolo-anni30-rotondo",
-    "pubblicato": "2026-09-23",
-    "nome": "Tavolo anni’30 rotondo",
-    "categoria": "mobili",
+    "id": 438,
+    "slug": "leviatano-doro",
+    "pubblicato": "2026-09-26",
+    "nome": "Leviatano d’Oro",
+    "categoria": "sculture",
     "sottotitolo": "",
-    "descrizione": "<p>È un tavolo rotondo DART, restaurato e reinterpretato a mano. Il piano in legno naturale è abbinato alla base sagomata nei toni del verde, che lo rende molto particolare ma facile da inserire anche in ambienti contemporanei.</p>\n<p>È ideale come piccolo tavolo da pranzo, per una cucina raccolta oppure come pezzo protagonista in un angolo della casa.</p>",
-    "prezzo": 550.0,
-    "disponibile": false,
-    "misure": "H 70 · L 85 cm",
-    "tecnica": "",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
+    "descrizione": "<p>La scultura di legno, pezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 30 · L 35 cm",
+    "tecnica": "Pittura su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "tavolo-anni30-rotondo-1",
+        "file": "leviatano-doro-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/2B588F2D-2B38-4407-A63F-6CB13A8AE69B.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5931.jpg"
       },
       {
-        "file": "tavolo-anni30-rotondo-2",
+        "file": "leviatano-doro-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3D2D516D-43F7-4002-A24E-07849F1DAD71.jpg"
-      },
-      {
-        "file": "tavolo-anni30-rotondo-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5818.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5930.jpg"
       }
     ]
   },
   {
-    "id": 464,
-    "slug": "mobile-botanico",
-    "pubblicato": "2026-10-08",
-    "nome": "Mobile botanico",
-    "categoria": "mobili",
+    "id": 435,
+    "slug": "pesce-doro",
+    "pubblicato": "2026-09-26",
+    "nome": "Pesce d’Oro",
+    "categoria": "sculture",
     "sottotitolo": "",
-    "descrizione": "<p>Mobile botanico dipinto a mano</p>\n<p>Un piccolo giardino prende vita sulle ante di questo mobile, decorato a mano con delicati motivi botanici.</p>\n<p>Il verde acqua si abbina al calore del legno naturale, creando un equilibrio raffinato tra colore e materia.</p>\n<p>Un pezzo unico DART, capace di portare freschezza, carattere e originalità in ogni ambiente.</p>\n<p>Dimensioni: H 94 × L 131 × P 58 cm</p>\n<p>Prezzo: 900 €</p>",
-    "prezzo": 600.0,
-    "disponibile": false,
-    "misure": "H 94 · L 131 · P 58 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
+    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 23 · L 36 cm",
+    "tecnica": "Pittura su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "mobile-botanico-1",
+        "file": "pesce-doro-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/AA8F3F8A-4C2C-4C33-B076-0907E94536BD.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
       },
       {
-        "file": "mobile-botanico-2",
+        "file": "pesce-doro-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6284.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
       },
       {
-        "file": "mobile-botanico-3",
+        "file": "pesce-doro-3",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6285.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "slug": "la-regina-rossa",
+    "pubblicato": "2026-09-26",
+    "nome": "La regina rossa",
+    "categoria": "sculture",
+    "sottotitolo": "",
+    "descrizione": "<p>La scultura fatta dai frammenti dei mobili.<br />\nPezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 30 · L 20 cm",
+    "tecnica": "Pittura a mano su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "la-regina-rossa-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5933.jpg"
       },
       {
-        "file": "mobile-botanico-4",
+        "file": "la-regina-rossa-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6280.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5932.jpg"
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "slug": "nuotatrici",
+    "pubblicato": "2026-09-26",
+    "nome": "Nuotatrici",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale che rappresenta le nuotatrici</p>",
+    "prezzo": 180.0,
+    "disponibile": true,
+    "misure": "H 50 · L 70 · P 3 cm",
+    "tecnica": "Acrilico su tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "nuotatrici-frontale",
+        "w": 1200,
+        "h": 854,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg",
+        "derivata": true
       },
       {
-        "file": "mobile-botanico-5",
+        "file": "nuotatrici-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6278.jpg"
-      },
-      {
-        "file": "mobile-botanico-6",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6275.jpg"
-      },
-      {
-        "file": "mobile-botanico-7",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6274.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/84897F08-5E3C-40FB-897E-0FBF99000E03.jpg"
       }
     ]
   },
@@ -1169,6 +661,243 @@
     ]
   },
   {
+    "id": 413,
+    "slug": "quadro-con-i-fiori-2",
+    "pubblicato": "2026-09-23",
+    "nome": "Bouquet Mediterraneo",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale, rappresenta fiori astratti con il vaso</p>",
+    "prezzo": 130.0,
+    "disponibile": true,
+    "misure": "H 40 · L 50 cm",
+    "tecnica": "Acrilico si tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-con-i-fiori-2-1",
+        "w": 1200,
+        "h": 846,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/7541F9A4-DE92-4856-9191-184C64923F5A.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-2-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5863.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-2-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5862.jpg"
+      }
+    ]
+  },
+  {
+    "id": 409,
+    "slug": "tavolino",
+    "pubblicato": "2026-09-23",
+    "nome": "Tavolino",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>Tavolino restaurato e dipinto a mano con fiori astratti in vaso. Un pezzo unico, delicato e luminoso, perfetto per aggiungere un tocco di colore e personalità a qualsiasi angolo della casa.</p>",
+    "prezzo": 300.0,
+    "disponibile": true,
+    "misure": "H 71 · L 60 · P 41 cm",
+    "tecnica": "Restauro e pittura a mano",
+    "spedizione": "50,00 €",
+    "spedizione_isole": "100,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolino-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/37FFA39D-95B9-484B-B6B4-FDA16ACC674D.jpg"
+      },
+      {
+        "file": "tavolino-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/BC3A51E9-050B-4AB7-A30E-FA9E8678FEE5.jpg"
+      },
+      {
+        "file": "tavolino-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/CE82F886-C0E1-44D0-A875-6E01C34E6DC2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "slug": "tavolo-anni30-rotondo",
+    "pubblicato": "2026-09-23",
+    "nome": "Tavolo anni’30 rotondo",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>È un tavolo rotondo DART, restaurato e reinterpretato a mano. Il piano in legno naturale è abbinato alla base sagomata nei toni del verde, che lo rende molto particolare ma facile da inserire anche in ambienti contemporanei.</p>\n<p>È ideale come piccolo tavolo da pranzo, per una cucina raccolta oppure come pezzo protagonista in un angolo della casa.</p>",
+    "prezzo": 550.0,
+    "disponibile": false,
+    "misure": "H 70 · L 85 cm",
+    "tecnica": "",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolo-anni30-rotondo-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/2B588F2D-2B38-4407-A63F-6CB13A8AE69B.jpg"
+      },
+      {
+        "file": "tavolo-anni30-rotondo-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3D2D516D-43F7-4002-A24E-07849F1DAD71.jpg"
+      },
+      {
+        "file": "tavolo-anni30-rotondo-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5818.jpg"
+      }
+    ]
+  },
+  {
+    "id": 399,
+    "slug": "quadro-con-i-fiori",
+    "pubblicato": "2026-09-23",
+    "nome": "Giardino di Porcellana",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale, dipinto a mano, rappresenta fiori astratti con il vaso</p>",
+    "prezzo": 300.0,
+    "disponibile": true,
+    "misure": "H 70 · L 100 · P 3 cm",
+    "tecnica": "",
+    "spedizione": "35,00 €",
+    "spedizione_isole": "85,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-con-i-fiori-frontale",
+        "w": 1200,
+        "h": 837,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg",
+        "derivata": true
+      },
+      {
+        "file": "quadro-con-i-fiori-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/485964F8-AFF3-4425-9362-A58321609555.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5833.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5834.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5835.jpg"
+      },
+      {
+        "file": "quadro-con-i-fiori-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/E11A8B3B-4901-4F29-8AAF-B81A004CF98D-1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 392,
+    "slug": "quadro-con-vaso-dorato-2",
+    "pubblicato": "2026-09-23",
+    "nome": "Bouquet Notturno",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale, rappresenta fiori astratti con il vaso dorato</p>",
+    "prezzo": 130.0,
+    "disponibile": true,
+    "misure": "H 70 · L 30 · P 3 cm",
+    "tecnica": "Acrilico su tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-con-vaso-dorato-2-frontale",
+        "w": 809,
+        "h": 1914,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg",
+        "derivata": true
+      },
+      {
+        "file": "quadro-con-vaso-dorato-2-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/950F4561-7003-4ADC-9355-1004DE6FA28D.jpg"
+      },
+      {
+        "file": "quadro-con-vaso-dorato-2-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5838.jpg"
+      },
+      {
+        "file": "quadro-con-vaso-dorato-2-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5840.jpg"
+      }
+    ]
+  },
+  {
+    "id": 388,
+    "slug": "quadro-con-vaso-dorato",
+    "pubblicato": "2026-09-23",
+    "nome": "Giardino di Mezzanotte",
+    "categoria": "quadri",
+    "sottotitolo": "",
+    "descrizione": "<p>Quadro originale, dipinto a mano</p>",
+    "prezzo": 180.0,
+    "disponibile": true,
+    "misure": "H 70 · L 50 · P 3 cm",
+    "tecnica": "Acrilico su tela",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-con-vaso-dorato-frontale",
+        "w": 1200,
+        "h": 1686,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg",
+        "derivata": true
+      },
+      {
+        "file": "quadro-con-vaso-dorato-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/D0DC7BAC-A12E-4202-96E0-A7137F15E322.jpg"
+      }
+    ]
+  },
+  {
     "id": 386,
     "slug": "credenza-antica",
     "pubblicato": "2026-09-23",
@@ -1223,290 +952,104 @@
     ]
   },
   {
-    "id": 23,
-    "slug": "cassettiera-vintage",
-    "pubblicato": "2026-09-14",
-    "nome": "Cassettiera vintage",
+    "id": 378,
+    "slug": "tavolo-antico",
+    "pubblicato": "2026-09-23",
+    "nome": "Tavolo antico",
     "categoria": "mobili",
-    "sottotitolo": "Legno naturale e decoro verde",
-    "descrizione": "<p>Cassettiera restaurata e reinterpretata a mano, dove il calore del legno naturale incontra un decoro contemporaneo nei toni del verde. Un pezzo unico, pensato per chi ama circondarsi di arredi con personalità.</p>\n<p>I tre ampi cassetti offrono grande capienza, mentre ogni dettaglio è stato curato con attenzione per valorizzare il fascino del mobile originale e renderlo unico.</p>",
-    "prezzo": 900.0,
-    "disponibile": false,
-    "misure": "H 96 · L 119 · P 50 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
+    "sottotitolo": "",
+    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm</p>\n<p>Larghezza 124 cm</p>\n<p>Profondità 70 cm</p>\n<p>Non allungabile.</p>",
+    "prezzo": 750.0,
+    "disponibile": true,
+    "misure": "H 80 · L 124 · P 70 cm",
+    "tecnica": "",
     "spedizione": "100,00 €",
     "spedizione_isole": "150,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "cassettiera-vintage-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/cassettiera-1.jpg"
-      },
-      {
-        "file": "cassettiera-vintage-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/cassettiera-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": 26,
-    "slug": "mobile-uccellini",
-    "pubblicato": "2026-09-14",
-    "nome": "Mobile vintage con uccellini",
-    "categoria": "mobili",
-    "sottotitolo": "Uccelli dipinti a mano nei toni verde salvia",
-    "descrizione": "<p>Dal vivo questo mobile ha una presenza ancora più bella.</p>\n<p>È un pezzo unico vintage, restaurato mantenendo tutto il fascino originale del legno e dipinto a mano con delicati uccelli dai toni verde salvia. Un mobile elegante ma particolare, capace di dare carattere senza appesantire l’ambiente.</p>\n<p>Sta benissimo in soggiorno, entrata o cucina, perché arreda subito senza sembrare pesante.</p>",
-    "prezzo": 900.0,
-    "disponibile": false,
-    "misure": "H 94 · L 131 · P 58 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "mobile-uccellini-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-1.jpg"
-      },
-      {
-        "file": "mobile-uccellini-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-2.jpg"
-      },
-      {
-        "file": "mobile-uccellini-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-3.jpg"
-      }
-    ]
-  },
-  {
-    "id": 30,
-    "slug": "tavolino-fiori",
-    "pubblicato": "2026-09-14",
-    "nome": "Tavolino con fiori",
-    "categoria": "mobili",
-    "sottotitolo": "Piano dipinto con fiori astratti in vaso",
-    "descrizione": "<p>Tavolino restaurato e dipinto a mano con fiori astratti in vaso. Un pezzo unico, delicato e luminoso, perfetto per aggiungere un tocco di colore e personalità a qualsiasi angolo della casa.</p>",
-    "prezzo": 300.0,
-    "disponibile": false,
-    "misure": "H 71 · L 60 · P 41 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "50,00 €",
-    "spedizione_isole": "100,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolino-fiori-1",
+        "file": "tavolo-antico-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/5932917D-D8CB-4C32-B6FE-813E79967C26.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5145.jpg"
       },
       {
-        "file": "tavolino-fiori-2",
+        "file": "tavolo-antico-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/313D6CC4-10F0-4AEC-BF3E-FA5AF4F27B66.jpg"
-      }
-    ]
-  },
-  {
-    "id": 38,
-    "slug": "tavolino-legno",
-    "pubblicato": "2026-09-14",
-    "nome": "Tavolino in legno",
-    "categoria": "mobili",
-    "sottotitolo": "Decoro floreale sul piano, ripiano inferiore",
-    "descrizione": "<p>Tavolino in legno restaurato e dipinto a mano, con decorazione floreale delicata sul piano.</p>\n<p>Piccolo, elegante e pieno di poesia, perfetto accanto a una poltrona, in ingresso o come comodino particolare. Ha anche un ripiano inferiore, comodo e discreto.</p>",
-    "prezzo": 200.0,
-    "disponibile": false,
-    "misure": "H 70 · L 36 · P 36 cm",
-    "tecnica": "Restauro e pittura a mano su legno",
-    "spedizione": "50,00 €",
-    "spedizione_isole": "100,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5150.jpg"
+      },
       {
-        "file": "tavolino-legno-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/tavolino-fiori-2.jpg"
+        "file": "tavolo-antico-3",
+        "w": 1200,
+        "h": 1088,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5152.jpg"
+      },
+      {
+        "file": "tavolo-antico-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5155.jpg"
+      },
+      {
+        "file": "tavolo-antico-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5147.jpg"
       }
     ]
   },
   {
-    "id": 39,
-    "slug": "armadio-dipinto",
+    "id": 74,
+    "slug": "quadro-due-donne",
     "pubblicato": "2026-09-14",
-    "nome": "Armadio dipinto",
-    "categoria": "mobili",
-    "sottotitolo": "Restaurato nei toni del verde polvere",
-    "descrizione": "<p>Scheda in preparazione. Misure, prezzo e descrizione completa saranno pubblicati a breve.</p>",
+    "nome": "Due donne con la corona",
+    "categoria": "quadri",
+    "sottotitolo": "Acrilico su tela",
+    "descrizione": "<p>Scheda in preparazione. Misure e prezzo saranno pubblicati a breve.</p>",
     "prezzo": null,
     "disponibile": false,
     "misure": "",
-    "tecnica": "Restauro e pittura a mano su legno",
+    "tecnica": "Acrilico su tela, dipinto a mano",
     "spedizione": "Da concordare",
     "spedizione_isole": "",
-    "garanzia": "12 mesi",
+    "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "armadio-dipinto-1",
+        "file": "quadro-due-donne-1",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-due-donne-1.jpg"
       },
       {
-        "file": "armadio-dipinto-2",
+        "file": "quadro-due-donne-2",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-2.jpg"
-      },
-      {
-        "file": "armadio-dipinto-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-3.jpg"
-      },
-      {
-        "file": "armadio-dipinto-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-4.jpg"
-      },
-      {
-        "file": "armadio-dipinto-5",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-5.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-due-donne-2.jpg"
       }
     ]
   },
   {
-    "id": 45,
-    "slug": "scrivania-vintage",
+    "id": 72,
+    "slug": "quadro-colomba",
     "pubblicato": "2026-09-14",
-    "nome": "Scrivania vintage",
-    "categoria": "mobili",
-    "sottotitolo": "Legno massello con cassettiera laterale",
-    "descrizione": "<p>Scheda in preparazione. Misure, prezzo e descrizione completa saranno pubblicati a breve.</p>",
+    "nome": "Donna con la colomba",
+    "categoria": "quadri",
+    "sottotitolo": "Acrilico su tela",
+    "descrizione": "<p>Scheda in preparazione. Misure e prezzo saranno pubblicati a breve.</p>",
     "prezzo": null,
     "disponibile": false,
     "misure": "",
-    "tecnica": "Restauro conservativo",
+    "tecnica": "Acrilico su tela, dipinto a mano",
     "spedizione": "Da concordare",
     "spedizione_isole": "",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "scrivania-vintage-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-1.jpg"
-      },
-      {
-        "file": "scrivania-vintage-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-2.jpg"
-      },
-      {
-        "file": "scrivania-vintage-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-3.jpg"
-      }
-    ]
-  },
-  {
-    "id": 58,
-    "slug": "quadro-fiori-blu",
-    "pubblicato": "2026-09-14",
-    "nome": "Fiori in vaso — fondo blu notte",
-    "categoria": "quadri",
-    "sottotitolo": "Acrilico su tela",
-    "descrizione": "<p>Composizione floreale su fondo blu notte, con vaso dorato e fiori chiari dipinti a mano. Un’opera dai toni profondi che si stacca con eleganza su parete chiara.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
-    "prezzo": 180.0,
-    "disponibile": false,
-    "misure": "70 × 50 cm",
-    "tecnica": "Acrilico su tela, dipinto a mano",
-    "spedizione": "35,00 €",
-    "spedizione_isole": "85,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "quadro-fiori-blu-1",
+        "file": "quadro-colomba-1",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-blu-1.jpg"
-      },
-      {
-        "file": "quadro-fiori-blu-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-blu-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": 61,
-    "slug": "quadro-donna-corona",
-    "pubblicato": "2026-09-14",
-    "nome": "Donna con la corona",
-    "categoria": "quadri",
-    "sottotitolo": "Acrilico su tela",
-    "descrizione": "<p>Ritratto dipinto a mano ad acrilico su tela. Piccolo formato, ideale da appoggiare su una mensola o da comporre in gruppo con gli altri ritratti della serie.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
-    "prezzo": 40.0,
-    "disponibile": false,
-    "misure": "24 × 18 cm",
-    "tecnica": "Acrilico su tela, dipinto a mano",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-donna-corona-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-corona-1.jpg"
-      },
-      {
-        "file": "quadro-donna-corona-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-corona-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": 64,
-    "slug": "quadro-donna-legno",
-    "pubblicato": "2026-09-14",
-    "nome": "Siamo tutte regine",
-    "categoria": "quadri",
-    "sottotitolo": "Acrilico su legno",
-    "descrizione": "<p>Ritratto femminile dipinto a mano ad acrilico su supporto in legno.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
-    "prezzo": 50.0,
-    "disponibile": false,
-    "misure": "H 30 · L 30 · P 4 cm",
-    "tecnica": "Acrilico su legno, dipinto a mano",
-    "spedizione": "20,00 €",
-    "spedizione_isole": "70,00 €",
-    "garanzia": "24 mesi",
-    "foto": [
-      {
-        "file": "quadro-donna-legno-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-donna-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-colomba-1.jpg"
       }
     ]
   },
@@ -1559,56 +1102,513 @@
     ]
   },
   {
-    "id": 72,
-    "slug": "quadro-colomba",
+    "id": 64,
+    "slug": "quadro-donna-legno",
     "pubblicato": "2026-09-14",
-    "nome": "Donna con la colomba",
+    "nome": "Siamo tutte regine",
     "categoria": "quadri",
-    "sottotitolo": "Acrilico su tela",
-    "descrizione": "<p>Scheda in preparazione. Misure e prezzo saranno pubblicati a breve.</p>",
-    "prezzo": null,
+    "sottotitolo": "Acrilico su legno",
+    "descrizione": "<p>Ritratto femminile dipinto a mano ad acrilico su supporto in legno.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
+    "prezzo": 50.0,
     "disponibile": false,
-    "misure": "",
-    "tecnica": "Acrilico su tela, dipinto a mano",
-    "spedizione": "Da concordare",
-    "spedizione_isole": "",
+    "misure": "H 30 · L 30 · P 4 cm",
+    "tecnica": "Acrilico su legno, dipinto a mano",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "quadro-colomba-1",
+        "file": "quadro-donna-legno-1",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-colomba-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-donna-1.jpg"
       }
     ]
   },
   {
-    "id": 74,
-    "slug": "quadro-due-donne",
+    "id": 61,
+    "slug": "quadro-donna-corona",
     "pubblicato": "2026-09-14",
-    "nome": "Due donne con la corona",
+    "nome": "Donna con la corona",
     "categoria": "quadri",
     "sottotitolo": "Acrilico su tela",
-    "descrizione": "<p>Scheda in preparazione. Misure e prezzo saranno pubblicati a breve.</p>",
-    "prezzo": null,
+    "descrizione": "<p>Ritratto dipinto a mano ad acrilico su tela. Piccolo formato, ideale da appoggiare su una mensola o da comporre in gruppo con gli altri ritratti della serie.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
+    "prezzo": 40.0,
     "disponibile": false,
-    "misure": "",
+    "misure": "24 × 18 cm",
     "tecnica": "Acrilico su tela, dipinto a mano",
-    "spedizione": "Da concordare",
-    "spedizione_isole": "",
+    "spedizione": "20,00 €",
+    "spedizione_isole": "70,00 €",
     "garanzia": "24 mesi",
     "foto": [
       {
-        "file": "quadro-due-donne-1",
+        "file": "quadro-donna-corona-1",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-due-donne-1.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-corona-1.jpg"
       },
       {
-        "file": "quadro-due-donne-2",
+        "file": "quadro-donna-corona-2",
         "w": 1050,
         "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-due-donne-2.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-corona-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "slug": "quadro-fiori-blu",
+    "pubblicato": "2026-09-14",
+    "nome": "Fiori in vaso — fondo blu notte",
+    "categoria": "quadri",
+    "sottotitolo": "Acrilico su tela",
+    "descrizione": "<p>Composizione floreale su fondo blu notte, con vaso dorato e fiori chiari dipinti a mano. Un’opera dai toni profondi che si stacca con eleganza su parete chiara.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
+    "prezzo": 180.0,
+    "disponibile": false,
+    "misure": "70 × 50 cm",
+    "tecnica": "Acrilico su tela, dipinto a mano",
+    "spedizione": "35,00 €",
+    "spedizione_isole": "85,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-fiori-blu-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-blu-1.jpg"
+      },
+      {
+        "file": "quadro-fiori-blu-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-blu-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "slug": "quadro-fiori-azzurro",
+    "pubblicato": "2026-09-14",
+    "nome": "Azzurro e Oro",
+    "categoria": "quadri",
+    "sottotitolo": "Acrilico su tela",
+    "descrizione": "<p>Composizione floreale dipinta a mano ad acrilico su tela. Un vaso dorato e una fioritura densa di rosa, prugna e verde salvia su un fondo azzurro pieno.</p>\n<p>Opera originale firmata, pezzo unico.</p>",
+    "prezzo": 220.0,
+    "disponibile": true,
+    "misure": "H 70 · L 100 · P 4 cm",
+    "tecnica": "Acrilico su tela, dipinto a mano",
+    "spedizione": "35,00 €",
+    "spedizione_isole": "85,00 €",
+    "garanzia": "24 mesi",
+    "foto": [
+      {
+        "file": "quadro-fiori-azzurro-frontale",
+        "w": 703,
+        "h": 987,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg",
+        "derivata": true
+      },
+      {
+        "file": "quadro-fiori-azzurro-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-1.jpg"
+      },
+      {
+        "file": "quadro-fiori-azzurro-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-2.jpg"
+      },
+      {
+        "file": "quadro-fiori-azzurro-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-3.jpg"
+      },
+      {
+        "file": "quadro-fiori-azzurro-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/q-fiori-azzurro-4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "slug": "sgabello-rosso",
+    "pubblicato": "2026-09-14",
+    "nome": "Sgabello rosso con fiori",
+    "categoria": "mobili",
+    "sottotitolo": "Color corallo, decoro floreale",
+    "descrizione": "<p>Sgabellino d’epoca, dipinto a mano color corallo con decoro floreale. Un pezzo piccolo e allegro, da usare come seduta bassa o come piano d’appoggio.</p>",
+    "prezzo": 70.0,
+    "disponibile": true,
+    "misure": "H 23 · L 40 · P 22 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "Da concordare",
+    "spedizione_isole": "",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "sgabello-rosso-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-1.jpg"
+      },
+      {
+        "file": "sgabello-rosso-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-2.jpg"
+      },
+      {
+        "file": "sgabello-rosso-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/sgabello-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "slug": "scrivania-vintage",
+    "pubblicato": "2026-09-14",
+    "nome": "Scrivania vintage",
+    "categoria": "mobili",
+    "sottotitolo": "Legno massello con cassettiera laterale",
+    "descrizione": "<p>Scheda in preparazione. Misure, prezzo e descrizione completa saranno pubblicati a breve.</p>",
+    "prezzo": null,
+    "disponibile": false,
+    "misure": "",
+    "tecnica": "Restauro conservativo",
+    "spedizione": "Da concordare",
+    "spedizione_isole": "",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "scrivania-vintage-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-1.jpg"
+      },
+      {
+        "file": "scrivania-vintage-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-2.jpg"
+      },
+      {
+        "file": "scrivania-vintage-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/scrivania-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "slug": "armadio-dipinto",
+    "pubblicato": "2026-09-14",
+    "nome": "Armadio dipinto",
+    "categoria": "mobili",
+    "sottotitolo": "Restaurato nei toni del verde polvere",
+    "descrizione": "<p>Scheda in preparazione. Misure, prezzo e descrizione completa saranno pubblicati a breve.</p>",
+    "prezzo": null,
+    "disponibile": false,
+    "misure": "",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "Da concordare",
+    "spedizione_isole": "",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "armadio-dipinto-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-1.jpg"
+      },
+      {
+        "file": "armadio-dipinto-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-2.jpg"
+      },
+      {
+        "file": "armadio-dipinto-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-3.jpg"
+      },
+      {
+        "file": "armadio-dipinto-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-4.jpg"
+      },
+      {
+        "file": "armadio-dipinto-5",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/armadio-5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "slug": "tavolino-legno",
+    "pubblicato": "2026-09-14",
+    "nome": "Tavolino in legno",
+    "categoria": "mobili",
+    "sottotitolo": "Decoro floreale sul piano, ripiano inferiore",
+    "descrizione": "<p>Tavolino in legno restaurato e dipinto a mano, con decorazione floreale delicata sul piano.</p>\n<p>Piccolo, elegante e pieno di poesia, perfetto accanto a una poltrona, in ingresso o come comodino particolare. Ha anche un ripiano inferiore, comodo e discreto.</p>",
+    "prezzo": 200.0,
+    "disponibile": false,
+    "misure": "H 70 · L 36 · P 36 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "50,00 €",
+    "spedizione_isole": "100,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolino-legno-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/tavolino-fiori-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "slug": "tavolino-rotondo",
+    "pubblicato": "2026-09-14",
+    "nome": "Tavolino rotondo con base rossa",
+    "categoria": "mobili",
+    "sottotitolo": "Piano decorato, base laccata rossa",
+    "descrizione": "<p>Tavolino rotondo in legno, restaurato e dipinto a mano.</p>\n<p>Il piano è decorato con un vaso e motivi floreali delicati, mentre la base rossa lo rende più vivace e particolare.</p>\n<p>Piccolo, leggero e pieno di carattere, perfetto accanto a una poltrona, in ingresso o come angolo speciale in casa.</p>",
+    "prezzo": 200.0,
+    "disponibile": true,
+    "misure": "H 57 · Ø 40 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "50,00 €",
+    "spedizione_isole": "100,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolino-rotondo-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-1.jpg"
+      },
+      {
+        "file": "tavolino-rotondo-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-2.jpg"
+      },
+      {
+        "file": "tavolino-rotondo-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-3.jpg"
+      },
+      {
+        "file": "tavolino-rotondo-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/rotondo-4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "slug": "tavolino-fiori",
+    "pubblicato": "2026-09-14",
+    "nome": "Tavolino con fiori",
+    "categoria": "mobili",
+    "sottotitolo": "Piano dipinto con fiori astratti in vaso",
+    "descrizione": "<p>Tavolino restaurato e dipinto a mano con fiori astratti in vaso. Un pezzo unico, delicato e luminoso, perfetto per aggiungere un tocco di colore e personalità a qualsiasi angolo della casa.</p>",
+    "prezzo": 300.0,
+    "disponibile": false,
+    "misure": "H 71 · L 60 · P 41 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "50,00 €",
+    "spedizione_isole": "100,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolino-fiori-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/5932917D-D8CB-4C32-B6FE-813E79967C26.jpg"
+      },
+      {
+        "file": "tavolino-fiori-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/313D6CC4-10F0-4AEC-BF3E-FA5AF4F27B66.jpg"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "slug": "mobile-uccellini",
+    "pubblicato": "2026-09-14",
+    "nome": "Mobile vintage con uccellini",
+    "categoria": "mobili",
+    "sottotitolo": "Uccelli dipinti a mano nei toni verde salvia",
+    "descrizione": "<p>Dal vivo questo mobile ha una presenza ancora più bella.</p>\n<p>È un pezzo unico vintage, restaurato mantenendo tutto il fascino originale del legno e dipinto a mano con delicati uccelli dai toni verde salvia. Un mobile elegante ma particolare, capace di dare carattere senza appesantire l’ambiente.</p>\n<p>Sta benissimo in soggiorno, entrata o cucina, perché arreda subito senza sembrare pesante.</p>",
+    "prezzo": 900.0,
+    "disponibile": false,
+    "misure": "H 94 · L 131 · P 58 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "mobile-uccellini-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-1.jpg"
+      },
+      {
+        "file": "mobile-uccellini-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-2.jpg"
+      },
+      {
+        "file": "mobile-uccellini-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/uccellini-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "cassettiera-vintage",
+    "pubblicato": "2026-09-14",
+    "nome": "Cassettiera vintage",
+    "categoria": "mobili",
+    "sottotitolo": "Legno naturale e decoro verde",
+    "descrizione": "<p>Cassettiera restaurata e reinterpretata a mano, dove il calore del legno naturale incontra un decoro contemporaneo nei toni del verde. Un pezzo unico, pensato per chi ama circondarsi di arredi con personalità.</p>\n<p>I tre ampi cassetti offrono grande capienza, mentre ogni dettaglio è stato curato con attenzione per valorizzare il fascino del mobile originale e renderlo unico.</p>",
+    "prezzo": 900.0,
+    "disponibile": false,
+    "misure": "H 96 · L 119 · P 50 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "cassettiera-vintage-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/cassettiera-1.jpg"
+      },
+      {
+        "file": "cassettiera-vintage-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/cassettiera-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "mobile-art-deco",
+    "pubblicato": "2026-09-14",
+    "nome": "Mobile Art Déco",
+    "categoria": "mobili",
+    "sottotitolo": "Ante decorate nei toni del verde",
+    "descrizione": "<p>Mobile Art Déco restaurato e dipinto a mano, con struttura in legno e ante decorate in diverse tonalità di verde.</p>\n<p>Un pezzo elegante, originale e pieno di carattere, perfetto per dare personalità a un ingresso, soggiorno o sala da pranzo.</p>",
+    "prezzo": 750.0,
+    "disponibile": true,
+    "misure": "H 94 · L 110 · P 54 cm",
+    "tecnica": "Restauro e pittura a mano su legno",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "mobile-art-deco-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-1.jpg"
+      },
+      {
+        "file": "mobile-art-deco-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-2.jpg"
+      },
+      {
+        "file": "mobile-art-deco-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-3.jpg"
+      },
+      {
+        "file": "mobile-art-deco-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/artdeco-4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "credenza-art-deco",
+    "pubblicato": "2026-09-14",
+    "nome": "Credenza Art Déco",
+    "categoria": "mobili",
+    "sottotitolo": "Radica restaurata · interno dipinto a mano",
+    "descrizione": "<p>Mobile Art Déco restaurato con cura, che conserva tutto il fascino delle sue splendide venature originali. L’interno è stato reso unico da una decorazione dipinta interamente a mano, un dettaglio artistico che sorprende ogni volta che si aprono le ante e trasforma questo mobile in un pezzo davvero irripetibile.</p>\n<p>Capiente e versatile, è perfetto come mobile bar, credenza o contenitore per il soggiorno, aggiungendo carattere e personalità a qualsiasi ambiente.</p>",
+    "prezzo": 1000.0,
+    "disponibile": false,
+    "misure": "H 126 · L 96 · P 46 cm",
+    "tecnica": "Restauro conservativo, decorazione interna ad acrilico",
+    "spedizione": "150,00 €",
+    "spedizione_isole": "200,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "credenza-art-deco-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-1.jpg"
+      },
+      {
+        "file": "credenza-art-deco-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-2.jpg"
+      },
+      {
+        "file": "credenza-art-deco-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-3.jpg"
+      },
+      {
+        "file": "credenza-art-deco-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-4.jpg"
+      },
+      {
+        "file": "credenza-art-deco-5",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-5.jpg"
+      },
+      {
+        "file": "credenza-art-deco-6",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-6.jpg"
       }
     ]
   }

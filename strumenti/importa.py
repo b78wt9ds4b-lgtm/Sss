@@ -148,6 +148,9 @@ if __name__ == "__main__":
     DATI.mkdir(exist_ok=True)
     importa_immagini_tema()
     pezzi = importa_pezzi()
+    # WooCommerce restituisce i prodotti in un ordine diverso a ogni richiesta: un ordine fisso
+    # (prima i più recenti; a pari data, l'ultimo creato) evita che ogni importazione li rimescoli
+    pezzi.sort(key=lambda p: (p["pubblicato"], p["id"]), reverse=True)
     (DATI / "pezzi.json").write_text(
         json.dumps(pezzi, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Importati {len(pezzi)} pezzi.", file=sys.stderr)
