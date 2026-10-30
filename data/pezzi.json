@@ -1,5 +1,41 @@
 [
   {
+    "id": 435,
+    "slug": "pesce-doro",
+    "pubblicato": "2026-09-26",
+    "nome": "Pesce d’Oro",
+    "categoria": "sculture",
+    "sottotitolo": "",
+    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
+    "prezzo": 50.0,
+    "disponibile": true,
+    "misure": "H 23 · L 36 cm",
+    "tecnica": "Pittura su legno",
+    "spedizione": "15,00 €",
+    "spedizione_isole": "65,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "pesce-doro-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
+      },
+      {
+        "file": "pesce-doro-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
+      },
+      {
+        "file": "pesce-doro-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
+      }
+    ]
+  },
+  {
     "id": 388,
     "slug": "quadro-con-vaso-dorato",
     "pubblicato": "2026-09-23",
@@ -195,42 +231,6 @@
     ]
   },
   {
-    "id": 403,
-    "slug": "tavolo-anni30-rotondo",
-    "pubblicato": "2026-09-23",
-    "nome": "Tavolo anni’30 rotondo",
-    "categoria": "mobili",
-    "sottotitolo": "",
-    "descrizione": "<p>È un tavolo rotondo DART, restaurato e reinterpretato a mano. Il piano in legno naturale è abbinato alla base sagomata nei toni del verde, che lo rende molto particolare ma facile da inserire anche in ambienti contemporanei.</p>\n<p>È ideale come piccolo tavolo da pranzo, per una cucina raccolta oppure come pezzo protagonista in un angolo della casa.</p>",
-    "prezzo": 650.0,
-    "disponibile": true,
-    "misure": "H 70 · L 85 cm",
-    "tecnica": "",
-    "spedizione": "100,00 €",
-    "spedizione_isole": "150,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "tavolo-anni30-rotondo-1",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/2B588F2D-2B38-4407-A63F-6CB13A8AE69B.jpg"
-      },
-      {
-        "file": "tavolo-anni30-rotondo-2",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3D2D516D-43F7-4002-A24E-07849F1DAD71.jpg"
-      },
-      {
-        "file": "tavolo-anni30-rotondo-3",
-        "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5818.jpg"
-      }
-    ]
-  },
-  {
     "id": 409,
     "slug": "tavolino",
     "pubblicato": "2026-09-23",
@@ -273,8 +273,8 @@
     "nome": "Cassettiera verde oliva",
     "categoria": "mobili",
     "sottotitolo": "",
-    "descrizione": "<p>Cassettiera restaurata e reinterpretata in un elegante verde oliva, con piano in legno naturale a contrasto. Le maniglie originali e i dettagli lavorati ne valorizzano il carattere vintage. Tre ampi cassetti uniscono funzionalità e stile, rendendola un pezzo unico capace di dare personalità a qualsiasi ambiente.</p>\n<p>Dimensioni: H 75 × L 78 × P 50 cm<br />\nPrezzo: 750 €</p>",
-    "prezzo": 750.0,
+    "descrizione": "<p>Cassettiera restaurata e reinterpretata in un elegante verde oliva, con piano in legno naturale a contrasto. Le maniglie originali e i dettagli lavorati ne valorizzano il carattere vintage. Tre ampi cassetti uniscono funzionalità e stile, rendendola un pezzo unico capace di dare personalità a</p>",
+    "prezzo": 650.0,
     "disponibile": true,
     "misure": "H 75 · L 78 · P 50 cm",
     "tecnica": "Restauro e pittura su legno",
@@ -369,14 +369,14 @@
       {
         "file": "bordeaux-in-fiore-1",
         "w": 1200,
-        "h": 1808,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6408.jpg"
+        "h": 1500,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/1ddfdd37-7dea-4c7b-b43d-6af8bbf25ab1.jpg"
       },
       {
         "file": "bordeaux-in-fiore-2",
         "w": 1200,
-        "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6409.jpg"
+        "h": 1800,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/9d0f8ae1-ebd0-41bd-8619-f37480f02225.jpg"
       }
     ]
   },
@@ -424,7 +424,7 @@
     "categoria": "mobili",
     "sottotitolo": "",
     "descrizione": "<p>Un armadio dalle proporzioni slanciate, completamente reinterpretato da DART attraverso una composizione botanica dipinta a mano che attraversa ante e cassetti.</p>\n<p>Il fondo verde-grigio fa da base a fiori, foglie e piccoli dettagli nei toni del rosa, bordeaux, verde e avorio. La decorazione non è applicata come semplice ornamento: segue la struttura del mobile e trasforma l’intero fronte in una composizione unica.</p>\n<p>La disposizione asimmetrica di ante e cassetti lo rende anche particolarmente funzionale, con diversi spazi contenitivi racchiusi in un mobile dalla profondità contenuta.</p>\n<p>Un pezzo pensato per chi non cerca semplicemente un armadio, ma qualcosa capace di dare identità alla stanza.</p>",
-    "prezzo": 1400.0,
+    "prezzo": 1200.0,
     "disponibile": true,
     "misure": "H 199 · L 110 · P 50 cm",
     "tecnica": "Restauro e pittura a mano su legno",
@@ -556,8 +556,8 @@
     "nome": "Tavolo antico",
     "categoria": "mobili",
     "sottotitolo": "",
-    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm<br />\nLarghezza 124 cm<br />\nProfondità 70 cm</p>\n<p>Non allungabile.</p>",
-    "prezzo": 900.0,
+    "descrizione": "<p>Tavolo rustico in abete, dallo stile country e dal carattere caldo e autentico. Il piano in legno naturale mantiene visibili venature e segni del tempo, mentre la base verde polveroso e il grande cassetto centrale gli danno un tocco particolare e molto decorativo.</p>\n<p>Un pezzo perfetto sia come tavolo da pranzo che come protagonista di una cucina o di un ambiente dallo stile country contemporaneo.</p>\n<p>Altezza 80 cm</p>\n<p>Larghezza 124 cm</p>\n<p>Profondità 70 cm</p>\n<p>Non allungabile.</p>",
+    "prezzo": 750.0,
     "disponibile": true,
     "misure": "H 80 · L 124 · P 70 cm",
     "tecnica": "",
@@ -628,38 +628,56 @@
     ]
   },
   {
-    "id": 435,
-    "slug": "pesce-doro",
-    "pubblicato": "2026-09-26",
-    "nome": "Pesce d’Oro",
-    "categoria": "sculture",
+    "id": 551,
+    "slug": "cassettiera-lunga-dart",
+    "pubblicato": "2026-10-28",
+    "nome": "Cassettiera lunga DART",
+    "categoria": "mobili",
     "sottotitolo": "",
-    "descrizione": "<p>La scultura fatta di legno, pezzo unico</p>",
-    "prezzo": 50.0,
+    "descrizione": "<p>Cassettiera lunga dalle proporzioni eleganti, completamente reinterpretata da DART in un verde-grigio profondo e sofisticato.</p>\n<p>La struttura pulita e leggermente arrotondata viene alleggerita dalle gambe affusolate, mentre le maniglie color cuoio con dettagli metallici aggiungono un contrasto caldo e contemporaneo.</p>\n<p>I quattro ampi cassetti offrono molto spazio contenitivo senza appesantire il mobile, rendendolo adatto a una camera da letto, a un soggiorno oppure a un ingresso importante.</p>\n<p>Un pezzo unico, restaurato e reinterpretato a mano da DART</p>",
+    "prezzo": 850.0,
     "disponibile": true,
-    "misure": "H 23 · L 36 cm",
-    "tecnica": "Pittura su legno",
-    "spedizione": "15,00 €",
-    "spedizione_isole": "65,00 €",
+    "misure": "H 76 · L 163 · P 55 cm",
+    "tecnica": "Restauro e pittura su legno",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
     "garanzia": "12 mesi",
     "foto": [
       {
-        "file": "pesce-doro-1",
+        "file": "cassettiera-lunga-dart-1",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5928.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6800.jpg"
       },
       {
-        "file": "pesce-doro-2",
+        "file": "cassettiera-lunga-dart-2",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5929.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6801.jpg"
       },
       {
-        "file": "pesce-doro-3",
+        "file": "cassettiera-lunga-dart-3",
         "w": 1200,
         "h": 1600,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5927.jpg"
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6804.jpg"
+      },
+      {
+        "file": "cassettiera-lunga-dart-4",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6803.jpg"
+      },
+      {
+        "file": "cassettiera-lunga-dart-5",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6802.jpg"
+      },
+      {
+        "file": "cassettiera-lunga-dart-6",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6805.jpg"
       }
     ]
   },
@@ -671,7 +689,7 @@
     "categoria": "mobili",
     "sottotitolo": "Ante decorate nei toni del verde",
     "descrizione": "<p>Mobile Art Déco restaurato e dipinto a mano, con struttura in legno e ante decorate in diverse tonalità di verde.</p>\n<p>Un pezzo elegante, originale e pieno di carattere, perfetto per dare personalità a un ingresso, soggiorno o sala da pranzo.</p>",
-    "prezzo": 900.0,
+    "prezzo": 750.0,
     "disponibile": true,
     "misure": "H 94 · L 110 · P 54 cm",
     "tecnica": "Restauro e pittura a mano su legno",
@@ -833,60 +851,6 @@
     ]
   },
   {
-    "id": 11,
-    "slug": "credenza-art-deco",
-    "pubblicato": "2026-09-14",
-    "nome": "Credenza Art Déco",
-    "categoria": "mobili",
-    "sottotitolo": "Radica restaurata · interno dipinto a mano",
-    "descrizione": "<p>Mobile Art Déco restaurato con cura, che conserva tutto il fascino delle sue splendide venature originali. L’interno è stato reso unico da una decorazione dipinta interamente a mano, un dettaglio artistico che sorprende ogni volta che si aprono le ante e trasforma questo mobile in un pezzo davvero irripetibile.</p>\n<p>Capiente e versatile, è perfetto come mobile bar, credenza o contenitore per il soggiorno, aggiungendo carattere e personalità a qualsiasi ambiente.</p>",
-    "prezzo": 1000.0,
-    "disponibile": false,
-    "misure": "H 126 · L 96 · P 46 cm",
-    "tecnica": "Restauro conservativo, decorazione interna ad acrilico",
-    "spedizione": "150,00 €",
-    "spedizione_isole": "200,00 €",
-    "garanzia": "12 mesi",
-    "foto": [
-      {
-        "file": "credenza-art-deco-1",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-1.jpg"
-      },
-      {
-        "file": "credenza-art-deco-2",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-2.jpg"
-      },
-      {
-        "file": "credenza-art-deco-3",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-3.jpg"
-      },
-      {
-        "file": "credenza-art-deco-4",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-4.jpg"
-      },
-      {
-        "file": "credenza-art-deco-5",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-5.jpg"
-      },
-      {
-        "file": "credenza-art-deco-6",
-        "w": 1050,
-        "h": 1400,
-        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-6.jpg"
-      }
-    ]
-  },
-  {
     "id": 456,
     "slug": "armadio-con-pesce",
     "pubblicato": "2026-10-02",
@@ -979,6 +943,96 @@
         "w": 1200,
         "h": 1600,
         "origine": "https://www.darthome.it/wp-content/uploads/2026/10/IMG_6154.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "credenza-art-deco",
+    "pubblicato": "2026-09-14",
+    "nome": "Credenza Art Déco",
+    "categoria": "mobili",
+    "sottotitolo": "Radica restaurata · interno dipinto a mano",
+    "descrizione": "<p>Mobile Art Déco restaurato con cura, che conserva tutto il fascino delle sue splendide venature originali. L’interno è stato reso unico da una decorazione dipinta interamente a mano, un dettaglio artistico che sorprende ogni volta che si aprono le ante e trasforma questo mobile in un pezzo davvero irripetibile.</p>\n<p>Capiente e versatile, è perfetto come mobile bar, credenza o contenitore per il soggiorno, aggiungendo carattere e personalità a qualsiasi ambiente.</p>",
+    "prezzo": 1000.0,
+    "disponibile": false,
+    "misure": "H 126 · L 96 · P 46 cm",
+    "tecnica": "Restauro conservativo, decorazione interna ad acrilico",
+    "spedizione": "150,00 €",
+    "spedizione_isole": "200,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "credenza-art-deco-1",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-1.jpg"
+      },
+      {
+        "file": "credenza-art-deco-2",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-2.jpg"
+      },
+      {
+        "file": "credenza-art-deco-3",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-3.jpg"
+      },
+      {
+        "file": "credenza-art-deco-4",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-4.jpg"
+      },
+      {
+        "file": "credenza-art-deco-5",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-5.jpg"
+      },
+      {
+        "file": "credenza-art-deco-6",
+        "w": 1050,
+        "h": 1400,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/credenza-6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "slug": "tavolo-anni30-rotondo",
+    "pubblicato": "2026-09-23",
+    "nome": "Tavolo anni’30 rotondo",
+    "categoria": "mobili",
+    "sottotitolo": "",
+    "descrizione": "<p>È un tavolo rotondo DART, restaurato e reinterpretato a mano. Il piano in legno naturale è abbinato alla base sagomata nei toni del verde, che lo rende molto particolare ma facile da inserire anche in ambienti contemporanei.</p>\n<p>È ideale come piccolo tavolo da pranzo, per una cucina raccolta oppure come pezzo protagonista in un angolo della casa.</p>",
+    "prezzo": 550.0,
+    "disponibile": false,
+    "misure": "H 70 · L 85 cm",
+    "tecnica": "",
+    "spedizione": "100,00 €",
+    "spedizione_isole": "150,00 €",
+    "garanzia": "12 mesi",
+    "foto": [
+      {
+        "file": "tavolo-anni30-rotondo-1",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/2B588F2D-2B38-4407-A63F-6CB13A8AE69B.jpg"
+      },
+      {
+        "file": "tavolo-anni30-rotondo-2",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/3D2D516D-43F7-4002-A24E-07849F1DAD71.jpg"
+      },
+      {
+        "file": "tavolo-anni30-rotondo-3",
+        "w": 1200,
+        "h": 1600,
+        "origine": "https://www.darthome.it/wp-content/uploads/2026/09/IMG_5818.jpg"
       }
     ]
   },

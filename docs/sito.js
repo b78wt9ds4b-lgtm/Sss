@@ -51,6 +51,26 @@
   /* Galleria della scheda pezzo */
   var nastro = document.querySelector('.galleria-nastro');
   if (nastro) {
+    /* Le foto dopo la prima hanno l'indirizzo in data-src: si scaricano a pagina caricata,
+       o appena si tocca la galleria, così non tolgono banda alla foto principale */
+    var differite = Array.prototype.slice.call(nastro.querySelectorAll('img[data-src]'));
+    var caricaFoto = function () {
+      differite.forEach(function (im) {
+        im.srcset = im.getAttribute('data-srcset');
+        im.src = im.getAttribute('data-src');
+        im.removeAttribute('data-srcset');
+        im.removeAttribute('data-src');
+      });
+      differite = [];
+    };
+    if (differite.length) {
+      if (document.readyState === 'complete') caricaFoto();
+      else window.addEventListener('load', caricaFoto);
+      ['pointerdown', 'scroll', 'focusin'].forEach(function (ev) {
+        nastro.parentNode.addEventListener(ev, caricaFoto, { once: true, passive: true, capture: true });
+      });
+    }
+
     var slide = Array.prototype.slice.call(nastro.children);
     var mini = Array.prototype.slice.call(document.querySelectorAll('.miniature button'));
     var conta = document.querySelector('.galleria-conta');
@@ -77,7 +97,8 @@
     /* Visore a schermo intero */
     var visore = document.querySelector('.visore');
     if (visore && visore.showModal) {
-      var img = visore.querySelector('img');
+      /* l'immagine si crea qui: nell'HTML un <img> senza indirizzo non sarebbe valido */
+      var img = visore.querySelector('img') || visore.insertBefore(document.createElement('img'), visore.firstChild);
       var mostra = function (i) {
         corrente = (i + slide.length) % slide.length;
         img.src = slide[corrente].getAttribute('data-grande');
@@ -97,13 +118,14 @@
     }
   }
 
-  /* Barra d'acquisto fissa (solo telefono): resta visibile finché i pulsanti
-     principali non sono sullo schermo, così prezzo e «Acquista» sono sempre a portata */
+  /* Barra d'acquisto fissa (solo telefono): compare quando i pulsanti principali sono
+     usciti in alto dallo schermo. Prima di arrivarci non serve, e coprirebbe le misure */
   var barra = document.querySelector('.barra-acquisto');
   var azioni = document.querySelector('.scheda-azioni');
   if (barra && azioni && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (voci) {
-      barra.classList.toggle('visibile', !voci[0].isIntersecting);
+      var v = voci[0];
+      barra.classList.toggle('visibile', !v.isIntersecting && v.boundingClientRect.top < 0);
     }).observe(azioni);
   }
 })();

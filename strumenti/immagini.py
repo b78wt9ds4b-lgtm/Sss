@@ -175,6 +175,22 @@ def anteprima_social(nome_file, foto, occhiello, titolo, prezzo="", nota=""):
     return relativo
 
 
+MINIATURA = 200  # miniature della galleria nella scheda: riquadri da 64 px, nitidi anche su schermi 3x
+
+
+def miniatura(foto):
+    """Variante piccola di una foto per le miniature della galleria, ricavata da quella da 800 px.
+    Si rifà quando la foto di partenza cambia, per esempio dopo un ritocco. Restituisce il nome del file."""
+    sorgente = FOTO / f"{foto}-800.webp"
+    dest = FOTO / f"{foto}-{MINIATURA}.webp"
+    if not dest.exists() or dest.stat().st_mtime < sorgente.stat().st_mtime:
+        with Image.open(sorgente) as im:
+            im = im.convert("RGB")
+            im.thumbnail((MINIATURA, MINIATURA * 3), Image.LANCZOS)
+            im.save(dest, "WEBP", quality=72, method=6)
+    return dest.name
+
+
 def foto_jpeg(foto):
     """Copia JPEG (1200 px) di una foto, per i cataloghi prodotti. Restituisce il percorso relativo a docs/."""
     sorgente = FOTO / f"{foto}-1200.webp"

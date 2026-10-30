@@ -6,8 +6,6 @@ della foto nella Libreria media; la posizione conta la prima foto della scheda c
 | Pezzo | Foto sul negozio | Cosa fare | File | Perché |
 |---|---|---|---|---|
 | Azzurro e Oro (ID 53) | nessuna: è una foto in più, ricavata da q-fiori-azzurro-1 | Caricarla come immagine principale; quella di adesso passa nella galleria | `quadro-fiori-azzurro-frontale.jpg` | Quadro appoggiato alla porta, con il legno intorno |
-| Bordeaux in fiore (ID 473) | IMG_6408 · immagine principale | Sostituirla | `bordeaux-in-fiore-1.jpg` | Quadro storto con il muro intorno |
-| Bordeaux in fiore (ID 473) | IMG_6409 · 2ª foto | Sostituirla | `bordeaux-in-fiore-2.jpg` | Foto scura |
 | Bouquet Mediterraneo (ID 413) | 7541F9A4-DE92-4856-9191-184C64923F5A · immagine principale | Sostituirla | `quadro-con-i-fiori-2-1.jpg` | Troppo sfondo bianco |
 | Bouquet Notturno (ID 392) | nessuna: è una foto in più, ricavata da 950F4561-7003-4ADC-9355-1004DE6FA28D | Caricarla come immagine principale; quella di adesso passa nella galleria | `quadro-con-vaso-dorato-2-frontale.jpg` | Quadro fotografato di sbieco |
 | Fiori di mezzanotte (ID 496) | IMG_6505 · immagine principale | Sostituirla | `fiori-di-mezzanotte-1.jpg` | Bordi del cavalletto nella foto |

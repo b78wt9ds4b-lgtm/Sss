@@ -17,8 +17,9 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
 | `data/ritocchi.json` | I ritocchi alle foto: quali togliere, schiarire, ritagliare, e i quadri da raddrizzare |
 | `strumenti/importa.py` | Copia pezzi e foto dal vecchio sito WordPress |
 | `strumenti/costruisci.py` | Genera le pagine HTML in `docs/` partendo da `data/` |
-| `strumenti/immagini.py` | Converte le foto in WebP a 400, 800 e 1200 px, crea le anteprime per WhatsApp e i social e le foto JPEG per i cataloghi |
+| `strumenti/immagini.py` | Converte le foto in WebP a 400, 800 e 1200 px (più le miniature da 200 px della galleria), crea le anteprime per WhatsApp e i social e le foto JPEG per i cataloghi |
 | `strumenti/ritocca.py` | Applica i ritocchi di `data/ritocchi.json` partendo dalle foto originali |
+| `strumenti/controlla.py` | Controlla le pagine generate (collegamenti, foto, dati per Google) e, a richiesta, che prezzi e venduti siano ancora quelli del negozio |
 
 ## Modificare i contenuti
 
@@ -39,6 +40,13 @@ Nuova versione del sito di [darthome.it](https://www.darthome.it): mobili restau
    ```
 
    poi apri http://localhost:8000.
+4. Prima di pubblicare, fai i controlli automatici:
+
+   ```
+   python3 strumenti/controlla.py --negozio
+   ```
+
+   Verifica che ogni collegamento, foto e file esista, che ogni pagina abbia titolo e descrizione, che le foto abbiano le misure (così la pagina non salta mentre si carica), che prezzi e disponibilità per Google siano quelli giusti e che «Acquista ora» compaia solo sui pezzi in vendita. Con `--negozio` confronta anche `data/pezzi.json` con il negozio WordPress: se un prezzo è cambiato, un pezzo è stato venduto o ne è arrivato uno nuovo, lo elenca (e va rilanciato `importa.py`). Se trova problemi li elenca uno per riga ed esce con errore; senza `--negozio` non serve internet.
 
 Per riallineare pezzi e foto al vecchio sito: `python3 strumenti/importa.py`, poi `ritocca.py` e `costruisci.py` (vedi «Foto»). Le foto già presenti non vengono riscaricate, a meno che sul negozio non siano cambiate; con `--tutte-le-foto` vengono riconvertite tutte.
 
@@ -56,7 +64,7 @@ python3 strumenti/ritocca.py
 python3 strumenti/costruisci.py
 ```
 
-Gli originali vengono scaricati una volta sola in `.originali/`, che non viene pubblicata. Ogni foto è salvata in tre larghezze (400, 800 e 1200 px): il browser scarica la più piccola che basta per lo schermo. Le regole di ritocco indicano la foto con il suo percorso su WordPress (`origine`), così restano giuste anche se sul negozio le foto vengono tolte o riordinate.
+Gli originali vengono scaricati una volta sola in `.originali/`, che non viene pubblicata. Ogni foto è salvata in tre larghezze (400, 800 e 1200 px): il browser scarica la più piccola che basta per lo schermo. Per le miniature sotto la galleria delle schede c'è anche una versione da 200 px, creata da `costruisci.py`. Nella scheda si scarica subito solo la prima foto della galleria; le altre partono a pagina caricata, o appena si tocca la galleria. Le regole di ritocco indicano la foto con il suo percorso su WordPress (`origine`), così restano giuste anche se sul negozio le foto vengono tolte o riordinate.
 
 Sul sito i quadri orizzontali, o molto stretti, si vedono sempre interi, su uno sfondo neutro. Nelle schede di mobili e quadri c'è un disegno in scala con una persona alta 1,70 m, ricavato dalle misure: se le misure sono sbagliate, si vede subito.
 

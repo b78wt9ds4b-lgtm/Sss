@@ -335,6 +335,12 @@ def main():
         print(f"· frontale {nome}{avviso}")
 
     if per_wp:
+        # via le foto di un giro precedente che non servono più (per esempio perché sul negozio la
+        # foto di partenza è già stata cambiata): caricarle rimetterebbe al suo posto quella vecchia
+        fatte = {r[4] for r in righe}
+        for vecchia in (ALTA if alta else PER_WP).glob("*.jpg"):
+            if vecchia.name not in fatte:
+                vecchia.unlink()
         righe.sort(key=lambda r: (r[0]["nome"], r[1]))
         if alta:
             scrivi_elenco_alta(righe)

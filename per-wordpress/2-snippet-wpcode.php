@@ -19,6 +19,8 @@ if ( ! defined( 'DART_MIGLIORIE' ) ) :
 	define( 'DART_WHATSAPP_FLOTTANTE', true );   // pulsante WhatsApp tondo in basso a destra
 	define( 'DART_TESTI_SPEDIZIONE', true );     // testi aggiornati: BRT o Poste Italiane, consegna al piano strada
 	define( 'DART_NOTE_ORDINE', true );          // suggerimento nel campo «Note sull'ordine» del pagamento
+	define( 'DART_CORRELATI_DISPONIBILI', true ); // tra i «Prodotti correlati» solo pezzi ancora in vendita
+	define( 'DART_GALLERIA_TASTIERA', true );    // la galleria della scheda si scorre anche con la tastiera
 
 	/* ------------------------------------------------------------ utilità */
 
@@ -352,10 +354,10 @@ if ( ! defined( 'DART_MIGLIORIE' ) ) :
 
 	/* ------------------------------------------------------------ testi della spedizione */
 
-	// Le frasi scritte nel tema (home e schede) che parlano ancora di consegna al piano, di
-	// telefonata dopo l'ordine e di garanzia di 24 mesi su tutto. Si sostituiscono solo se le
-	// trova uguali, parola per parola: quando i ragazzi avranno cambiato i testi nel tema, non
-	// serve più e si può spegnere.
+	// Le frasi scritte nel tema (home e schede) che parlano ancora di consegna al piano e di
+	// telefonata dopo l'ordine. Si sostituiscono solo se le trova uguali, parola per parola:
+	// quando i ragazzi avranno cambiato i testi nel tema, non serve più e si può spegnere.
+	// (La garanzia di 24 mesi su tutto l'hanno già corretta loro: ogni scheda dice la sua.)
 	if ( DART_TESTI_SPEDIZIONE ) {
 		add_action( 'template_redirect', 'dart_inizia_sostituzioni' );
 	}
@@ -381,8 +383,6 @@ if ( ! defined( 'DART_MIGLIORIE' ) ) :
 				=> 'Imballaggio curato, spedizione con BRT o Poste Italiane.',
 			'La categoria è già pronta: basta caricare i pezzi dal pannello.'
 				=> 'Presto in arrivo.',
-			'Sui prodotti vale la garanzia legale di conformità di 24 mesi.'
-				=> 'Garanzia legale di conformità: 12 mesi su mobili, oggetti e pezzi restaurati, 24 mesi sui quadri nuovi dipinti da noi.',
 			'In negozio a Trieste trovi tutti i pezzi dal vivo — e dal vivo, spesso, sono ancora più belli.'
 				=> 'Se vuoi vedere meglio un pezzo prima di comprarlo, scrivici su WhatsApp: ti mandiamo altre foto o un video. Poi lo imballiamo a mano e lo spediamo in tutta Italia.',
 		);
@@ -400,6 +400,42 @@ if ( ! defined( 'DART_MIGLIORIE' ) ) :
 			$campi['order']['order_comments']['placeholder'] = 'Un numero di telefono a cui rispondi e il nome sul citofono: servono al corriere.';
 		}
 		return $campi;
+	}
+
+	/* ------------------------------------------------------------ prodotti correlati */
+
+	// Nelle schede, «Prodotti correlati» proponeva anche pezzi venduti: a fine pagina, al posto di
+	// un pezzo acquistabile, c'era un vicolo cieco. WooCommerce ne cerca più del necessario e poi ne
+	// tiene 4, quindi togliere i venduti qui non svuota la sezione.
+	if ( DART_CORRELATI_DISPONIBILI ) {
+		add_filter( 'woocommerce_related_products', 'dart_correlati_disponibili' );
+	}
+
+	function dart_correlati_disponibili( $ids ) {
+		return array_values(
+			array_filter(
+				(array) $ids,
+				function ( $id ) {
+					$pezzo = wc_get_product( $id );
+					return $pezzo && $pezzo->is_in_stock() && $pezzo->is_purchasable();
+				}
+			)
+		);
+	}
+
+	/* ------------------------------------------------------------ galleria e tastiera */
+
+	// La galleria delle schede (#galleria) scorre di lato ma non si raggiungeva con il tasto Tab
+	// (segnalazione «scrollable-region-focusable» del controllo axe): la rendiamo raggiungibile.
+	if ( DART_GALLERIA_TASTIERA ) {
+		add_action( 'wp_footer', 'dart_galleria_tastiera', 30 );
+	}
+
+	function dart_galleria_tastiera() {
+		if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+			return;
+		}
+		echo "<script>(function(){var g=document.getElementById('galleria');if(g&&!g.hasAttribute('tabindex')){g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label','Foto del pezzo: scorri con le frecce');}})();</script>\n";
 	}
 
 	/* ------------------------------------------------------------ domande frequenti */

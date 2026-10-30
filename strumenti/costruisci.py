@@ -125,10 +125,16 @@ def prima_frase(s):
 
 # Larghezze delle varianti di ogni foto in docs/foto/ (LARGHEZZE in immagini.py).
 VARIANTI = (400, 800, 1200)
+MINIATURA = 200  # le miniature della galleria (immagini.miniatura)
 
 
 def foto_url(r, nome, w):
     return f"{r}foto/{nome}-{w}.webp"
+
+
+def miniatura(nome):
+    """Nome del file della miniatura (200 px); senza Pillow si usa la variante da 400."""
+    return immagini.miniatura(nome) if immagini else f"{nome}-400.webp"
 
 
 def srcset(r, foto):
@@ -272,6 +278,11 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
     pezzi_menu = "".join(f'<li><a href="{u}">{t}</a></li>' for u, t, _ in voci[:4])
     wa_link = wa(wa_messaggio or "Ciao DART, vorrei qualche informazione.")
     robots = "" if indicizza else '<meta name="robots" content="noindex">\n'
+    # una pagina da non indicizzare non ha un indirizzo canonico (per la 404 sarebbe un indirizzo inesistente)
+    canonico_tag = f'<link rel="canonical" href="{canonico}">\n' if indicizza else ""
+    og_url = f'<meta property="og:url" content="{canonico}">\n' if indicizza else ""
+    # niente preload dei caratteri: con font-display: swap il testo compare subito lo stesso, e il
+    # preload toglieva banda a stile.css e alla foto principale (su rete lenta FCP e LCP arrivavano ~0,2 s dopo)
     home = r or "./"
     documento = f"""<!doctype html>
 <html lang="it">
@@ -280,14 +291,12 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(titolo)}</title>
 <meta name="description" content="{e(descrizione)}">
-{robots}<link rel="canonical" href="{canonico}">
-<meta property="og:type" content="{og_tipo}">
+{robots}{canonico_tag}<meta property="og:type" content="{og_tipo}">
 <meta property="og:site_name" content="DART">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="{e(titolo)}">
 <meta property="og:description" content="{e(descrizione)}">
-<meta property="og:url" content="{canonico}">
-<meta property="og:image" content="{BASE}/{og[0]}">
+{og_url}<meta property="og:image" content="{BASE}/{og[0]}">
 <meta property="og:image:width" content="{og[1]}">
 <meta property="og:image:height" content="{og[2]}">
 <meta property="og:image:alt" content="{e(og[3])}">
@@ -295,8 +304,6 @@ def pagina(*, percorso, titolo, descrizione, corpo, attivo="", og=None, og_tipo=
 <meta name="theme-color" content="#F6F0E6">
 <link rel="icon" type="image/png" href="{r}favicon.png">
 <link rel="apple-touch-icon" href="{r}apple-touch-icon.png">
-<link rel="preload" href="{r}fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{r}fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{r}stile.css">
 <script type="speculationrules">{SPECULAZIONE}</script>
 {testa}{ld}</head>
@@ -770,15 +777,18 @@ def scheda(p):
     legali = NEGOZIO["pagine_legali"]
     descr = p["descrizione"] or (f"<p>{e(p['sottotitolo'])}</p>" if p["sottotitolo"] else "")
 
-    nastro = "".join(
-        f'<button type="button" data-grande="{foto_url(r, f["file"], 1200)}" aria-label="Ingrandisci la foto {i + 1}">'
-        f'{immagine(r, f, p["nome"] + (" — foto " + str(i + 1) if i else ""), "(min-width: 900px) 55vw, 100vw", lazy=i > 0)}</button>'
-        for i, f in enumerate(foto))
+    def slide(i, f):
+        img = immagine(r, f, p["nome"] + (" — foto " + str(i + 1) if i else ""), "(min-width: 900px) 55vw, 100vw", lazy=i > 0)
+        if i:
+            img = img.replace(' src="', ' data-src="', 1).replace(' srcset="', ' data-srcset="', 1) + f"<noscript>{img}</noscript>"
+        return f'<button type="button" data-grande="{foto_url(r, f["file"], 1200)}" aria-label="Ingrandisci la foto {i + 1}">{img}</button>'
+
+    nastro = "".join(slide(i, f) for i, f in enumerate(foto))
     miniature = ""
     if len(foto) > 1:
         miniature = '<div class="miniature">' + "".join(
             f'<button type="button" aria-label="Foto {i + 1}" aria-current="{str(i == 0).lower()}">'
-            f'<img src="{foto_url(r, f["file"], 400)}" alt="" loading="lazy" width="64" height="80"></button>'
+            f'<img src="{r}foto/{miniatura(f["file"])}" alt="" loading="lazy" width="64" height="80"></button>'
             for i, f in enumerate(foto)) + f'</div><p class="galleria-conta" aria-live="polite">1 di {len(foto)}</p>'
 
     costo = numero(p["spedizione"])
@@ -913,7 +923,6 @@ def scheda(p):
 {simili_html}
 {barra}
 <dialog class="visore" aria-label="Foto a schermo intero">
-  <img src="" alt="">
   <button class="chiudi" type="button" aria-label="Chiudi">✕</button>
   <button class="prec" type="button" aria-label="Foto precedente">‹</button>
   <button class="succ" type="button" aria-label="Foto successiva">›</button>
@@ -975,7 +984,8 @@ def scheda(p):
     return pagina(percorso=percorso, titolo=titolo, descrizione=descrizione, corpo=corpo,
                   attivo=p["categoria"], og=og, og_tipo="product" if p["disponibile"] else "website",
                   og_extra=og_extra, dati_strutturati=[prodotto, briciole],
-                  classe_body="ha-barra" if p["disponibile"] else "", wa_messaggio=msg)
+                  classe_body="ha-barra" if p["disponibile"] else "", wa_messaggio=msg,
+                  testa="<noscript><style>img[data-srcset] { display: none; }</style></noscript>\n" if len(foto) > 1 else "")
 
 
 def contatti():
@@ -1090,7 +1100,7 @@ def main():
     in_uso = {f["file"] for p in PEZZI for f in p["foto"]} | {"hero", "negozio"}
     for f in (DOCS / "foto").glob("*.webp"):
         m = re.fullmatch(r"(.+)-(\d+)\.webp", f.name)
-        if m and (m.group(1) not in in_uso or int(m.group(2)) not in VARIANTI):
+        if m and (m.group(1) not in in_uso or int(m.group(2)) not in VARIANTI + (MINIATURA,)):
             f.unlink()
 
     oggi = date.today().isoformat()

@@ -58,7 +58,13 @@ def specifiche(slug):
     """Legge la tabella 'specifiche' dalla scheda del vecchio sito."""
     pagina = scarica(f"{SITO}/pezzo/{slug}/").decode("utf-8")
     righe = re.findall(r'<span class="k">(.*?)</span><span class="v">(.*?)</span>', pagina)
-    return {testo(k): testo(v) for k, v in righe}
+    spec = {testo(k): testo(v) for k, v in righe}
+    # La garanzia era una riga delle specifiche; da fine ottobre 2026 è scritta in «Resi e garanzia»
+    # («…garanzia legale di conformità, che dura 24 mesi dalla consegna»).
+    durata = re.search(r"garanzia legale di conformit[^.<]*?dura (\d+) mesi", pagina)
+    if not spec.get("Garanzia") and durata:
+        spec["Garanzia"] = f"{durata.group(1)} mesi"
+    return spec
 
 
 TUTTE = "--tutte-le-foto" in sys.argv

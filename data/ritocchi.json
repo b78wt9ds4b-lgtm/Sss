@@ -37,11 +37,6 @@
       "luce": 1.08,
       "motivo": "Foto scura"
     },
-    "bordeaux-in-fiore-2": {
-      "origine": "2026/10/IMG_6409.jpg",
-      "luce": 1.08,
-      "motivo": "Foto scura"
-    },
     "floraison-2": {
       "origine": "2026/10/IMG_6405.jpg",
       "luce": 1.1,
@@ -194,31 +189,6 @@
       ],
       "motivo": "Bordi del cavalletto nella foto",
       "margine": 0.02
-    },
-    "bordeaux-in-fiore": {
-      "da": "bordeaux-in-fiore-1",
-      "origine": "2026/10/IMG_6408.jpg",
-      "sostituisci": true,
-      "angoli": [
-        [
-          0.109,
-          0.035
-        ],
-        [
-          0.916,
-          0.044
-        ],
-        [
-          0.886,
-          0.953
-        ],
-        [
-          0.083,
-          0.948
-        ]
-      ],
-      "bilanciamento": 0.25,
-      "motivo": "Quadro storto con il muro intorno"
     },
     "floraison": {
       "da": "floraison-1",
